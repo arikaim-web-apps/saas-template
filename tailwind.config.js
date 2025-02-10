@@ -21,20 +21,9 @@ module.exports = {
         },
     },
     darkMode: 'class',
-    plugins: [        
-        require("daisyui"),
+    plugins: [               
         require("@tailwindcss/typography")
     ],
-    daisyui: {
-        styled: true,
-        themes: true,
-        base: true,
-        utils: true,
-        logs: true,
-        rtl: false,
-        prefix: "",
-        darkTheme: "dark",
-    },
     corePlugins: {    
         preflight: false  
     }

@@ -1,9 +1,0 @@
-{
-    "labels": {
-        "storage": "Storage",
-        "used": "Used",
-        "size": "Storage Size",
-        "space": "Free space",
-        "storage_size": "Used Storage"
-    }
-}

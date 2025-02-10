@@ -1,7 +1,7 @@
 {      
-    "title": "Arikaim Web Tools",
+    "title": "SaaS template",
     "version": "1.0.0",
-    "name": "arikaim-services",
+    "name": "saas",
     "package-type": "template",
     "icon": "users",
     "thumbnail": "thumbnail.jpg",
@@ -15,14 +15,10 @@
         "library": [
             "jquery",
             "arikaim",
-            "arikaim-ui",
-            "fomantic",  
-            "highlight", 
-            "tailwind"
+            "arikaim-ui"
         ],
         "extensions": [
-            "users",
-            "storage"
+            "users"
         ]
     },
     "routes": [
@@ -55,30 +51,6 @@
             "language-path": true,     
             "page": "blog",
             "name": "Blog"                   
-        },
-        {
-            "path": "/qrcode-generator",      
-            "language-path": true,     
-            "page": "qrcode",
-            "name": "qrcode"                   
-        },
-        {
-            "path": "/short-links",      
-            "language-path": true,     
-            "page": "links",
-            "name": "links"                   
-        },
-        {
-            "path": "/file-manager",           
-            "page": "files.features",
-            "language-path": true,
-            "name": "FilesManager"                   
-        },
-        {
-            "path": "/qrcode/api",           
-            "page": "api.qrcode",
-            "language-path": false,
-            "name": "ApiQrCode"                   
         }
     ],
     "languages": [
@@ -90,8 +62,7 @@
     "default-theme": "default",
     "include": {     
         "components": [    
-            "current>users",
-            "links::api"
+            "current>users"
         ],         
         "css": [
             "preflight.css",
@@ -102,16 +73,10 @@
             "jquery",                                
             "arikaim",
             "arikaim-ui",      
-            "fomantic:form-validation",
-            "utility:flowbite"                      
+            "fomantic:form-validation"               
         ]       
     },
     "modules": {
-        "subscriptions": "subscriptions",
-        "qrcode": "qrcode",
-        "images": "images",
-        "files": "files",
-        "links": "links",
-        "api": "api"
+        "subscriptions": "subscriptions"
     }
 }

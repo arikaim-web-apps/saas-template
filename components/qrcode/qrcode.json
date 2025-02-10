@@ -1,8 +1,0 @@
-{
-    "title": "QR Codes",
-    "icon": "material-icons~qr-code.rounded",
-    "labels": {
-        "create": "Create Qr Code"
-    },
-    "message": "Confirm Delete QrCode"
-}

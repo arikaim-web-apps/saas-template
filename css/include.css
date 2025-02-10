@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .active-button {
-    @apply bg-slate-200;
+    @apply bg-stone-200;
 }

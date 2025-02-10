@@ -1,9 +1,0 @@
-{
-    "title": "REST Api",
-    "icon": "material-icons~code",
-    "menu": {
-        "title": "Api",
-        "icon": "material-icons~code"
-    },
-    "message": "Pro plan is required for REST Api"
-}

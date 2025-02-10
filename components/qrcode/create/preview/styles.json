@@ -1,8 +1,0 @@
-{
-    "border": "bg-stone-100 rounded-xl",
-    "download": {
-        "class": "normal-case text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300 dark:focus:ring-sky-800 font-medium rounded-lg text-sm px-3 py-1.5 text-center",
-        "color": "bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600",
-        "border": ""
-    }    
-}

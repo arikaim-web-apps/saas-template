@@ -1,9 +1,0 @@
-{
-    "title": "Documentation",
-    "icon": "material-icons~info",
-    "labels": {
-        "api": "REST Api",
-        "url": "API endpoint",
-        "extension": "Extension"       
-    }
-}
