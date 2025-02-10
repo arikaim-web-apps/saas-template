@@ -1,0 +1,12 @@
+{
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Checkout Error Page",
+        "description": "Checkout Error Page",
+        "keywords": ""
+    },
+    "message": "Error process checkput",
+    "labels": {
+        "error": "Error"
+    }
+}

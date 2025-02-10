@@ -1,0 +1,27 @@
+{% set plan = service('subscriptions').getPlan(plan_slug) %}
+{% set billing_type = billing_type|default('monthly') %}
+<div class="mt-8 flex flex-col {{ class }}">
+    <div class="flex flex-row justify-center">
+        <div class="px-2 font-bold text-gray-700">
+            {{ labels.monthly }}
+        </div>  
+        <div class="px-2 w-14">
+            {{  component('tailwind~toggle',{ 
+                    component_id: 'billing-toggle',
+                    field: { name: 'billing_type', id: 'billing_type' }    
+                }) 
+            }}
+        </div>
+        <div class="px-2 font-bold text-gray-700">
+            {{ labels.annual }}
+        </div>       
+    </div>
+    <div class="mt-4">
+        {{  component('current>subscriptions.item',{ 
+                plan: plan,              
+                billing_type: billing_type,
+                upgrade: true
+            }) 
+        }}
+    </div>
+</div>

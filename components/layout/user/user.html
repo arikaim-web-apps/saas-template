@@ -1,0 +1,14 @@
+<div class="flex flex-col items-stretch" style="height: calc(100vh - calc(100vh - 100%))">
+    {{ component('current>user-area.navbar',{ active: active }) }} 
+    <div class="flex flex-row self-stretch items-stretch flex-grow bg-stone-100">  
+        {{ component('current>user-area.sidebar',{ active: active }) }}     
+        <div     
+        
+            class="sm:pl-48 xs:pl-16 flex flex-col flex-grow pb-4 h-full pt-12 xs:pr-2 pr-8 lg:pr-8" 
+            id="user_area_content">
+            {{ content }}                              
+        </div>    
+    </div> 
+</div>      
+{{ component('current>toast',{ id: 'toast' }) }}   
+{{ component('current>loader',{},'html') }}   

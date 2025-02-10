@@ -1,0 +1,8 @@
+{
+    "message": "Page not found",
+    "title": "Alert",
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Page Not Found"
+    }
+}

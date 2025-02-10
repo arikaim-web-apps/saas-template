@@ -1,0 +1,13 @@
+{% if qrcode.image_type != 'svg' %}
+<div class="py-4 pr-4 shrink-0 self-center">
+    <img 
+        alt="Qrcode"
+        id="qrcode_image" 
+        class="border rounded border-gray-500 border-solid" 
+        src="{{ qrcode.encoded_image }}">
+</div>
+{% else %}
+<div class="py-4 pr-4 w-64 h-64 hidden shrink-0 self-center" id="svg_image">
+    {{ qrcode.encoded_image }}
+</div>   
+{% endif %}

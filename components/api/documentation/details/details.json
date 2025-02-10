@@ -1,0 +1,16 @@
+{
+    "title": "Details",
+    "labels": {
+        "endpoint": "Endpoint",
+        "params": "Parameters",
+        "response": "Response",
+        "fields": "Fields",
+        "path": "Path",
+        "none": "none",
+        "content": "Content Type",
+        "method": "Method",
+        "json": "Json",
+        "details": "Details",       
+        "auth": "Authentication"
+    }
+}

@@ -1,0 +1,18 @@
+{{ component('current>user-area.title',{ title: title, icon: icon }) }}
+<div
+    class="mt-16 w-full flex flex-row md:flex-row sm:flex-col xs:flex-col items-start self-stretch  flex-grow"> 
+    <div 
+        class="flex-shrink-0 xs:w-full sm:w-full md:w-72 flex flex-nowrap xs:flex-col sm:flex-col md:flex-row">
+        {% component 'current>user-area.panel' %}
+            {% set title = menu.title %}
+            {% set icon = menu.icon %}
+            {% set hide_close = true %}           
+            {{ component('current>user-area.account.menu',{ styles: styles }) }}                  
+        {% endcomponent %}
+    </div>
+    <div 
+        id="account_content"
+        class="md:pl-4 sm:pl-0 mt-0 md:mt-0 sm:mt-4 xs:mt-4 w-1/2 lg:w-1/2 xs:w-full sm:w-full md:w-full">       
+        {{ component('current>user-area.account.details',{ styles: styles }) }}                                             
+    </div> 
+</div>

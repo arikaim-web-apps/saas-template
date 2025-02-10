@@ -1,0 +1,14 @@
+{% set qrcode = createModel('Qrcode','qrcode').findById(uuid) %}
+{% component 'current>user-area.panel.inner' %}
+    <div 
+        id="qrcode-editor"  
+        uuid="{{ qrcode.uuid }}"> 
+        <div class="mt-4" id="edit_content">       
+            {{  component('current>qrcode.edit.form',{ 
+                    qrcode: qrcode, 
+                    id: 'qrcode_edit_form_' ~ qrcode.uuid
+                }) 
+            }}
+        </div>
+    </div>
+{% endcomponent %}

@@ -1,0 +1,18 @@
+{% set mode = mode|default('edit') %}
+{% if hide_title != true %}
+    {{ component('current>user-area.title',{ title: title, icon: icon }) }}
+{% endif %}
+
+<div class="{{ (hide_title != true) ? 'mt-16' : '' }} grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 gap-4 justify-items-stretch">
+    <div id="images_menu" 
+        mode="{{ mode }}"
+        class="order-1 lg:order-1 md:order-2 sm:order-2 xs:order-2">                    
+        {{ component('current>images.menu') }} 
+        <div class="mt-2 w-full" id="image_details">                      
+        </div>           
+    </div>
+    <div 
+        class="col-span-2 md:col-span-1 lg:col-span-2 order-2 lg:order-2 md:order-1 sm:order-1 xs:order-1">
+        {{ component('current>images.view',{ mode: mode }) }}       
+    </div>                                      
+</div>

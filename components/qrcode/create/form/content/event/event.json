@@ -1,0 +1,22 @@
+{
+    "title": "Event",
+    "icon": "icons~calendar",
+    "fields": {
+        "title": {
+            "label": "Title",
+            "placeholder": "Enter event title."
+        },
+        "start": {
+            "label": "Start Date",
+            "placeholder": "Enter event start date."            
+        },
+        "end": {
+            "label": "End Date",
+            "placeholder": "Enter event end date."            
+        },
+        "location": {          
+            "label": "Location",
+            "placeholder": "Enter event location."            
+        }
+    }
+}

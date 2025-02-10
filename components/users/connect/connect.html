@@ -1,0 +1,47 @@
+{% set redirect = getOption('users.login.redirect') %}
+<div class="flex mt-2 p-2 items-center justify-center">   
+    {% if getOption('users.sign.with.github',false) == true %}
+        <div class="p-1">      
+            <button 
+                class="ui basic mini oauth-authorize-button button" 
+                provider="github" 
+                action="login" 
+                redirect="{{ redirect }}">   
+                {{ component('icons~github',theme.connect.icon,'svg') }}
+            </button>       
+        </div>
+    {% endif %}
+    {% if getOption('users.sign.with.facebook',false) == true %}
+        <div class="p-1">
+            <button 
+                class="ui basic mini oauth-authorize-button button" 
+                provider="facebook" 
+                action="login" 
+                redirect="{{ redirect }}">   
+                {{ component('icons~facebook',theme.connect.icon,'svg') }}
+            </button>
+        </div>               
+    {% endif %}       
+    {% if getOption('users.sign.with.twitter',false) == true %}
+        <div class="p-1">   
+            <button 
+                class="ui basic mini oauth-authorize-button button" 
+                provider="twitter" 
+                action="login" 
+                redirect="{{ redirect }}">   
+                {{ component('icons~twitter',theme.connect.icon,'svg') }}
+            </button>           
+        </div>
+    {% endif %}   
+    {% if getOption('users.sign.with.google',false) == true %}
+        <div class="p-1">   
+            <button 
+                class="ui basic mini oauth-authorize-button button" 
+                provider="google" 
+                action="login" 
+                redirect="{{ redirect }}">   
+                {{ component('icons~google',theme.connect.icon,'svg') }}
+            </button>           
+        </div>        
+    {% endif %}  
+</div>

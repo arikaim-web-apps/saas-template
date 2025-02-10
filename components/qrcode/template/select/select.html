@@ -1,0 +1,29 @@
+
+{% set user_id = service('access').getId() %}
+{% set template = createModel('QrcodeTemplate','qrcode').userQuery(user_id) %} 
+{% if selected is not empty %}
+    {% set selected = template.findById(selected) %}
+{% endif %}
+{% set items = template.get() %}
+{% set selected_text = (selected is empty) ? labels.select : selected.title %}
+<select 
+    id="{{ component_id }}"
+    {{ rule|attr('rule') }}
+    name="{{ name|default('template') }}"
+    class="{{ theme.form.select.default }}">
+    {% if hide_empy != true %}
+        <option 
+            class=""
+            value=""
+            {{ (selected is empty ) ? 'disabled selected text-gray-400' : '' }}>
+            {{ labels.empty }}
+        </option>
+    {% endif %}
+    {% for item in items %}
+        <option 
+            value="{{ item.uuid }}"
+            {{ (selected == item.uuid) ? 'disabled selected' : '' }}>
+            {{ item.title }}
+        </option>
+    {% endfor %}
+</select>

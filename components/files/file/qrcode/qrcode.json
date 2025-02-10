@@ -1,0 +1,8 @@
+{
+    "title": "Qr Code",
+    "icon": "material-icons~qr-code",
+    "labels": {
+        "name": "Name",
+        "close": "Close"       
+    }    
+}

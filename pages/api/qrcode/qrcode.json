@@ -1,0 +1,15 @@
+{
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "QR Code Api",
+        "description": "Automate QR Code creation",
+        "keywords": "qrcode generator, qrcode, api, qrcode generator api, web tools"
+    },
+    "title": "QR Code Generator API",
+    "subtitle": "Automated QrCode generation.",
+    "buttons": {
+    },
+    "labels": {
+     
+    }
+}

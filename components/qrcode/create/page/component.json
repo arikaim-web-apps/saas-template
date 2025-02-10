@@ -1,0 +1,11 @@
+{     
+    "include": {
+        "js": [                             
+            "current>qrcode.create"
+        ] 
+    },
+    "access": {
+        "auth": "session",
+        "redirect": "/user"             
+    }
+}

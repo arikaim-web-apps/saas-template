@@ -1,0 +1,8 @@
+{
+    "include": {
+        "js": [
+            "users::users"
+        ]
+    },
+    "include-styles": true
+}

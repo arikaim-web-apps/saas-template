@@ -1,0 +1,15 @@
+{
+    "fields": {
+        "color": {
+            "label": "Frame"
+        },
+        "text_color": {
+            "label": "Text"
+        },
+        "label": {
+            "label": "Label",
+            "value": "SCAN ME",
+            "placeholder": ""
+        }  
+    }    
+}

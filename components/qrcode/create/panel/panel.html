@@ -1,0 +1,16 @@
+<div
+    id="{{ component_id }}"
+    class="{{ styles.class|default(class) }} {{ styles.color }}">
+    {% if hide_title != true %}
+    {{  component('current>user-area.panel.title',{ 
+            title: title, 
+            icon: icon,
+            styles: styles,
+            hide_close: hide_close
+        }) 
+    }}
+    {% endif %}
+    <div class="panel-content">
+        {{ component('current>qrcode.create',{}) }}
+    </div>
+</div>

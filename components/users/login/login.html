@@ -1,0 +1,94 @@
+{% set login_with = getOption('users.login.with',1) %}
+{% set captcha_protect = getOption('users.login.captcha.protect',true) %}
+<div class="{{ styles.space }} {{ styles.border }}"> 
+    <div class="z-0 {{ styles.color }}">         
+        <h1 class="flex items-center {{ styles.title.class }}">
+            {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
+            <div class="pl-2 font-bold {{ styles.title.color }}">
+                {{ title }}
+            </div>
+        </h1>
+        <form class="form pt-4" id="login_form" method="POST">
+            {% if login_with == 1 or login_with == 3 %}
+                <div class="field flex flex-col my-1">
+                    <label class="{{ styles.label }}">
+                        {{ fields.user_name.label }}
+                    </label>               
+                    <input 
+                        class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                        type="text" 
+                        rule="minLength[2]"
+                        name="user_name" 
+                        id="user_name" 
+                        {{ fields.user_name.placeholder|attr("placeholder") }}>                
+                </div>
+            {% else %}
+            <div class="field flex flex-col my-1">
+                <label class="{{ styles.label }}">
+                    {{ fields.email.label }}
+                </label>               
+                <input 
+                    class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                    type="email" 
+                    rule="email"
+                    name="email" 
+                    id="email" 
+                    {{ fields.email.placeholder|attr("placeholder") }}>                
+                </div>        
+            {% endif %}
+            <div class="field flex flex-col my-1 z-0">
+                <label class="{{ styles.label }}">
+                    {{ fields.password.label }}
+                </label>
+                <div class="relative z-0">
+                    <input 
+                        class="z-0 form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                        type="password" 
+                        rule="minLength[4]"
+                        name="password" 
+                        id="password" 
+                        {{ fields.password.placeholder|attr("placeholder") }}>  
+                    <div class="absolute view-password cursor-pointer inset-y-0 right-0 flex items-center pr-2">
+                        {{ component('icons~eye',styles.input.icon,'svg') }}
+                    </div>
+                </div>
+            </div>   
+            <div class="field flex flex-row items-center">              
+                <input class="form-input checkbox " 
+                    type="checkbox" 
+                    name="remember" 
+                    id="remember" 
+                    value="1">    
+                <label class="px-2 text-sm {{ styles.label }}">
+                    {{ fields.remember.label }}
+                </label>
+            </div>             
+            <div class="field mt-2" id="captcha_panel">            
+                {% if captcha_protect == true %}           
+                    {% if service('access').getLoginAttempts() > 0 %}           
+                        {{ component('captcha::code') }}                
+                    {% endif %}       
+                {% endif %}   
+            </div>    
+            <div class="">
+                {{  component('current>form.footer',{ 
+                        button_title: buttons.login     
+                    }) 
+                }}  
+            </div>   
+        </form>       
+        {% if hasExtension('oauth') == true %}                            
+            {{  component('current>users.connect',{                    
+                    class: '',
+                    hide_button_title: true 
+                }) 
+            }}
+        {% endif %}  
+    </div>           
+</div>
+<div class="flex flex-row items-center p-1">           
+    {{ component('icons~lock.open',styles.link.icon,'svg') }}  
+    <a class="pl-2 text-sm {{ styles.link.class }} {{ styles.link.hover }}" id="forgotten_button">   
+        {{ links.forgotten }}
+    </a>       
+</div>

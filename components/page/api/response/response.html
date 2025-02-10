@@ -1,0 +1,26 @@
+{% set docs = service('docs').getControllerInfo(route.handler_class,route.handler_method) %}  
+<div class="{{ class }}">
+    <h4 class="p-2 w-full font-bold text-md">
+        {{ labels.response }}
+    </h4>
+    <div class="p-2 bg-stone-50 rounded-lg">
+        {{  component('tailwind~code',{ 
+                language: 'json rounded-lg', 
+                hide_copy: true,
+                class: 'rounded-lg ',
+                trim_space: false,
+                content: docs.response.getJson()
+            }) 
+        }}
+    </div>
+    <div class="p-2">
+        {% if docs.response.fields|length > 0 %}
+            {{  component('current>api.documentation.details.params',{ 
+                    title: labels.fields,
+                    hide_reqired: true, 
+                    items: docs.response.fields 
+                }) 
+            }}          
+        {% endif %} 
+    </div>        
+</div>

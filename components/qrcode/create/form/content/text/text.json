@@ -1,0 +1,10 @@
+{
+    "title": "Text",
+    "icon": "material-icons~chat",
+    "fields": {
+        "text": {
+            "label": "Text",
+            "placeholder": "Enter qr code content."
+        }
+    }  
+}

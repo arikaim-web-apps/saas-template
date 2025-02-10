@@ -1,0 +1,11 @@
+{
+    "labels": {
+        "subscribe": "Subscribe", 
+        "upgrade": "Upgrade",      
+        "month": "per month",
+        "year": "per year",
+        "free": "Free",
+        "unlimited": "Unlimited",
+        "signup": "Sign up"
+    }
+}

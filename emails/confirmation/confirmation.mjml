@@ -1,0 +1,32 @@
+<mjml>
+    <mj-include path="../head.mjml" />
+    <mj-body>
+        <mj-include path="../navbar.mjml" />
+        <mj-section 
+            background-color="#fafaf9">
+            <mj-column>
+                <mj-spacer height="50px" />
+                <mj-text
+                    css-class="title"
+                    align="left">{{ title }}
+                </mj-text>
+               
+                <mj-text
+                    font-size="16px"
+                    align="left">
+                    <p>
+                        Please confirm that <b>{{ user.email }}</b> is your e-mail address by clicking on the link below.
+                    </p>                  
+                </mj-text>
+                <mj-spacer height="50px" />
+                <mj-button       
+                    color="white"       
+                    href="{{ confirm_email_url }}"
+                    background-color="#0ea5e9">
+                    {{ labels.confirm }}
+                </mj-button>                      
+            </mj-column>
+        </mj-section>
+        <mj-include path="../footer.mjml" />
+    </mj-body>
+</mjml>

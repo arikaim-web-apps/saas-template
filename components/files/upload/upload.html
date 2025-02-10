@@ -1,0 +1,21 @@
+{% set user_id = service('access').getId() %}
+{% set free_storage = service('user.storage').getUserStorageFreeSpace(user_id)  %}
+{% component 'current>user-area.panel' %} 
+    {% set class = 'w-72 xs:w-full sm:w-full lg:w-72' %}
+    <div class="mt-4 w-full min-w-full">   
+        {% if free_storage <= 0 %}  
+            {{  component('tailwind~alert.error',{ 
+                    description:  messages.full, 
+                    title: labels.alert  
+                }) 
+            }}            
+        {% else %}      
+            {{  component('current>files.upload.form',{ 
+                    path: path,
+                    filesystem: filesystem,
+                    hide_path: false 
+                }) 
+            }}      
+        {% endif %}                   
+    </div>
+{% endcomponent %}

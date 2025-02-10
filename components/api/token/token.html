@@ -1,0 +1,10 @@
+{% set user_id = service('access').getId() %}
+{% if service('subscriptions').hasPlanFeature(user_id,'api-access') == false %}
+    {% error 'Access Denied' %}
+{% endif %}
+{% component 'current>user-area.panel' %} 
+    {% set id = 'api_token_panel' %}
+    <div class="flex flex-col" id="token_content">
+        {{ component('current>api.token.details',{}) }}
+    </div>
+{% endcomponent %}

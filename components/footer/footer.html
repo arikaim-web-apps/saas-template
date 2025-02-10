@@ -1,0 +1,62 @@
+<footer class="{{ styles.class }} {{ styles.space }}">    
+    <div 
+        class="{{ styles.size }} bg-stone-100 grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
+        <div>
+            <div class="flex flex-row items-center">          
+                <div class="bg-stone-100 rounded-full p-0.5">              
+                    <img width="32px" height="32px" alt="{{ title }}" src="{{ template_url }}images/arikaim-logo.png">               
+                </div>                                                 
+                <div class="pl-2">                
+                    <div 
+                        class="first-letter:text-red-600 inline-block align-baseline monoton-font text-xl font-medium hover:text-sky-500 transition duration-700 ease-in-out">
+                        <a href="{{ url('') }}" class="align-baseline">
+                            {{ title }}
+                        </a>
+                    </div>                                 
+                    <div 
+                        class="tracking-wide text-stone-700 text-xs font-light assistant-font -mt-2">
+                        {{ subtitle }}
+                    </div>
+                </div>                                                      
+            </div>
+            <div 
+                class="px-1 pt-2 flex flex-row items-center">              
+                {{ component('material-icons~copyright',styles.icon,'svg') }}             
+                <div class="px-1 {{ styles.copyright.color }}">       
+                    {{ copyright|renderText({ interval: currentYear() }) }}             
+                </div> 
+            </div>      
+            <div class="mt-2 px-1  {{ styles.item.class }}">
+                <img src="{{ template_url }}images/arikaim-icon.png" 
+                    width="14px" height="14px" alt="Arikaim CMS">
+                <a href="http://arikaim.com" 
+                    class="px-1 {{ styles.item.color }}" 
+                    target="arikaim">                                          
+                    {{ labels.created }}
+                </a>
+            </div>                                                    
+        </div> 
+        {% for column in columns %}
+        <div>
+            <h2 class="{{ styles.item.title }}">
+                {{ column.title }}
+            </h2> 
+            {% for item in column.items %}
+                <a class="{{ styles.item.class }}" href="{{ url(item.url) }}">
+                    {{ component(item.icon,styles.icon,'svg') }} 
+                    <span class="px-1 {{ styles.item.color }}">               
+                        {{ item.title }}
+                    </span> 
+                </a>  
+            {% endfor %}       
+        </div> 
+        {% endfor %} 
+        <div>
+            <h2 class="{{ styles.item.title }}">&nbsp;</h4>
+            <a href="https://twitter.com/arikaimCms"               
+                target="x">
+                {{ component('icons~x',theme.icons.gray,'svg') }}                 
+            </a>    
+        </div>
+    </div>
+</footer>

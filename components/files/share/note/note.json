@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "note": {
+            "placeholder": "Enter file share note"
+        }
+    },
+    "labels": {
+        "save": "Save"
+    }
+}

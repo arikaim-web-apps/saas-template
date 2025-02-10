@@ -1,0 +1,18 @@
+{
+    "title": "WhatsApp",
+    "icon": "icons~whatsapp",
+    "fields": {
+        "country": {
+            "label": "Country Code",
+            "placeholder": "Enter email address."
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "Enter phone number."
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Enter message."
+        }         
+    }
+}

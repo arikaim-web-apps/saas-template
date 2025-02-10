@@ -1,0 +1,12 @@
+<mj-head>        
+    <mj-title>{{ subject }}</mj-title>
+    <mj-font name="Monoton"
+       href="https://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLRw.ttf" />
+    <mj-style>
+        .title {
+            color: black !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+        }
+    </mj-style>
+</mj-head>

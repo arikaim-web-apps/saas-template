@@ -1,0 +1,13 @@
+{
+    "labels": {       
+        "name": "Name",
+        "create": "Create",     
+        "directory": "Parent Directory"
+    },
+    "fields": {
+        "name":{
+            "label": "Name",
+            "placeholder": "Enter Directory Name"
+        }
+    }
+}

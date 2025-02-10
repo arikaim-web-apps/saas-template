@@ -1,0 +1,12 @@
+{
+    "title": "Share",
+    "icon": "material-icons~share",
+    "labels": {
+        "users": "Users",
+        "groups": "Groups",
+        "file": "File",
+        "filesystem": "Filesystem",
+        "local": "Local",
+        "directory": "Directory"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "user-area": {
+        "sidebar": {   
+            "links": {
+                "component": "current>links",
+                "title": "Links",
+                "tooltip": "Short links",
+                "icon": "material-icons~link"            
+            }                             
+        },
+        "dashboard": [
+            "current>links.dashboard"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "title": "Facebook",
+    "icon": "icons~facebook",
+    "fields": {
+        "url": {
+            "label": "Url",
+            "placeholder": "Enter Url."
+        },     
+        "share": {
+            "label": "Share Url"            
+        }
+    }
+}

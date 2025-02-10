@@ -1,0 +1,28 @@
+{% set email_send = email_send|default(false) %}
+{% set login_url = (login_url is empty) ? url('/login') : login_url  %}
+{% set site = (site is empty) ? domain : site %}
+<div class="{{ styles.space }} {{ styles.color }} {{ styles.border }}">
+    <h1 class="flex items-center {{ styles.title.class }}">
+        {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
+        <div class="pl-2 font-bold">
+            {{ titles[title]|default(titles.signup) }}
+        </div>
+    </h1>     
+    <div class="py-4">
+        <div class="{{ styles.message }}">              
+            {{ messages[message]|default(content)|renderText({ site: site, email: email }) }}          
+        </div>  
+        {% if email_send == true %}
+        <div class="py-2">
+            {{ message.send }}    
+        </div>
+        {% endif %}
+        {% if hide_login != true %}
+        <div class="mt-8">
+            <a class="{{ styles.button.login }}" href="{{ login_url }}">
+                {{ labels.login }}
+            </a>
+        </div>
+        {% endif %}
+    </div>    
+</div>

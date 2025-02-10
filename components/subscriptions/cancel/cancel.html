@@ -1,0 +1,19 @@
+<div class="w-full p-4 {{ styles.border }} {{ styles.color }}">
+    <div class="{{ styles.title }}">                    
+        {{ title }}
+    </div>
+    <div class="mt-4">
+        <div class="text-center font-bold" id="message">
+            {{ message }}
+        </div>  
+        <div class="text-center font-bold hidden" id="success_message">
+            {{ success }}
+        </div>   
+        <div class="text-center mt-4">           
+            <button id="confirm_button"
+                class="confirm-cancel-subscription {{ styles.button.class }} {{ styles.button.color }} {{ styles.button.border }}">
+                {{ labels.confirm }}
+            </button>   
+        </div>
+    </div>
+</div>

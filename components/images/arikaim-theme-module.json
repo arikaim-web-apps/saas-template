@@ -1,0 +1,14 @@
+{
+    "user-area": {
+        "sidebar": {   
+            "images": {
+                "component": "current>images",
+                "title": "Images",
+                "tooltip": "Image collections",
+                "icon": "material-icons~image"     
+            }                                       
+        },
+        "dashboard": [
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Images",
+    "icon": "material-icons~image",
+    "labels": {  
+        "logo": "Logo Images",
+        "delete": "Delete"
+    },
+    "message": "Confirm Delete Image"
+}

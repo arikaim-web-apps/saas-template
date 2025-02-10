@@ -1,0 +1,23 @@
+{% if uuid is not empty %}
+    {% set file = createModel('Files','storage').findByid(uuid) %}
+{% endif %}
+{% set hidden = (file.isPublic() == true) ? "style='display:none'" : '' %}
+{% set active = (file.isPublic() == false) ? 'active' : '' %}
+
+{% component 'current>user-area.panel' %} 
+    {% set class = 'w-72 xs:w-full sm:w-full lg:w-72' %}
+    <div class="p-2 border rounded border-gray-300 border-solid"> 
+        <input type="hidden" id="file_uuid" value="{{ file.uuid }}">
+        {{  component('tailwind~toggle.daisyui',{ 
+                id: 'file_public', 
+                toggle_class: 'toggle-xs toggle-success',
+                checked: file.isPublic(),
+                right_label: fields.public,
+                left_label: fields.private 
+            }) 
+        }}      
+    </div>
+    <div class="p-2 {{ (file.isPublic() == true) ? 'hidden' : '' }}" id="password_content">
+        {{ component('current>files.access.password',{ file: file }) }}
+    </div>
+{% endcomponent %}

@@ -1,0 +1,36 @@
+<mj-section background-color="#f5f5f4">
+    <mj-column 
+        vertical-align="middle"
+        width="20%">
+        <mj-image
+            width="48px"                   
+            src="{{ template_url }}images/arikaim-logo.png">
+        </mj-image>
+    </mj-column>
+    <mj-column 
+        width="80%"
+        vertical-align="middle">
+        <mj-navbar 
+            align="left"
+            base-url="{{ url('',true) }}"
+            ico-color="#ffffff">
+            <mj-navbar-link                   
+                href="" 
+                text-transform="none"
+                font-size="20px"
+                font-family="Monoton"
+                color="#44403c">Arikaim.dev           
+            </mj-navbar-link>
+            <mj-navbar-link 
+                href="login" 
+                text-transform="none"
+                font-size="10px"
+                color="#44403c">Login</mj-navbar-link>
+            <mj-navbar-link 
+                href="signup" 
+                text-transform="none"
+                font-size="10px"
+                color="#44403c">Sign Up</mj-navbar-link>               
+        </mj-navbar>
+    </mj-column>
+</mj-section>

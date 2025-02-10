@@ -1,0 +1,74 @@
+{% set billing_type = billing_type|default('annual') %}
+{% set upgrade = upgrade|default(false) %}  
+{% set monthly_price = plan.pricePerMonth('monthly')|numberFormat([0]) %}
+{% set annual_price = plan.annual_price|numberFormat([0]) %}   
+{% if plan.isFree() == false %} 
+    {% set price_label = (billing_type == 'annual') ? labels.year : labels.month %}  
+{% else %}
+    {% set price_label = labels.free %}
+{% endif %}
+<div 
+    class="flex flex-col justify-between {{ styles.item.border }} {{ styles.item.size }}">
+    <div class="p-2 {{ styles.item.title.color }} {{ styles.item.title.text }} {{ styles.item.title.border }}">
+        {{ plan.title }}
+    </div>   
+    <div class="p-2 flex flex-col justify-between flex-grow">
+        <div class="mt-1 px-4 py-4">
+            <span class="text-gray-600">{{ plan.description }}</span>
+        </div>
+        <div class="my-4">              
+            <div class="flex flex-row items-center justify-center h-12">                 
+                <div class="px-2 fond-bold self-end">
+                    {{ plan.currency.sign }}
+                </div>                                           
+                <div 
+                    class="text-6xl text-bold plan-price place-self-center" 
+                    monthly-price="{{ monthly_price }}" 
+                    annual-price="{{ annual_price }}">                
+                    {{ (billing_type == 'annual') ? annual_price : monthly_price }}  
+                </div>    
+                <div class="pl-1 place-self-end">
+                    <span 
+                        class="text-xs  uppercase border border-solid rounded-lg px-2 border-gray-400
+                        {{ (plan.isFree() == false) ? 'price-label text-sky-700' : 'text-green-500' }}"
+                        monthly-label="{{ labels.month }}" 
+                        annual-label="{{ labels.year }}">
+                        {{ price_label }}
+                    </span> 
+                </div>                     
+            </div>        
+        </div>              
+        <div class="pl-4 py-4 text-left justify-self-stretch flex-grow">
+            <div class="flex flex-col">
+                {% for feature in plan.features %}
+                <div class="flex flex-row">                 
+                    {{ component(styles.item.features.icon.name,styles.item.features.icon,'svg') }}  
+                    <div class="pl-2 text-gray-500 font-semibold">
+                        {{ feature.title }}
+                        {% if feature.item_value > 0 %}
+                        <span class="{{ theme.badge.default }}">{{ feature.item_value }}</span>
+                        {% endif %}
+                    </div>                                                                                                          
+                </div>
+                {% endfor %}           
+            </div>
+        </div>              
+        <div class="place-content-center mt-8">       
+            {% set monthly_subscrbe_url = url(plan.getSubscribeUrl('monthly',upgrade)) %}
+            {% set annual_subscrbe_url = url(plan.getSubscribeUrl('annual',upgrade)) %}            
+            <a class="block subscribe-button 
+                {{ styles.item.button.class }} {{ styles.item.button.color }} {{ styles.item.button.border }}" 
+                href="{{ (billing_type == 'annual') ? annual_subscrbe_url : monthly_subscrbe_url }}"  
+                monthly-url="{{ monthly_subscrbe_url }}"
+                annual-url="{{ annual_subscrbe_url }}">               
+                <span class="uppercase text-white">
+                    {% if (upgrade == true) %}
+                        {{ labels.upgrade }}
+                    {% else %}
+                        {{ (plan.isFree() == false) ? labels.subscribe : labels.signup }}
+                    {% endif %}
+                </span>
+            </a>       
+        </div>
+    </div>                     
+</div>

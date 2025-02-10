@@ -1,0 +1,20 @@
+{
+    "title": "File Download",
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Public Files",
+        "description": "Public Files",
+        "keywords": "files, shared files, public files"
+    },
+    "labels": {
+        "name": "File Name",
+        "download": "Download",
+        "size": "Size"
+    },
+    "message": {
+        "access": {
+            "title": "Access Denied",
+            "description": "File is protected"
+        }
+    }
+}

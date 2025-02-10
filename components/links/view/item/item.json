@@ -1,0 +1,17 @@
+{      
+    "labels": {
+        "edit": "Edit",
+        "status": "Link Status",
+        "details": "Details",
+        "delete": "Delete",     
+        "type": "Type",
+        "password": "Edit Password",
+        "views": "Views",
+        "short": "Short Url",
+        "link": "Open Link",
+        "title": "Title"      
+    },
+    "title": "Link",
+    "icon": "material-icons~link",
+    "message": "..." 
+}

@@ -1,0 +1,9 @@
+{
+    "labels": {
+        "empty": "No shared files.",
+        "size": "File Size",
+        "date": "Date Uploaded",
+        "password": "Password Protected",
+        "downloads": "Downloads"
+    }
+}

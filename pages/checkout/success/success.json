@@ -1,0 +1,12 @@
+{
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Checkout Sucess Page",
+        "description": "Checkout Sucess Page",
+        "keywords": ""
+    },
+    "message": "Sucess checkout",
+    "labels": {
+        "success": "Success"
+    }
+}

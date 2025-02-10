@@ -1,0 +1,47 @@
+{
+    "fields": {
+        "content": {
+            "label": "Content",
+            "placeholder": ""
+        },           
+        "options": {
+            "label": "Options"
+        },   
+        "color": {
+            "label": "Colors"
+        },   
+        "logo": {
+            "label": "Logo"
+        },
+        "background": {
+            "label": "Background"
+        },
+        "frame": {
+            "label": "Frame"
+        },
+        "shape": {
+            "label": "Shape"
+        }
+    },
+    "tooltips": {
+        "create": "Create QR Code",
+        "save": "Create and save QR Code"
+    },
+    "buttons": {
+        "create_and_save": "Create & Save",
+        "create": "Create",
+        "signup": "Signup",
+        "default": "Default",
+        "upgrade": "Upgrade Account",
+        "clear": "Clear"
+    },
+    "labels": {
+        "preview": "Preview",
+        "subscribe": "Subscribe",
+        "palns": "View Plans",      
+        "subscribe_text": "Get access to full featured QR code generator."
+    },
+    "messages": {
+        "unlock": "And access full QrTag features."
+    }   
+}

@@ -1,0 +1,33 @@
+{% set user_id = service('access').getId() %}
+{% set local = service('user.storage').mountLocalUserFilesystem(user_id) %}
+{% set filesystem = service('user.storage').getUserFilesystemName() %}
+{% set bin_path = service('storage').getRecyleBinPath() %}
+{% set path = path|default(bin_path) %}
+{% set items = getDirectoryFiles(path,false,filesystem) %}
+{% set items = paginate(items,'trash') %}  
+
+{% if items.getItems()|length == 0 %}
+    {{ component('current>files.view.items.empty',{ view_type: 'table' }) }}
+{% endif %}
+
+{% for item in items.getItems() %}
+    {% set uuid = createUuid() %}
+    {% set mime_type = (item.type == 'dir') ? 'directory' : service('storage').getMimetype(item.path,filesystem) %}
+    <div class="p-1 flex flex-row items-center" id="row_{{ uuid }}">                
+        <btn class="restore-file tooltip" uuid="{{ uuid }}" path="{{ item.path }}" data-tip="{{ labels.restore }}">
+            {{ component('material-icons~trash.restore',theme.icons.action,'svg') }}  
+        </btn>   
+        <div class="pl-3 flex flex-row items-center">         
+        {% if item.type == 'dir' or item.type == 'directory' %}
+            <a class="open-directory" path="{{ item.path }}" driver-name="{{ driver_name }}">
+                {{ component('material-icons~folder',theme.icons.action,'svg') }}                    
+            </a>              
+        {% else %}           
+            {{ component('current>files.file.svg',{ type: mime_type, size: 'h-6 w-6' }) }}                                         
+        {% endif %}   
+            <span class="text-gray-800 pl-2">
+                {{ item.basename }}    
+            </span>  
+        </div>                                                                           
+    </div>
+{% endfor %}

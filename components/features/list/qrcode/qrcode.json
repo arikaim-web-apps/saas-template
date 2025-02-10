@@ -1,0 +1,32 @@
+{
+    "features": {
+        "dynamic": {
+            "title": "Dynamic QR Codes",
+            "subtitle": "Change your QR codes content anytime."
+        },
+        "logo": {
+            "title": "QR Code Logo",
+            "subtitle": "Add logo image to QR Code."
+        },
+        "frames": {
+            "title": "QR Code Frames",
+            "subtitle": "Add frame with label to QR Code."
+        },
+        "colors": {
+            "title": "Choose QR Code colors",
+            "subtitle": "Customizable colors."
+        },
+        "types": {
+            "title": "QR Code Content Types",
+            "subtitle": "13 qrcode content types."
+        },
+        "templates": {
+            "title": "QR Code Templates",
+            "subtitle": "Easy create qrcode from template."
+        },
+        "options": {
+            "title": "QR Code Options",
+            "subtitle": "Qrcode image type and size settings."
+        }
+    }
+}

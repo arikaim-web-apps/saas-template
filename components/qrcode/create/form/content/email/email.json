@@ -1,0 +1,18 @@
+{
+    "title": "Email",
+    "icon": "material-icons~email",
+    "fields": {
+        "email": {
+            "label": "Send To",
+            "placeholder": "Enter email address."
+        },
+        "subject": {
+            "label": "Subject",
+            "placeholder": "Enter email subject."
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Enter email mesasge."
+        }
+    }
+}

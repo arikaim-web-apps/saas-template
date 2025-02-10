@@ -1,0 +1,8 @@
+{
+    "tooltip": {
+        "create": "Create QrCode"       
+    },
+    "labels": {
+        "search": "Search QrCode"
+    }
+}

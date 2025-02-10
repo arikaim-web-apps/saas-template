@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "title":{
+            "label": "Title",
+            "placeholder": "Enter title"            
+        }
+    }
+}

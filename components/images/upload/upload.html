@@ -1,0 +1,20 @@
+{% component 'current>user-area.panel' %}
+    {% set id = 'images_items_panel' %}
+           
+    {{  component('current>images.upload.form',{ 
+            button_class: 'upload-button mini',
+            target_path: target_path ~ 'images/',
+            hide_path: true,
+            hide_title: true,
+            hide_labels: true,
+            button_class: 'btn btn-primary btn-sm',
+            private_image: true,
+            create_target_path: true,                            
+            accept: 'image/png',
+            resize_width: 256,                           
+            resize_height: 256,
+            collection: 'QrCode logo images'
+        }) 
+    }}                     
+
+{% endcomponent %}

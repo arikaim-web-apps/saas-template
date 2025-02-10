@@ -1,0 +1,16 @@
+{
+    "titles": {
+        "signup": "Registration Successful",
+        "success": "Success"
+    },
+    "messages": {
+        "signup": "Thank you for registering to the <b>{{ site }}</b> website.",
+        "send": "You should receive a confirmation email shortly.",
+        "password": "Password recovery link emailed to <b>{{ email }}</b>",
+        "password_changed": "Password was changed successfully.",
+        "confirmed": ""
+    },
+    "labels": {
+        "login": "Login"
+    }
+}

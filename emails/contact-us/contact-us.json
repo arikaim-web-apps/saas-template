@@ -1,0 +1,11 @@
+{
+    "subject": "Contact us message notification.",
+    "title": "Contact us message",
+    "labels": {        
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",     
+        "message": "Message"
+    }
+}

@@ -1,0 +1,59 @@
+{% for item in items.navbar %}  
+<div class="{{ styles.item.class }}">
+    <a 
+        class="flex flex-row items-center {{ styles.item.color }} {{ (active == item.key) ? styles.item.active : '' }}" 
+        href="{{ url(item.url) }}">
+        {% if item.icon is not empty %}
+            <div class="px-1">
+                {{ component(item.icon,styles.icon,'svg') }}  
+            </div>                           
+        {% endif %}
+        {{ item.title }}
+    </a>
+</div>             
+{% endfor %} 
+
+{% set modules = readThemeModules(template_path,template_modules) %}
+<div class="{{ styles.item.class }}">
+    {{ component('current>navbar.menu.tools',{ styles: styles }) }}
+</div>
+
+{% for module in modules %}  
+    {% for item in module.navbar.menu %}  
+    <div class="{{ styles.item.class }}">
+        <a 
+            class="flex flex-row items-center {{ styles.item.color }} {{ (active == item.key) ? styles.item.active : '' }}" 
+            href="{{ url(item.url) }}">
+            {% if item.icon is not empty %}
+                <div class="px-1">
+                    {{ component(item.icon,styles.icon,'svg') }}  
+                </div>                           
+            {% endif %}
+            {{ item.title }}
+        </a>
+    </div>             
+    {% endfor %}  
+{% endfor %}
+        
+{% if service('access').isLogged() == false %}  
+    {% for item in items.user %}  
+    <div class="{{ styles.item.class }}">
+        <a 
+            class="flex flex-row items-center {{ styles.item.color }} {{ (active == item.key) ? styles.item.active : '' }}" 
+            href="{{ url(item.url) }}">
+            {% if item.icon is not empty %}
+                <div class="px-1">
+                    {{ component(item.icon,styles.icon,'svg') }}  
+                </div>                           
+            {% endif %}
+            {{ item.title }}
+        </a>
+    </div>             
+    {% endfor %}    
+{% else %}
+    <a 
+        class="{{ styles.item.color }}" 
+        href="{{ url('/user') }}">
+        {{ component(styles.icon.name,styles.icon,'svg') }}  
+    </a> 
+{% endif %}

@@ -1,0 +1,15 @@
+{
+    "user-area": {
+        "sidebar": {      
+            "qrcode": {
+                "component": "current>qrcode",
+                "title": "QrCode",
+                "tooltip": "QrCode generator",
+                "icon": "material-icons~qr-code.rounded"      
+            }                    
+        },
+        "dashboard": [
+           "current>qrcode.dashboard"
+        ]
+    }
+}

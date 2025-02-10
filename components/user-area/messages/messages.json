@@ -1,0 +1,9 @@
+{
+    "update": "Saved successfully.",
+    "delete": "Deleted successfully.",
+    "add": "Added successfully.",
+    "errors": { 
+    },
+    "messages": {         
+    }
+}

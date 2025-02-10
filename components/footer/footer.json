@@ -1,0 +1,60 @@
+{
+    "title": "Arikaim",
+    "subtitle": "Web Tools",
+    "columns": {
+        "services": {
+            "title": "Services",
+            "items": [
+                {
+                    "title": "QR code generator",
+                    "url": "/qrcode-generator",
+                    "icon": "icons~qrcode"
+                },
+                {
+                    "title": "Api",
+                    "url": "/qrcode/api",
+                    "icon": "icons~code"
+                },
+                {
+                    "title": "Pricing",
+                    "url": "/subscription",
+                    "icon": "material-icons~subscription"
+                }               
+            ]
+        },
+        "company": {
+            "title": "Company",
+            "items": [                
+                {
+                    "title": "Contact Us",
+                    "url": "/contact-us",
+                    "icon": "icons~mail"
+                },
+                {
+                    "title": "Blog",
+                    "url": "/blog",
+                    "icon": "icons~document.text"
+                } 
+            ]
+        },
+        "legal": {
+            "title": "Legal",
+            "items": [
+                {
+                    "title": "Privacy Policy",
+                    "url": "/privacy-policy",
+                    "icon": "icons~info"
+                },
+                {
+                    "title": "Terms and Conditions",
+                    "url": "/terms",
+                    "icon": "icons~lock"
+                }
+            ]
+        }
+    },
+    "labels": {
+        "created": "Created with Arikaim CMS"
+    },
+    "copyright": "Copyright {{ interval }}. All Rights Reserved."
+}

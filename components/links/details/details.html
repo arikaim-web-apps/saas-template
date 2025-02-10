@@ -1,0 +1,41 @@
+{% if uuid is not empty %}
+    {% set link = createModel('Links','links').findById(uuid) %}
+{% endif %}
+<div class="shadow bg-white rounded-lg flex flex-col justify-items-stretch self-stretch w-full">
+    {{ component('current>panel-title',{ title: title, icon: 'icons~info', content_id: content_id }) }}   
+    <div class="flex flex-row items-start px-4 p-2 w-full">
+        <table class="table-auto border-collapse">
+            <tbody>
+                <tr clas="border border-slate-300 border-solid">
+                    <td class="font-bold text-right p-2">{{ labels.url }}</td>
+                    <td class="break-all p-2 select-all">{{ link.url }}</td>
+                </tr>
+                <tr>
+                    <td class="font-bold text-right p-2">{{ labels.short }}</td>
+                    <td class="flex flex-row items-center">
+                        <a class="tooltip px-1 details-button" data-tip="{{ labels.link }}" href="{{ link.getShortUrl() }}" target="_blank">
+                            {{ component('icons~link',{ class: theme.link.hover, size: 'h-4 w-4', color: theme.icons.color },'svg') }}
+                        </a>  
+                        <div class="p-2 break-all select-all">{{ link.getShortUrl() }}</div>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-bold text-right p-2">{{ labels.title }}</td>
+                    <td class="break-all p-2">{{ link.title }}</td>
+                </tr>
+                <tr>
+                    <td class="font-bold text-right p-2">{{ labels.description }}</td>
+                    <td class="break-all p-2">{{ link.description }}</td>
+                </tr>
+                <tr>
+                    <td class="font-bold text-right p-2">{{ labels.views }}</td>
+                    <td class="p-2">{{ link.views }}</td>
+                </tr>
+                <tr>
+                    <td class="font-bold text-right p-2">{{ labels.type }}</td>
+                    <td class="p-2">{{ link.type|default('link') }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>

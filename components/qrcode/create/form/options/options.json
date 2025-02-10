@@ -1,0 +1,22 @@
+{
+    "fields": {
+        "image": {
+            "label": "Type"
+        },
+        "precision": {
+            "label": "Precision"
+        },
+        "length": {
+            "label": "Length"
+        },
+        "size": {
+            "label": "Size"
+        },
+        "transparent": {
+            "label": "Transparent"
+        }
+    },
+    "buttons": {
+        "default": "Default"
+    }
+}

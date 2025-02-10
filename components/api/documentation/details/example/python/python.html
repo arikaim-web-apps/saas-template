@@ -1,0 +1,41 @@
+<h5 class="font-bold">
+    {{ labels.install }}
+</h5>
+<div>
+    {{  component('tailwind~code',{ 
+            language: 'shell rounded-lg', 
+            hide_copy: true,
+            class: 'rounded-lg ',
+            trim_space: false,
+            content: ' pip install arikaim-client '
+        }) 
+    }}
+</div>
+<h5 class="font-bold">
+    {{ labels.usage }}
+</h5>
+<div>
+    {{  component('tailwind~code',{ 
+            language: 'python rounded-lg', 
+            hide_copy: true,
+            class: 'rounded-lg ',
+            trim_space: false,
+            content: " from arikaim_client.client import ArikaimClient
+            
+ apiKey = 'API KEY'
+ host = 'SITE URL'
+
+ client = ArikaimClient(host,apiKey)
+            
+ data = {
+    .. Request parameters ..  key: value
+ }
+            
+ response = client.request('" ~ method ~ "','" ~ api_path ~"',data)
+            
+ print(response.status)
+ print(response.to_dictonary())"
+
+        }) 
+    }}
+</div>

@@ -1,0 +1,27 @@
+{
+    "fields": {
+        "url": {
+            "label": " URL",
+            "placeholder": "Enter link URL"
+        },
+        "title": {
+            "label": "Title",
+            "placeholder": "Enter Link Title"
+        },
+        "description": {
+            "label": "Text",
+            "placeholder": "Enter Link Text"
+        }
+    },
+    "labels": {
+        "link": "Link",
+        "text": "Text",
+        "youtube": "Video",
+        "embed": "Embed",
+        "social": "Social",
+        "image": "Image"
+    },
+    "buttons": {
+        "save": "Save"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "title": "SMS",
+    "icon": "material-icons~sms",
+    "fields": {
+        "message": {
+            "label": "Message",
+            "placeholder": "Enter sms message."
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "Enter phone number."
+        }       
+    }
+}

@@ -1,0 +1,98 @@
+{% if uuid is not empty %}
+    {% set item = createModel('Links','links').findById(uuid) %}
+{% endif %}
+{% set passwsord_icon = (item.hasPassword() == true) ? 'icons~lock' : 'icons~lock.open' %}
+<div 
+    class="flex w-full"        
+    id="row_{{ item.uuid }}" 
+    uuid="{{ item.uuid }}">            
+    {% component 'current>user-area.panel' %}  
+        {% set hide_close = true %}
+        {% set id = 'link_panel_' ~ item.uuid %}
+        {% set class = 'h-full w-full mb-2' %}
+        {% set title = item.title|default(title) %}       
+        <div class="flex flex-row items-start w-full">
+            <div class="w-1/2 flex-grow">
+                <div class="flex flex-row items-start">
+                    <div class="font-bold">                
+                        <div class="text-gray-500 flex flex-row items-center">
+                            <a class="tooltip" data-tip="{{ labels.link }}" href="{{ item.getShortUrl() }}" target="_blank">
+                                {{ component('icons~link.external',theme.icons.action,'svg') }}
+                            </a>  
+                            <div class="px-1 select-all">{{ item.url }}</div>  
+                        </div>
+                        <div class="my-2 flex flex-row items-center">
+                            <div class="text-xs uppercase text-gray-400">
+                                {{ labels.short }}
+                            </div>                           
+                            <div class="{{ theme.badge.default }} px-2 text-sm text-gray-700 select-all">
+                                {{ item.getShortUrl() }}
+                            </div>   
+                        </div>                                  
+                    </div>
+                </div>           
+                <div class="flex flex-row items-center self-start place-content-start">  
+                    <div class="flex flex-row items-center">
+                        <div class="text-xs uppercase text-gray-300 pr-2">
+                            {{ labels.views }}
+                        </div>
+                        <div class="{{ theme.badge.default }} tooltip" data-tip="{{ labels.views }}">                   
+                            {{ item.views }}
+                        </div>  
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="text-xs uppercase text-gray-300 pr-2">
+                            {{ labels.type }}
+                        </div>
+                        <div 
+                            class="{{ theme.badge.default }} tooltip text-sm"
+                            data-tip="{{ labels.type }}">                   
+                            {{ item.type|default('link') }}
+                        </div>   
+                    </div>               
+                </div>  
+            </div>
+            <div class="flex flex-row p-2 bg-gray-100 rounded-lg">
+                <div class="px-1 pt-1 tooltip" data-tip="{{ labels.status }}">
+                    <input      
+                        uuid="{{ item.uuid }}"
+                        value="{{ (item.status == 1) ? 1 : 0 }}"
+                        type="checkbox" 
+                        name="{{ field_name|default('toggle') }}" 
+                        class="cursor-pointer toggle toggle-xs link-status-toggle" 
+                        {{ (item.status == 1) ? 'checked' : '' }}/>
+                </div>
+                {#  component('tailwind~toggle.daisyui',{ 
+                        toggle_class: 'toggle-xs',
+                        checked: item.status,
+                        component_id: 'status_' ~ item.uuid  
+                    }) 
+                #}
+                <a                   
+                    mountTo="link_details"
+                    component="current>links.edit.password"
+                    class="px-1 tooltip link-action" 
+                    {{ buttons.download.title|attr('title') }}
+                    params="uuid:{{ item.uuid }}" 
+                    data-tip="{{ labels.password }}">
+                    {{ component(passwsord_icon,theme.icons.action,'svg') }}               
+                </a>  
+                <a                   
+                    mountTo="link_details"
+                    component="current>links.edit"
+                    class="px-1 tooltip link-action" 
+                    {{ buttons.download.title|attr('title') }}
+                    params="uuid:{{ item.uuid }}" 
+                    data-tip="{{ labels.edit }}">
+                    {{ component('material-icons~edit',theme.icons.action,'svg') }}               
+                </a>   
+                <a 
+                    class="px-1 tooltip delete-link" 
+                    uuid="{{ item.uuid }}"
+                    data-tip="{{ labels.delete }}">
+                    {{ component('material-icons~trash',theme.icons.delete,'svg') }}               
+                </a>  
+            </div>
+        </div>                                             
+    {% endcomponent %}                            
+</div>

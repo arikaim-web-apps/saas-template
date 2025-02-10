@@ -1,0 +1,8 @@
+{
+    "labels": {      
+        "date": "Subscription Date",
+        "cancel": "Cancel",
+        "features": "Features",
+        "billing": "Billing"
+    }
+}

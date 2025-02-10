@@ -1,0 +1,15 @@
+{
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "QR Code Generator",
+        "description": "QR Code Generator",
+        "keywords": "qrcode generator, qrcode, arikaim, arikaim web tools, web tools"
+    },
+    "title": "QR Code Generator",
+    "buttons": {
+        "signup": "Sign Up"
+    },
+    "labels": {
+        "services": "Web Tools"
+    }
+}

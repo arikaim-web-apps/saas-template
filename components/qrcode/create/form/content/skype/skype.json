@@ -1,0 +1,16 @@
+{
+    "title": "Skype",
+    "icon": "icons~skype.solid",
+    "fields": {
+        "username": {
+            "label": "Username",
+            "placeholder": "Enter Username."
+        },
+        "chat": {
+            "label": "Chat"            
+        },
+        "call": {
+            "label": "Call"            
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{% component 'current>layout' %}
+    {% set active = 'pricing' %} 
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}   
+    <div class="flex mt-32 w-full justify-center">
+        <div class="flex-shrink-0 self-center w-74">
+            <div class="p-4 border border-solid border-stone-200 rounded-lg shadow">
+                <h3 class="font-bold p-4">
+                    {{ title }}
+                </h3>
+            </div>      
+        </div>        
+    </div>
+{% endcomponent %}

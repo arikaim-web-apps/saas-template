@@ -1,0 +1,8 @@
+{
+    "title": "Analytics",
+    "icon": "icons~chart",
+    "labels": {
+        "details": "Details",       
+        "scans": "Scans"
+    }
+}

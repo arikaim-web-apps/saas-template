@@ -1,0 +1,9 @@
+{
+    "title": "Blog",    
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Arikaim Web Tools Blog",
+        "description": "Arikaim Web Tools Blog",
+        "keywords": "web tools, web services, blog"
+    }    
+}

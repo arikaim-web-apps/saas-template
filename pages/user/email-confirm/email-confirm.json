@@ -1,0 +1,7 @@
+{
+    "head": {
+        "title": "Email Confirmation",
+        "favicon": "images/favicon.png"        
+    },
+    "message": "Your email has been confirmed!"
+}

@@ -1,0 +1,7 @@
+{
+    "title": "Qr Code",
+    "icon": "material-icons~qr-code.rounded",
+    "labels": {
+        "total": "Qr Codes"
+    }
+}

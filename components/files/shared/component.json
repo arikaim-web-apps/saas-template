@@ -1,0 +1,12 @@
+{
+    "include": {
+        "js": [            
+            "semantic~upload",                          
+            "tailwind~pdf"            
+        ] 
+    },
+    "access": {
+        "auth": "session",
+        "redirect": "/user"
+    }
+}

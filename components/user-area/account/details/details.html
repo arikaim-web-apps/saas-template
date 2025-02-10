@@ -1,0 +1,6 @@
+{% component 'current>user-area.panel' %}
+    {% set id = 'user_change_details' %}
+    <div class="p-4 mt-4">
+        {{ component('current>user-area.account.details.form',{ styles: styles }) }}
+    </div>    
+{% endcomponent %}

@@ -1,0 +1,15 @@
+{
+    "user-area": {
+        "sidebar": {   
+            "files": {
+                "component": "current>files",
+                "title": "Files",
+                "tooltip": "Files Manager",
+                "icon": "material-icons~file.text"  
+            }                                    
+        },
+        "dashboard": [    
+            "current>files.dashboard"        
+        ]
+    }
+}

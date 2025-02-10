@@ -1,0 +1,45 @@
+<nav 
+    class="flex flex-row items-center
+    {{ styles.size }} 
+    {{ styles.space }} 
+    {{ styles.color }}
+    {{ class }}">      
+    <div 
+        class="flex flex-row items-center 
+        {{ styles.content.size }}
+        {{ styles.content.align }}
+        {{ styles.content.space }}
+        {{ styles.content.color }}
+        {{ styles.content.border }}
+        {{ styles.content.class }}">
+        <btn class="px-1 cursor-pointer sidebar-button py-2 md:hidden lg:hidden" type="button">                    
+            {{ component(styles.sidebar.icon,styles.icon,'svg') }}               
+        </btn>   
+        <div class="px-2 xs:px-1 flex items-center flex-row xs:flex-grow"> 
+            <div class="bg-slate-50 rounded-full">              
+                <img width="32px" height="32px" alt="{{ title }}" src="{{ template_url }}images/arikaim-logo.png">               
+            </div>                                                 
+            <div class="pl-2">                
+                <div 
+                    class="first-letter:text-red-700 inline-block align-baseline monoton-font text-xl font-medium hover:text-sky-500 transition duration-700 ease-in-out">
+                    <a href="{{ url('') }}" class="align-baseline">
+                        {{ title }}
+                    </a>
+                </div>                                 
+                <div 
+                    class="tracking-wide text-slate-700 text-xs font-light assistant-font -mt-2">
+                    {{ subtitle }}
+                </div>
+            </div> 
+        </div>     
+        <div class="flex flex-grow justify-end">
+            <div class="flex flex-row items-center lg:flex xs:hidden md:flex">
+                {{  component('current>navbar.menu',{ 
+                        active: active, 
+                        styles: styles 
+                    }) 
+                }}                  
+            </div> 
+        </div>               
+    </div>       
+</nav>

@@ -1,0 +1,8 @@
+{
+    "title": "Account",
+    "icon": "icons~user",
+    "menu": {
+        "title": "Settings",
+        "icon": "material-icons~settings"
+    }   
+}

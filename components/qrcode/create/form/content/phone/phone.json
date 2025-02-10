@@ -1,0 +1,14 @@
+{
+    "title": "Phone",
+    "icon": "icons~phone",
+    "fields": {
+        "country": {
+            "label": "Country Code",
+            "placeholder": "Enter email address."
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "Enter phone number."
+        }       
+    }
+}

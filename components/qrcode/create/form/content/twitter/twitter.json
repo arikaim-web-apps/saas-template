@@ -1,0 +1,20 @@
+{
+    "title": "Twitter",
+    "icon": "icons~twitter",
+    "fields": {
+        "username": {
+            "label": "Username",
+            "placeholder": "Enter Username."
+        },
+        "link": {
+            "label": "Link to your profile"            
+        },
+        "post": {
+            "label": "Post a tweet"            
+        },
+        "text": {          
+            "label": "Text",
+            "placeholder": "Enter tweet text."            
+        }
+    }
+}

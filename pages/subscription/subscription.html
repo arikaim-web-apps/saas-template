@@ -1,0 +1,5 @@
+{% component 'current>layout' type 'html' %}      
+    {% set active = 'pricing' %} 
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}   
+    {{ component('current>subscriptions',{}) }}                                
+{% endcomponent %}

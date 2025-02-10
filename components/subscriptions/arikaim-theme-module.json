@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "menu": {
+            "subscriptions": {
+                "title": "Pricing",
+                "key": "pricing",
+                "url": "/subscription"                
+            } 
+        }                       
+    },
+    "user-area": {
+        "account": {
+            "menu": {
+                "subscriptions": {
+                    "component": "current>subscriptions.account.plan",
+                    "title": "Plan",
+                    "icon": "material-icons~subscription"
+                }
+            }
+        }
+    }
+}

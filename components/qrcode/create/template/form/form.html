@@ -1,0 +1,49 @@
+<form class="ui form" id="qrcode_create_form">
+    <input type="hidden" id="qrcode_uuid" name="qrcode_uuid" value="{{ qrcode_uuid|default(template.uuid) }}">            
+    <div class="{{ theme.form.fields }}">
+        <div class="{{ theme.form.field }} field">
+            <label class="{{ theme.form.label }}">
+                {{ fields.template.label }}
+            </label>          
+            {{  component('current>qrcode.template.select',{
+                    id: 'template_select',
+                    rule: 'empty'
+                }) 
+            }}
+        </div>
+        <div class="{{ theme.form.field }} field">
+            <label class="{{ theme.form.label }}">
+                {{ fields.title.label }}
+            </label>
+            <input 
+                name="title" 
+                id="title" 
+                class="{{ theme.form.input.class }} {{ theme.form.input.hover }} {{ theme.form.input.focus }}"
+                placeholder="{{ fields.title.placeholder }}">
+        </div>
+    </div>  
+    <div class="my-2" id="content_editor">
+    </div>
+    <div class="{{ theme.form.fields }}">
+        <div class="{{ theme.form.field }} field">
+            <label class="{{ theme.form.label }}">
+                {{ fields.qty.label }}
+            </label>
+            <input name="qty" type="range" min="1" max="26" value="1" class="range range-xs range-primary" step="5" />
+            <div class="w-full flex justify-between text-xs">
+                <span class="font-bold">1</span>
+                <span class="font-bold pl-2">5</span>
+                <span class="font-bold">10</span>
+                <span class="font-bold">15</span>
+                <span class="font-bold">20</span>
+                <span class="font-bold">25</span>
+            </div>
+        </div>   
+    </div> 
+    <div class="my-2">
+        {{  component('current>form.footer',{            
+                button_title: buttons.create,                         
+            }) 
+        }}   
+    </div>                
+</form>

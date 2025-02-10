@@ -1,0 +1,12 @@
+{
+    "subtitle": "text-center text-gray-400 pt-1",
+    "circle": "flex self-center shadow absolute inset-x-0 mx-auto -top-10 rounded-full h-20 w-20 text-center bg-white border border-stone-200 border-solid",
+    "title": "font-bold text-center text-lg p-2 pt-12 border-b border-solid border-slate-200",
+    "class": "h-full w-full place-self-stretch justify-self-stretch relative rounded bg-stone-100 shadow-md border border-stone-200 border-solid",
+    "item": "flex flex-row items-center",
+    "icon": {
+        "color": "text-lime-500", 
+        "size": "h-6 w-6", 
+        "width": 1
+    }
+}

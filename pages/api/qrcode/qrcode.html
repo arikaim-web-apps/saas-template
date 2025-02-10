@@ -1,0 +1,8 @@
+{% component 'current>layout' type 'html' %}   
+    {% set active = 'qrcode-generator' %}                
+    {{ component('current>page.title',{ title: title, subtitle: subtitle }) }}     
+    <div
+        class="mx-auto flex flex-row xs:flex-col sm:flex-col lg:flex-row items-start">  
+        {{ component('current>page.api.qrcode',{ class: 'mx-auto w-full' }) }}
+    </div>   
+{% endcomponent %}

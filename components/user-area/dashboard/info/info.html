@@ -1,0 +1,22 @@
+{% component 'current>user-area.dashboard.item' %}
+    <div class="pt-4">
+        <div class="py-2">
+            <div class="text-sm font-semibold">            
+                {{ labels.login }}                                         
+            </div>
+            <div class="flex items-center">
+                {{ component('icons~calendar',styles.icon,'svg') }}
+                <span class="text-sm text-gray-400 pl-2">{{ user.date_login|dateFormat }}</span>  
+            </div>      
+        </div>
+        <div class="py-2">
+            <div class="text-sm font-semibold">           
+                {{ labels.signup }}           
+            </div>     
+            <div class="flex items-center">
+                {{ component('icons~calendar',styles.icon,'svg') }}
+                <span class="text-sm text-gray-400 pl-2">{{ user.date_created|dateFormat }}</span> 
+            </div>                  
+        </div>  
+    </div>
+{% endcomponent %}

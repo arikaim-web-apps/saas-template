@@ -1,0 +1,12 @@
+{% if link.type == 'social' %}
+    <div class="w-1/2">
+        {{ component('current>links.social.form',{ link: link, uuid: uuid, edit_mode: true }) }}
+    </div>
+{% else %}
+    {{  component('current>links.form',{ 
+            link: link, 
+            uuid: uuid,
+            hide_link_type: hide_link_type
+        }) 
+    }}
+{% endif %}

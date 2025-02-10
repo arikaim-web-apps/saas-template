@@ -1,0 +1,14 @@
+{% if uuid is not empty %}
+    {% set qrcode = createModel('Qrcode','qrcode').findById(uuid) %}
+{% endif %}
+{% set user_id = access().getId() %}
+{% set report = createModel('Reports','reports').findReport('qrcode-scans-' ~ qrcode.id,user_id) %}
+{% set report_field = report.getField('views') %}
+<div id="chart_content" class="mt-2">
+    {{  component('reports::chart',{ 
+            report_id: report.id, 
+            field_id: report_field.id,
+            hode_period: true 
+        }) 
+    }}
+</div>

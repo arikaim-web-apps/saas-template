@@ -1,0 +1,15 @@
+<div 
+    class="z-10 fixed flex items-center self-center place-content-center pb-4 mx-auto  {{ class }}">     
+    <div class="flex flex-row items-center {{ styles.color }} {{ styles.size }}">
+        {% if icon is not empty %}           
+        <div class="pl-2">
+            {{ component(icon,styles.icon,'svg') }}
+        </div>        
+        {% endif %}
+        <div class="{{ styles.title }} flex-grow">        
+            {{ title }}
+        </div>
+        <div class="h-6 w-6">
+        </div>
+    </div>      
+</div>

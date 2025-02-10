@@ -1,0 +1,18 @@
+{% set selected = selected|default(5) %}
+<div class="ui selection dropdown scale-dropdown qrcode-option-dropdown z-10 mini
+    {{ class|default('basic button') }}" 
+    {{ title|attr('title') }} 
+    {{ id|attr('id') }}>   
+    <input type="hidden" name="{{ name|default('scale') }}" value="{{ selected }}" id="scale">  
+    <div class="text">
+        {{ selected }}
+    </div>  
+    <i class="icon dropdown"></i> 
+    <div class="menu z-10">   
+        {% for value in 1..10 %}         
+        <div class="item" data-value="{{ value }}">                    
+            {{ value }}
+        </div>   
+        {% endfor %}                   
+    </div>
+</div>

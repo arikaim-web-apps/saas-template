@@ -1,0 +1,21 @@
+{{ component('current>user-area.title',{ title: title, icon: icon }) }}
+<div 
+    class="{{ theme.user_area.content }} grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 gap-4 justify-items-stretch">                            
+    <div class="order-1 lg:order-1 md:order-2 sm:order-2 xs:order-2">                 
+        {{ component('current>links.menu') }} 
+        <div class="mt-2 w-full" id="link_details">       
+        </div>                
+    </div>
+    <div 
+        class="col-span-2 lg:col-span-2 md:col-span-1 order-2 lg:order-2 md:order-1 sm:order-1 xs:order-1" 
+        id="links_items">
+        {{ component('current>links.view') }}       
+    </div>                                      
+</div>
+
+{{  component('tailwind~modal.confirm',{ 
+        component_id: 'confirm_delete_link',
+        title_class: 'text-gray-900 bg-slate-200 p-2',
+        content: message
+    }) 
+}}

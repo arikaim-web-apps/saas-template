@@ -1,0 +1,10 @@
+{
+    "title": "Upload File",       
+    "icon": "material-icons~file.upload",
+    "messages": {
+        "full": "Storage is full. Upgrade your account"
+    },
+    "labels": {
+        "alert": "Alert"
+    }
+}

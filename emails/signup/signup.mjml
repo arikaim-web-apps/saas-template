@@ -1,0 +1,34 @@
+<mjml>
+    <mj-include path="../head.mjml" />
+    <mj-body>
+        <mj-include path="../navbar.mjml" />
+        <mj-section 
+            background-color="#fafaf9">
+            <mj-column>
+                <mj-spacer height="50px" />
+                <mj-text
+                    css-class="title"
+                    align="left">
+                    {{ title }}
+                </mj-text>
+                <mj-spacer height="20px" />
+                <mj-text
+                    font-size="10px"
+                    align="left">
+                    <b>User email </b> 
+                    {{ email }} 
+                    <br>
+                </mj-text>
+                <mj-text
+                    font-size="10px"
+                    align="left">
+                    <b>Username </b> 
+                    {{ user_name }} 
+                    <br>
+                </mj-text> 
+                <mj-spacer height="20px" />               
+            </mj-column>
+        </mj-section>
+        <mj-include path="../footer.mjml" />
+    </mj-body>
+</mjml>

@@ -1,0 +1,31 @@
+<div class="{{ theme.qrcode.content.panel }}">
+    {{ component('current>qrcode.create.form.content.title',{ title: title, icon: icon } ) }}
+    <input type="hidden" name="content_type" value="wifi">
+    <div class="field {{ theme.form.field }}">
+        <label class="{{ theme.form.label }}">
+            {{ fields.name.label }}
+        </label>     
+        <input 
+            rule="empty"
+            class="{{ theme.form.input.class }} {{ theme.form.input.hover }} {{ theme.form.input.focus }}"
+            type="text" 
+            name="name" 
+            id="name" 
+            placeholder="{{ fields.name.placeholder }}">  
+    </div>
+    <div class="field {{ theme.form.field }}">
+        <label class="{{ theme.form.label }}">{{ fields.encryption.label }}</label>
+        {{ component('current>qrcode.create.form.content.wifi.encryption',{}) }}
+    </div>   
+    <div class="field {{ theme.form.field }}">
+        <label class="{{ theme.form.label }}">
+            {{ fields.password.label }}
+        </label>     
+        <input 
+            class="{{ theme.form.input.class }} {{ theme.form.input.hover }} {{ theme.form.input.focus }}"
+            type="text" 
+            name="password" 
+            id="password" 
+            placeholder="{{ fields.password.placeholder }}">  
+    </div>
+</div>

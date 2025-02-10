@@ -1,0 +1,26 @@
+{% set qrcode = createModel('Qrcode','qrcode').findById(uuid) %}
+{% component 'current>user-area.panel.inner' %}
+    <div class="font-bold">
+        {{ labels.scans }}
+    </div>  
+    <div class="text-green-700 text-3xl font-bold">
+        {{ qrcode.scans }}
+    </div>
+    {% if hasExtension(['reports','ip']) == true %}
+        <div class="mt-2">      
+            {{  component('tailwind~toggle.daisyui',{ 
+                    id: 'analytics_toggle',
+                    left_label: labels.details,             
+                    checked: qrcode.analytics,
+                    label_class: ' text-gray-500 px-2 text-sm',
+                    toggle_class: 'toggle-primary toggle-sm' 
+                }) 
+            }}
+        </div>
+        <div class="mt-2" id="analytics_content" uuid="{{ qrcode.uuid }}">
+            {% if qrcode.analytics == 1 %}
+                {{ component('current>qrcode.analytics.content',{ uuid: qrcode.uuid }) }}
+            {% endif %}
+        </div>  
+    {% endif %}  
+{% endcomponent %}

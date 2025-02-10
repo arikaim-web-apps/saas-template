@@ -1,0 +1,97 @@
+{% set file = createModel('Files','storage').findById(uuid) %}
+{% set download_link_type = getOption('storage.download.link','uuid') %}
+{% component 'current>user-area.panel' %} 
+    {% set class = 'w-72 xs:w-full sm:w-full lg:w-72' %}
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.name }}</span>
+        <div class="">
+            {{ file.getBasename() }}        
+        </div>
+    </div>
+    {% if file.note is not empty %}
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.note }}</span>
+        <div class="">
+            {{ file.note }}        
+        </div>
+    </div>
+    {% endif %}
+    <div class="mt-8">
+        <span class="font-bold">{{ labels.type }}</span>
+        <div class=" flex items-center">
+            {{ component('current>files.file.svg',{ type: file.getFileType(), size: 'h-6 -w-6' },'svg') }}      
+            <span class="px-2">{{ file.mime_type }}</span>
+        </div>
+    </div>
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.date }}</span>
+        <div class=" flex items-center">
+            {{ component('icons~calendar',theme.icons.file,'svg') }}
+            <span class="px-2">{{ file.date_created|dateFormat }}</span>
+        </div>
+    </div>
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.owner }}</span>
+        <div class=" flex items-center">
+            {{ component('icons~user',theme.icons.file,'svg') }}
+            <span class="px-2">{{ file.user.user_name }}</span>
+        </div>
+    </div>
+    {% if file.isDirectory() == false %}
+        <div class="mt-4">
+            <span class="font-bold">{{ labels.size }}</span>
+            <div class=" flex items-center">
+                {{ component('icons~document',theme.icons.file,'svg') }}
+                <span class="px-2">{{ file.size|fileSize }}</span>
+            </div>
+        </div>
+    {% else %}
+        <div class="mt-4">
+            <span class="font-bold">{{ labels.downloads }}</span>
+            <div class=" flex items-center">
+                {{ component('icons~download',theme.icons.file,'svg') }}
+                <span class="px-2">{{ file.downloads }}</span>
+            </div>
+        </div>      
+    {% endif %}
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.filesystem }}</span>
+        <div class=" flex items-center">
+            {{ component('icons~server',theme.icons.file,'svg') }}
+            <span class="px-2">{{ file.filesystem }}</span>
+        </div>
+    </div>
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.access }}</span>
+        <div class="flex items-center">
+            {{ component('icons~lock',theme.icons.file,'svg') }}              
+            {% if file.hasPermissions() == true %}
+                <div class="px-2 font-bold text-green-500 p-1">
+                    {{ labels.shared }}
+                </div>
+            {% else %}
+                <div class="px-2 font-bold text-red-500 p-1">
+                    {{ labels.private }}
+                </div>
+            {% endif %}  
+        </div>
+    </div>
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.link }}</span>
+        <div class="text-xs">                       
+            <p class="px-2">{{ file.getDownloadUrl(null,false,download_link_type) }}</p>            
+        </div> 
+    </div>  
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.details_page }}</span>
+        <div class="text-xs">                       
+            <p class="px-2">{{ url('/file/details/' ~ file.uuid,true)  }}</p>            
+        </div> 
+    </div>  
+    <div class="mt-4">
+        <span class="font-bold">{{ labels.download_page }}</span>
+        <div class="text-xs">                       
+            <p class="px-2">{{ url('/file/download/' ~ file.uuid,true)  }}</p>            
+        </div> 
+    </div>             
+{% endcomponent %}

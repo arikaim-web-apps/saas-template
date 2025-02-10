@@ -1,0 +1,11 @@
+{
+    "title": "Shared files",
+    "labels": {
+        "paginator": "Rows per page",
+        "placeholder": "Search file"
+    },
+    "preview": {
+        "title": "Preview",
+        "close": "Close"
+    }    
+}

@@ -1,0 +1,10 @@
+{
+    "labels": {
+        "select": "Select"
+    },
+    "items": {
+        "nopass": "No Encryption",
+        "WEP": "WEP",
+        "WPA": "WPA/WPA2"     
+    }   
+}

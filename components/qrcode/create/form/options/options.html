@@ -1,0 +1,39 @@
+<div id="options_fields"> 
+    <div class="flex flex-col items-start">
+        <div class="grid gap-2 mt-2 md:grid-cols-4 xs:grid-cols-2 rid-cols-4">   
+            <div class="field">
+                <label class="text-sm {{ theme.form.label }}">{{ fields.precision.label }}</label>
+                {{ component('current>qrcode.create.form.options.precision',{ class: 'basic mini fluid' }) }}
+            </div>
+            <div class="field">
+                <label class="text-sm {{ theme.form.label }}">{{ fields.length.label }}</label>
+                {{ component('current>qrcode.create.form.options.version',{ class: 'basic mini button fluid' }) }}
+            </div>  
+            <div class="field">
+                <label class="text-sm {{ theme.form.label }}">{{ fields.image.label }}</label>
+                {{ component('current>qrcode.create.form.options.image-type',{ class: 'basic mini button fluid' }) }}
+            </div>
+            <div class="field">
+                <label class="text-sm {{ theme.form.label }}">{{ fields.size.label }}</label>
+                {{ component('current>qrcode.create.form.options.scale',{ class: 'basic mini button fluid', selected: qrcode.scale|default(5) }) }}                   
+            </div>  
+            <div class="field">
+                <label class="text-sm {{ theme.form.label }}">{{ fields.transparent.label }}</label>
+                <div class="px-2">
+                    {{  component('tailwind~toggle.daisyui',{ 
+                            id: 'transparent_toggle', 
+                            toggle_class: 'toggle-xs', 
+                            field_name: 'transparent', 
+                            checked: true 
+                        }) 
+                    }}                   
+                </div>               
+            </div>                     
+        </div>      
+        <div class="py-2">           
+            <a class="hover:text-sky-400 cursor-pointer {{ theme.badge.dark }} default-options-button">                            
+                {{ buttons.default }}
+            </a>  
+        </div>
+    </div>             
+</div> 

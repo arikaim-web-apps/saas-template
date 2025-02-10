@@ -1,0 +1,83 @@
+{
+    "title": "Type",
+    "items": {
+        "text": {
+            "label": "Text",
+            "tooltip": "Text content",
+            "icon": "material-icons~chat",
+            "component": "current>qrcode.create.form.content.text"
+        },
+        "link": {
+            "label": "Link",
+            "tooltip": "Open a URL",
+            "icon": "material-icons~link",
+            "component": "current>qrcode.create.form.content.link"
+        },
+        "email": {
+            "label": "E-Mail",
+            "tooltip": "Open email link.",
+            "icon": "material-icons~email",
+            "component": "current>qrcode.create.form.content.email"
+        },
+        "sms": {
+            "label": "SMS",
+            "tooltip": "Send sms.",
+            "icon": "material-icons~sms",
+            "component": "current>qrcode.create.form.content.sms"
+        },
+        "phone": {
+            "label": "Phone",
+            "tooltip": "Phone call.",
+            "icon": "material-icons~contact.phone",
+            "component": "current>qrcode.create.form.content.phone"
+        },
+        "skype": {
+            "label": "Skype",
+            "tooltip": "Skype link.",
+            "icon": "icons~skype.solid",
+            "component": "current>qrcode.create.form.content.skype"
+        },
+        "twitter": {
+            "label": "Twitter",
+            "tooltip": "Twitter link.",
+            "icon": "icons~twitter",
+            "component": "current>qrcode.create.form.content.twitter"
+        },
+        "whatsapp": {
+            "label": "Whatsapp",
+            "tooltip": "Whatsapp link.",
+            "icon": "icons~whatsapp",
+            "component": "current>qrcode.create.form.content.whatsapp"
+        },
+        "facebook": {
+            "label": "Facebook",
+            "tooltip": "Facebook link.",
+            "icon": "icons~facebook",
+            "component": "current>qrcode.create.form.content.facebook"
+        },
+        "vcard": {
+            "label": "Address",
+            "tooltip": "Address vCard.",
+            "icon": "icons~address",
+            "component": "current>qrcode.create.form.content.address"
+        },
+        "wifi": {
+            "label": "WiFi",
+            "tooltip": "Wi-Fi network",
+            "icon": "icons~wifi",
+            "component": "current>qrcode.create.form.content.wifi"
+        },
+        "event": {
+            "label": "Event",
+            "tooltip": "Calendar event.",
+            "icon": "icons~calendar",
+            "component": "current>qrcode.create.form.content.event"
+        },
+        "bitcoin": {
+            "label": "BitCoin",
+            "tooltip": "Crypto.",
+            "icon": "icons~bitcoin",
+            "component": "current>qrcode.create.form.content.crypto"
+        }
+    }
+}

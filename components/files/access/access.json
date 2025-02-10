@@ -1,0 +1,13 @@
+{
+    "title": "File Access",
+    "icon": "material-icons~key",
+    "fields": {
+        "public": "Public", 
+        "private": "Private",
+        "password": "Password",      
+        "note": {
+            "label": "Note",
+            "placeholder": "Enter file note"
+        }
+    }
+}

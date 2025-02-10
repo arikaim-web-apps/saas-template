@@ -1,0 +1,12 @@
+{
+    "labels": {
+        "delete": "Delete",
+        "download": "Download",
+        "details": "Details",
+        "share": "Share",
+        "note": "File note",
+        "access": "File Access",
+        "edit": "Edit Share",
+        "qrcode": "Qr Code"      
+    }
+}

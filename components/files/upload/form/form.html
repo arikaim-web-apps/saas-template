@@ -1,0 +1,16 @@
+{% set path = path|default('')%}
+{% if hide_path != true %}
+    {{ component('current>files.directory.path',{ path: path, filesystem: filesystem },'static') }}           
+{% endif %}
+<form class="ui form" id="file_form" enctype="multipart/form-data">
+    <input type="hidden" id="path" value="{{ path }}">
+    <input type="hidden" id="filesystem" name="filesystem" value="{{ filesystem }}">
+    <div class="field">               
+        <label>{{ labels.file }}</label>           
+        <input name="file[]" id="file" type="file">                       
+    </div>        
+    {{  component('current>form.footer',{ 
+            button_title: buttons.upload
+        }) 
+    }}     
+</form>

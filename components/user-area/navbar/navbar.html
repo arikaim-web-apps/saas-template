@@ -1,0 +1,21 @@
+<nav 
+
+    class="fixed z-20 left-0 flex flex-row items-center
+    {{ styles.size }} 
+    {{ styles.space }} 
+    {{ styles.color }}
+    {{ class }}">      
+    <div 
+        class="flex flex-row items-center 
+        {{ styles.content.size }}
+        {{ styles.content.align }}
+        {{ styles.content.space }}
+        {{ styles.content.color }}
+        {{ styles.content.class }}">
+        <div class="flex flex-grow justify-end">
+            {{ component('current>user-area.navbar.avatar',{ styles: styles }) }}
+            <div class="flex flex-row items-center lg:flex md:hidden sm:hidden xs:hidden">            
+            </div> 
+        </div>               
+    </div>       
+</nav>

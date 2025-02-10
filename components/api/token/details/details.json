@@ -1,0 +1,8 @@
+{     
+    "labels": {      
+        "create": "Create Api Key",
+        "token": "Key",     
+        "delete": "Delete Api Key"      
+    },
+    "message": "Confirm remove api key"
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Edit Title",
+    "icon": "icons~edit",
+    "labels": {
+        "title": "Title",
+        "close": "Close",
+        "save": "Save",
+        "view": "View"        
+    }
+}

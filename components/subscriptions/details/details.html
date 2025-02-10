@@ -1,0 +1,65 @@
+<div class="mt-2 p-4" id="subscripiption_details">
+    <div class="w-full p-4 {{ styles.border }} {{ styles.color }}">
+        <div class="{{ styles.title }}">                    
+            {{ subscription.plan.title }}
+        </div>
+        <div class="flex flex-row items-center mt-2">
+            <div class="w-1/2">
+                <h4 class="{{ styles.features.title }}">{{ labels.billing }}</h4>  
+                <div class="inline-block tooltip" data-tip="{{ labels.date }}">
+                    <div class="p-1 flex flex-row items-center">
+                        {{ component('icons~calendar',{ color: 'text-indigo-500', size: 'h-6 w-6', width: 2 },'svg') }}             
+                        <div class="flex-grow text-gray-600 p-2">
+                            {{ subscription.date_created|dateFormat }}
+                        </div>    
+                    </div>  
+                </div>            
+                <div class="flex flex-row items-center">
+                    <div class="inline-block bg-stone-100 p-2 border border-stone-200 border-solid flex flex-row items-center rounded-lg">
+                        <div class="px-2">
+                            <span class="text-small">{{ subscription.plan.currency.sign }}</span>
+                            <span class="font-bold">
+                                {{ subscription.plan.getPrice(subscription.billing_type)|numberFormat(2) }}
+                            </span>
+                        </div>                               
+                        <div class="text-green-700 pl-2 uppercase text-sm font-bold">
+                            {{ subscription.billing_type }}
+                        </div>                           
+                    </div>
+                    <div class="flex-grow"></div>
+                </div> 
+            </div>
+            <div class="w-1/2">         
+                <h4 class="{{ styles.features.title }}">{{ labels.features }}</h4>  
+                {% if subscription.plan.features.count > 0 %}       
+                <div class="pl-4 py-4 text-left justify-self-stretch flex-grow">
+                    <div class="flex flex-col">
+                        {% for feature in subscription.plan.features %}
+                        <div class="flex flex-row">                 
+                            {{ component(styles.features.icon.name,styles.features.icon,'svg') }}  
+                            <div class="pl-2 text-gray-500 font-semibold">
+                                {{ feature.title }}
+                                {% if feature.item_value > 0 %}
+                                <span class="{{ theme.badge.default }}">
+                                    {{ feature.item_value }}
+                                </span>
+                                {% endif %}
+                            </div>                                                                                                          
+                        </div>
+                        {% endfor %}           
+                    </div>
+                </div>       
+                {% endif %}
+            </div>
+        </div>
+        <div class="text-right">
+            {% if service('access').isLogged() == true %}
+            <button 
+                class="mt-4 text-right cancel-subscription
+                {{ styles.button.class }} {{ styles.button.color }} {{ styles.button.border }}">
+                {{ labels.cancel }}
+            </button>   
+            {% endif %}
+        </div>        
+    </div>
+</div>

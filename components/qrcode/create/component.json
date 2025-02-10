@@ -1,0 +1,12 @@
+{     
+    "include": {
+        "js": [                  
+            "qrcode::api",
+            "current>images.upload.form"
+        ] 
+    },
+    "access": {
+        "auth": "none"       
+    },
+    "include-styles": true
+}

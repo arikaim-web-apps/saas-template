@@ -1,0 +1,10 @@
+{
+    "include": {
+        "js": [                             
+            "storage::api"                      
+        ] 
+    },
+    "access": {
+        "auth": "none"        
+    }
+}

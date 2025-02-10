@@ -1,0 +1,17 @@
+{% set view_type = view_type|default(getViewType('files')) %}
+
+{% if view_type == 'table' %}
+    <div class="bg-white p-1 pl-3 flex flex-row items-center tooltip" id="empty_row" data-tip="{{ title }}"> 
+        {{ component('material-icons~folder',theme.icons.disabled,'svg') }}    
+        ..                   
+    </div>
+{% else %}
+<div 
+    data-tip="{{ title }}"
+    class="pl-3 tooltip h-full flex flex-col items-start bg-white rounded-lg border border-solid border-gray-300 shadow" 
+    id="empty_row">  
+    <div class="py-8 self-center place-self-center">            
+        {{ component('icons~folder.open',{ size: 'h-32 w-32', width: 1, color: theme.icons.color },'svg') }}                   
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,9 @@
+{
+    "labels": {
+        "annual": "Annual",
+        "monthly": "Monthly"
+    },
+    "tooltips": {
+        "billing": "Billing Type"
+    }
+}

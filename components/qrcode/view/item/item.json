@@ -1,0 +1,22 @@
+{      
+    "title": "Qr Code",
+    "icon": "material-icons~qr-code.rounded",
+    "labels": {
+        "download": "Download",
+        "type": "Type",
+        "title": "Title",
+        "edit": "Edit",
+        "details": "Details",
+        "analytics": "Analytics",
+        "create": "Create From Template",
+        "dynamic": "Dynamic",
+        "template": "Create Template",
+        "static": "Static",
+        "delete": "Delete",
+        "scans": "Scans",
+        "content": "Content Type",
+        "empty": "No saved Qr Codes",
+        "image": "Image Type"      
+    },
+    "message": "Not available for static content type." 
+}

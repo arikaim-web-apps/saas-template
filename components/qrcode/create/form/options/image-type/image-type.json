@@ -1,0 +1,11 @@
+{
+    "labels": {
+        "select": "Select Image Type"
+    },
+    "items": {
+        "jpg": "Jpg",
+        "png": "Png",
+        "gif": "Gif",
+        "svg": "Svg"
+    }   
+}

@@ -1,0 +1,42 @@
+{% set modules = readThemeModules(template_path,template_modules) %}
+<sidebar 
+    id="{{ component_id }}"
+    class="fixed top-0 left-0 z-40 h-screen 
+    {{ styles.color }} 
+    {{ styles.size }} 
+    {{ styles.border }}">
+    <div       
+        class="flex flex-col items-center {{ styles.space }}">
+        <div class="mt-2 px-2 xs:px-1 flex items-center flex-row xs:flex-grow">            
+            <div class="bg-white rounded-full">              
+                <img width="32px" height="32px" alt="{{ title }}" src="{{ template_url }}images/arikaim-logo.png">               
+            </div>                                                 
+            <div class="pl-2 flex flex-col items-start">                
+                <div 
+                    class="first-letter:text-red-600 inline-block align-baseline monoton-font text-xl font-medium hover:text-sky-500 transition duration-700 ease-in-out">
+                    <a href="{{ url('') }}" class="align-baseline">
+                        {{ title }}
+                    </a>
+                </div>                                 
+                <div 
+                    class="-mt-2 tracking-wide text-gray-900 text-xs font-light assistant-font">
+                    {{ subtitle }}
+                </div>
+            </div> 
+        </div>    
+        {{ component('current>user-area.sidebar.item',{ styles: styles, item: dashboard, active: true }) }} 
+        {% for module in modules %}
+            {% set items = module['user-area'].sidebar %}
+            {% if items is not empty %}
+                {% for item in items %}  
+                    {{ component('current>user-area.sidebar.item',{ styles: styles, item: item }) }} 
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div       
+        class="flex flex-col items-center w-full {{ styles.logout.class }} {{ styles.space }}">
+        {{ component('current>user-area.sidebar.item',{ styles: styles, item: account }) }}  
+        {{ component('current>user-area.sidebar.item',{ styles: styles, item: logout }) }}      
+    </div>
+</sidebar>

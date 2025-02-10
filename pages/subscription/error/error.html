@@ -1,0 +1,22 @@
+{% component 'current>layout' %}
+    {% set active = 'pricing' %} 
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}   
+    <div class="flex mt-32 w-full justify-center">
+        <div class="flex-shrink-0 self-center w-72">
+            <div class="flex flex-col items-start">                            
+                <h3 class="mt-2 pt-2">
+                    <i class="icon orange warning large sign"></i>
+                    <span class="pl-2">{{ title }}</span>
+                </h3>                 
+                <div class="ui message">
+                    <h5>
+                        {{ error }}
+                    </h5>
+                    <p class="p-2">
+                        {{ error_details.message }}
+                    </p>              
+                </div>
+            </div>          
+        </div>        
+    </div>                          
+{% endcomponent %}

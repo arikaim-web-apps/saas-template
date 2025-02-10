@@ -1,0 +1,23 @@
+{% set user_id = service('access').getId() %}
+{% if user_id is empty %}
+    {% error 'Not logged' %}
+{% endif %}
+{% set images = service('image.library').getImages('qrcode-logo-images',user_id).getQuery() %}
+{% set items = paginate(images,'images') %}  
+{% set items = items.getItems() %}
+{% if items|length == 0 %}
+    {{ component('current>images.view.empty',{ field_id: field_id }) }}
+{% endif %}
+
+{% if mode == 'select' %}      
+    {{ component('current>images.view.upload',{ field_id: field_id, mode: mode }) }}
+    {{ component('current>images.view.empty',{ field_id: field_id, mode: mode  }) }}
+{% endif %}
+{% for item in items %} 
+    {{  component('current>images.view.item',{ 
+            image: item.image, 
+            mode: mode, 
+            field_id: field_id
+        }) 
+    }}
+{% endfor %}

@@ -1,0 +1,123 @@
+{% set user = service('access').getUser() %}
+{% set user = createModel('Users').findById(user.uuid) %}
+{% set user_details = createModel('UserDetails','users').findByColumn(user.id,'user_id') %}   
+
+<form class="form" id="user_details_form">   
+    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow">
+        <!-- 
+        <div class="field required flex flex-col w-1/2 md:w-1/2 xs:w-full">            
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.user_name.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                type="text" 
+                rule="minLength[2]"
+                name="user_name" 
+                id="user_name" 
+                {{ fields.user_name.placeholder|attr('placeholder') }} 
+                value="{{ user.user_name }}">         
+        </div>   
+        -->
+        <div class="field required flex flex-col w-1/2 md:w-1/2 xs:w-full">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.email.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                type="text" 
+                rule="email"
+                name="email" 
+                id="email" 
+                {{ fields.email.placeholder|attr('placeholder') }} 
+                value="{{ user.email }}">  
+        </div> 
+    </div>
+    <div class="my-8">
+        <hr class="border-t-2 border-solid border-stone-50">
+    </div> 
+    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow my-1">
+        <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.first_name.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                rule="htmlTags" 
+                name="first_name" 
+                id="first_name" 
+                optional="true" 
+                placeholder="{{ fields.first_name.placeholder }}" 
+                type="text" 
+                value="{{ user_details.first_name }}">
+        </div>
+        <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.last_name.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                rule="htmlTags" 
+                name="last_name" 
+                id="last_name" 
+                optional="true" 
+                placeholder="{{ fields.last_name.placeholder }}" 
+                type="text" 
+                value="{{ user_details.last_name }}">
+        </div>
+    </div>   
+    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow">
+        <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.phone.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                error-prompt="{{ fields.phone.error }}" 
+                rule="integer,minLength[2]" 
+                optional="true" 
+                name="phone" 
+                id="phone" 
+                placeholder="{{ fields.phone.placeholder }}" 
+                type="number" 
+                value="{{ user_details.phone }}">
+        </div>
+        <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.phone2.label }}
+            </label>
+            <input 
+                class="form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                error-prompt="{{ fields.phone.error }}" 
+                rule="integer,minLength[2]" 
+                optional="true" 
+                name="phone_2" 
+                id="phone_2" 
+                placeholder="{{ fields.phone2.placeholder }}" 
+                type="number" 
+                value="{{ user_details.phone_2 }}">
+        </div>
+    </div>
+    {{  component('current>form.footer',{          
+            button_title: labels.save               
+        })                      
+    }}          
+</form>

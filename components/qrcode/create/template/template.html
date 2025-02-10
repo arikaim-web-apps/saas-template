@@ -1,0 +1,16 @@
+{% set user_id = service('access').getId() %}
+<div class="flex flex-col flex-grow">
+    <div class="flex flex-row items-center font-bold p-2 px-3">
+        {{ component('icons~qrcode',styles.icon,'svg') }}
+        <div class="font-bold px-2 text-lg">
+            {{ title }}
+        </div>                
+    </div>
+    <div class="p-4">
+        {% if service('subscriptions').hasPlanFeature(user_id,'qrcode-template') == true %}
+            {{ component('current>qrcode.create.template.form',{}) }}
+        {% else %}
+            {{ component('current>subscriptions.feature',{ feature: 'qrcode-template' }) }}
+        {% endif %}
+    </div>
+</div>

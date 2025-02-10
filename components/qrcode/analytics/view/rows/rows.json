@@ -1,0 +1,9 @@
+{    
+    "buttons": {
+        "map": "View wmap location"  
+    },
+    "labels": {
+        "draft": "Draft",
+        "updated": "Updated"
+    }   
+}

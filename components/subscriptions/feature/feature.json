@@ -1,0 +1,8 @@
+{
+    "message": "For access",
+    "upgrade": "feature upgrade your account",
+    "buttons": {
+        "login": "Login",
+        "signup": "Create Account"
+    }
+}

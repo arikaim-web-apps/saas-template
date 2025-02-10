@@ -1,0 +1,28 @@
+ <mj-wrapper background-color="#f5f5f4">
+    <mj-section>
+        <mj-column>          
+            <mj-text
+                color="#a8a29e"
+                padding-left="20px"
+                font-size="10px"
+                align="left">
+                Copyright 2024. 
+                <b>arikaim.dev</b>
+            </mj-text>
+        </mj-column>
+        <mj-column>
+            <mj-text
+                color="#a8a29e"
+                padding-left="20px"
+                font-size="10px"
+                align="left">
+                <a 
+                    style="color:#a8a29e" 
+                    target="_blank"
+                    href="{{ url('/contact-us',true) }}">
+                    Contact Us
+                </a>
+            </mj-text>
+        </mj-column>       
+    </mj-section>
+</mj-wrapper>

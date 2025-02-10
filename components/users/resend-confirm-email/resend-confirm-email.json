@@ -1,0 +1,9 @@
+{
+    "title": "Email not confirmed",    
+    "buttons": {
+        "submit": "Send confirmation email",
+        "login": "Login"
+    },
+    "error": "Error send email confirm message.",
+    "message": "Your email address is not confirmed!"
+}

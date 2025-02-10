@@ -1,0 +1,35 @@
+{% set view_type = view_type|default(getViewType('files')) %}
+{% set items = paginate(files,'files') %}  
+{% set items = items.getItems() %}
+
+{% if view_type == 'table' %}
+    <div class="flex flex-col items-start">
+{% else %}
+    <div class="mr-4 mt-4 tailwind-grid grid-cols-5 items-start xl:grid-cols-4 2xl:grid-cols-6 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-2" id="files_items">
+{% endif %}
+
+{% if items|length == 0 %}
+    {{ component('current>files.view.items.empty',{}) }}
+{% endif %}
+
+{% for item in items %} 
+    {% set file = (path == '') ? item.file().first() : item %}   
+    {% if view_type == 'table' %}     
+        {{  component('current>files.file.row',{
+                file: file, 
+                path: file.path, 
+                shared: true, 
+                hide_multiselect: true 
+            },'static') 
+        }}                    
+    {% else %}
+        {{  component('current>files.file.card',{ 
+                file: file,
+                path: file.path,
+                shared: true,
+                hide_multiselect: true 
+            },'static') 
+        }}                
+    {% endif %}   
+{% endfor %}
+</div>

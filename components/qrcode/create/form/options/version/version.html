@@ -1,0 +1,22 @@
+{% set selected = selected|default(-1) %}
+{% set selected_text = (selected is empty or selected == -1) ? auto : selected %}
+<div class="ui selection dropdown qrcode-option-dropdown version-dropdown 
+    {{ class|default('selection') }}" 
+    {{ title|attr('title') }} 
+    {{ id|attr('id') }}>   
+    <input type="hidden" name="{{ name|default('version') }}" value="{{ selected }}" id="version">  
+    <div class="text">
+        {{ selected_text }}
+    </div>  
+    <i class="icon dropdown"></i> 
+    <div class="menu">  
+        <div class="item" data-value="-1">         
+            {{ auto }}
+        </div> 
+        {% for version in [1,5,10,15,20,25,30,35,40] %}         
+        <div class="item" data-value="{{ version }}">         
+            {{ version }}
+        </div>   
+        {% endfor %}                   
+    </div>
+</div>

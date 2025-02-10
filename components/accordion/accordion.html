@@ -1,0 +1,18 @@
+<section class="grid grid-cols-1 gap-y-3 {{ class }}">
+    {% for item in items %}
+        {% if item.content is not empty %}
+        <details class="group py-1 text-md {{ styles.item.class }}">
+            <summary class="{{ styles.item.title }} flex flex-row items-center justify-between marker:[font-size:0px]">
+                {{ item.title }}
+                {{ component('icons~chevron.down',styles.item.icon,'svg') }}                
+            </summary>
+            <div            
+                class="text-stone-500 flex shrink-0">
+                {{ item.content }}
+            </div>
+        </details>
+        {% endif %}
+    {% endfor %}
+</section>
+
+

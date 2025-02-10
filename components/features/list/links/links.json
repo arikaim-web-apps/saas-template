@@ -1,0 +1,12 @@
+{
+    "features": {
+        "short": {
+            "title": "Link status option",
+            "subtitle": "Disable or enable short link."
+        },
+        "password": {
+            "title": "Link password",
+            "subtitle": "Protect link with password."
+        }   
+    }
+}

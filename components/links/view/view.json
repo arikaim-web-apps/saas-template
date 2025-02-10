@@ -1,0 +1,26 @@
+{
+    "labels": {       
+        "create": "Create Link",
+        "type": "Link Type"
+    },
+    "type": {
+        "link": {
+            "title": "Link"
+        },
+        "text": {
+            "title": "Link & Text"
+        },
+        "video": {
+            "title": "Video"
+        },
+        "embed": {
+            "title": "Embed"
+        },
+        "social": {
+            "title": "Social"
+        },
+        "image": {
+            "title": "Image"
+        }
+    }
+}

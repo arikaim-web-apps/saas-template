@@ -1,0 +1,12 @@
+{  
+    "include": {
+        "js": [    
+            "subscriptions::api"               
+        ]
+    },
+    "access": {
+        "auth": "session",
+        "redirect": "/user"
+    },
+    "include-styles": true
+}

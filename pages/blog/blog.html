@@ -1,0 +1,5 @@
+{% component 'current>layout' %}  
+    {% set active = 'blog' %}
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}  
+    {{ component('current>blog',{}) }}                                                 
+{% endcomponent %}

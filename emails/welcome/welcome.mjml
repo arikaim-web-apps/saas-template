@@ -1,0 +1,25 @@
+<mjml>
+    <mj-include path="../head.mjml" />
+    <mj-body>
+        <mj-include path="../navbar.mjml" />
+        <mj-section 
+            background-color="#fafaf9">
+            <mj-column>
+                <mj-spacer height="50px" />
+                <mj-text
+                    css-class="title"
+                    align="left">
+                    {{ title }} {{ domain }}    
+                </mj-text>
+                <mj-spacer height="50px" />
+                <mj-button       
+                    color="white"       
+                    href="{{ url('/login',true) }}"
+                    background-color="#0ea5e9">
+                    {{ labels.login }}
+                </mj-button>                      
+            </mj-column>
+        </mj-section>
+        <mj-include path="../footer.mjml" />
+    </mj-body>
+</mjml>

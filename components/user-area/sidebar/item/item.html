@@ -1,0 +1,15 @@
+<div
+    component="{{ item.component }}"
+    mountTo="user_area_content"
+    class="sidebar-item px-2 py-2 flex-grow w-full {{ (active == true) ? 'active-menu-item' : '' }}
+    {{ styles.item.class }} 
+    {{ styles.item.color }}">
+    <div 
+        class="{{ styles.tooltip }}" 
+        data-tip="{{ item.tooltip }}">
+        {{ component(item.icon,styles.icon,'svg') }}
+    </div>       
+    <div class="{{ styles.item.link }}">
+        {{ item.title }}
+    </div>    
+</div>

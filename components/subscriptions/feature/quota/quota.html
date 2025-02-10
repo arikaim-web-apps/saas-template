@@ -1,0 +1,32 @@
+{% set model = createModel('PlanFeatureTypes','subscriptions').findFeatureType(feature) %}
+<div class="p-4 flex flex-col content-between rounded-box bg-stone-50 border border-solid border-stone-200">
+    {% if service('access').isLogged() == true %}
+    <div class="flex-grow font-semibold">
+        {{ message.start }}
+        <span class="{{ theme.badge.green }}">
+            {{ model.title }}
+        </span>
+        {{ message.end }}
+    </div>
+    <div class="mt-4">
+        {{ component('current>subscriptions.account.buttons.upgrade') }}
+    </div>
+    {% else %}
+        <div class="flex-grow font-semibold">
+            {{ message.start }}
+            <span class="{{ theme.badge.green }}">
+                {{ model.title }}
+            </span>
+            {{ message.end }}
+        </div>
+        <div class="mt-4">
+            <a href="{{ url('/login') }}" class="{{ theme.link }}">
+                {{ buttons.login }}
+            </a>
+            or 
+            <a href="{{ url('/login') }}" class="{{ theme.link }}">
+                {{ buttons.signup }}
+            </a>
+        </div>
+    {% endif %}
+</div>

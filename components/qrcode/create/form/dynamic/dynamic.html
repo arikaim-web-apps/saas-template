@@ -1,0 +1,15 @@
+{% if service('subscriptions').hasPlanFeature(user_id,'dynamic-qrcode') == true %}
+    <div class="flex flex-row items-center">
+        {{  component('tailwind~toggle.daisyui',{
+                component_id: 'dynamic',
+                toggle_class: ' toggle-success toggle-sm ',
+                field_name: 'dynamic'           
+            }) 
+        }} 
+        <div class="px-2 font-bold">
+            {{ labels.dynamic }}
+        </div>
+    </div>  
+{% else %}
+    {# component('current>subscriptions.feature',{ feature: 'dynamic-qrcode' }) #}
+{% endif %}

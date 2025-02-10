@@ -1,0 +1,15 @@
+{
+    "label": "flex flex-col my-1 font-semibold",
+    "input": {
+        "class": "w-full p-2 border border-solid rounded border-stone-200 placeholder-stone-400",
+        "focus": "focus:border-sky-300 focus:border focus:border-solid focus:outline-none",
+        "hover": "hover:border-sky-300 transition duration-1000 ease-in-out"
+    },
+    "icon": {
+        "size": "h-6 w-6",
+        "color": "text-indigo-500",
+        "width": "2",
+        "class": "p-1"
+    },
+    "button": ""        
+}

@@ -1,0 +1,28 @@
+{
+    "fields": {
+        "finder": {
+            "label": "Finder"
+        },
+        "alignment": {
+            "label": "Alignment"
+        },
+        "timing": {
+            "label": "Timing"
+        },
+        "format": {
+            "label": "Format"
+        },
+        "version": {
+            "label": "Version"
+        },
+        "bg": {
+            "label": "Background"
+        },
+        "data": {
+            "label": "Data"
+        }
+    },
+    "labels": {
+        "clear": "Clear colors"
+    }
+}

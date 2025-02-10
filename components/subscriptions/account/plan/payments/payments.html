@@ -1,0 +1,19 @@
+{% set user_id = service('access').getId() %}
+{% if user_id > 0 %}
+    {% set subscription = createModel('Subscriptions','subscriptions').getSubscription(user_id) %}  
+    {% set transactions = subscription.transactions().get() %} 
+{% endif %}
+{% if transactions|length > 0 %}
+<div class="mt-2">
+    <div class="font-bold">
+        {{ title }}
+    </div>
+    <div class="flex flex-col">        
+        {% for item in transactions %}
+        <div>
+            {{ item.uuid }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

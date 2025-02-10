@@ -1,0 +1,18 @@
+{
+    "border": "border border-solid border-stone-200 rounded-lg",
+    "color": "bg-stone-50",
+    "title": "text-orange-600 plx-4 text-lg font-bold",       
+    "features": {
+        "title": "font-semibold",
+        "icon": {
+            "name": "icons~check",
+            "size": "h-6 w-6",
+            "color": "text-green-400"
+        }
+    },  
+    "button": {
+        "class": "text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2 text-center mr-1 mb-1",
+        "color": "bg-gradient-to-r from-red-400 via-red-500 to-red-600 focus:ring-red-300 dark:focus:ring-red-800",
+        "border": "shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80"
+    }      
+}

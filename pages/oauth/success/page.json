@@ -1,0 +1,11 @@
+{
+    "include": {             
+        "library": [
+            "jquery",               
+            "arikaim",      
+            "arikaim-ui",          
+            "fomantic",
+            "tailwind"
+        ]        
+    }
+}

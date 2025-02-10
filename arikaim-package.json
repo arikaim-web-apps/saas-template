@@ -1,0 +1,117 @@
+{      
+    "title": "Arikaim Web Tools",
+    "version": "1.0.0",
+    "name": "arikaim-services",
+    "package-type": "template",
+    "icon": "users",
+    "thumbnail": "thumbnail.jpg",
+    "private-repository": true,
+    "repository": "",
+    "require": {
+        "components": [
+            "icons",
+            "tailwind"
+        ],
+        "library": [
+            "jquery",
+            "arikaim",
+            "arikaim-ui",
+            "fomantic",  
+            "highlight", 
+            "tailwind"
+        ],
+        "extensions": [
+            "users",
+            "storage"
+        ]
+    },
+    "routes": [
+        {
+            "path": "/",         
+            "home": true,  
+            "page": "home",
+            "language-path": true,
+            "name": "Home"                   
+        },
+        {
+            "path": "/privacy-policy",           
+            "page": "privacy",
+            "language-path": true,
+            "name": "Privacy"                   
+        },
+        {
+            "path": "/terms",           
+            "page": "terms",
+            "language-path": true,
+            "name": "Terms"                   
+        },
+        {
+            "path": "/contact-us",         
+            "page": "contact-us",          
+            "name": "contactUs"                   
+        },
+        {
+            "path": "/blog",      
+            "language-path": true,     
+            "page": "blog",
+            "name": "Blog"                   
+        },
+        {
+            "path": "/qrcode-generator",      
+            "language-path": true,     
+            "page": "qrcode",
+            "name": "qrcode"                   
+        },
+        {
+            "path": "/short-links",      
+            "language-path": true,     
+            "page": "links",
+            "name": "links"                   
+        },
+        {
+            "path": "/file-manager",           
+            "page": "files.features",
+            "language-path": true,
+            "name": "FilesManager"                   
+        },
+        {
+            "path": "/qrcode/api",           
+            "page": "api.qrcode",
+            "language-path": false,
+            "name": "ApiQrCode"                   
+        }
+    ],
+    "languages": [
+        "en"      
+    ],
+    "themes": [
+        "default"
+    ],
+    "default-theme": "default",
+    "include": {     
+        "components": [    
+            "current>users",
+            "links::api"
+        ],         
+        "css": [
+            "preflight.css",
+            "style.css",
+            "tailwind.min.css"
+        ],        
+        "library": [
+            "jquery",                                
+            "arikaim",
+            "arikaim-ui",      
+            "fomantic:form-validation",
+            "utility:flowbite"                      
+        ]       
+    },
+    "modules": {
+        "subscriptions": "subscriptions",
+        "qrcode": "qrcode",
+        "images": "images",
+        "files": "files",
+        "links": "links",
+        "api": "api"
+    }
+}

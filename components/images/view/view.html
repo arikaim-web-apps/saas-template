@@ -1,0 +1,25 @@
+{% set user_id = service('access').getId() %}
+{% set target_path = service('users').getStoragePath(user_id,false) %}    
+{% if service('subscriptions').hasPlanFeature(user_id,'qrcode-logo') == true %}
+    <div       
+        mode="{{ mode }}"
+        fieldId="{{ field_id }}"
+        class="grid grid-cols-10 lg:grid-cols-10 md:grid-cols-8 xs:grid-cols-3 sm:grid-cols-3 gap-2 " 
+        id="images_items">    
+        {{  component('current>images.view.items',{ 
+                collection: collection, 
+                mode: mode,
+                field_id: field_id
+            }) 
+        }}   
+    </div> 
+{% else %}
+    {{ component('current>subscriptions.feature',{ feature: 'qrcode-logo' }) }}
+{% endif %}
+
+{{  component('tailwind~modal.flowbite',{ 
+        component_id: 'confirm_delete_image',        
+        confirm_button: labels.delete,
+        content: message
+    }) 
+}}

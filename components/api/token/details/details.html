@@ -1,0 +1,43 @@
+{% set user_id = service('access').getId() %}
+{% set token = createModel('AccessTokens').getTokenByUser(user_id,2) %}
+{% if token is empty %}
+<div class="mt-4">
+    <button class="{{ theme.buttons.green }} create-token">
+        {{ labels.create }}
+    </button>
+</div>    
+{% else %}
+<div class="font-bold">
+    {{ labels.token }}
+</div> 
+<div class="flex flex-row items-center">
+    <span class="p-2 text-xs font-bold break-all border border-solid border-gray-300 rounded" id="api_token">
+        {{ token.token|trim }}
+    </span>   
+    <div class="pl-1">
+        {{  component('tailwind~clipboard.copy',{ 
+                selector: '#api_token', 
+                icon_size: ' ',
+                options: 'trim',
+                class: 'btn btn-xs btn-ghost btn-square',
+                type: 'element',
+                escape: true
+            }) 
+        }}    
+    </div>  
+</div> 
+<div class="mt-2">
+    <button 
+        class="tooltip delete-token" 
+        data-tip="{{ labels.delete }}" 
+        uuid="{{ token.uuid }}">
+        {{ component('material-icons~trash',{ size: 'h-6 w-6', color: 'text-red-500' },'svg') }}
+    </button>  
+</div>       
+{{  component('tailwind~modal.confirm',{ 
+        component_id: 'confirm_delete_token',
+        title_class: 'text-gray-900 bg-slate-200 p-2',
+        content: message
+    }) 
+}}
+{% endif %}

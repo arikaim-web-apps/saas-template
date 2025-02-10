@@ -1,0 +1,4 @@
+{% component 'current>layout' %}   
+    {% set active = 'blog-post' %}       
+    {{ component('current>blog.post',{ uuid: uuid }) }}                                                                 
+{% endcomponent %}

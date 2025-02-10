@@ -1,0 +1,17 @@
+{% set user_id = service('access').getId() %}
+{% set total_links = service('links').getTotalLinks(user_id) %}
+
+{% component 'current>user-area.panel' %}     
+    {% set id = 'add_link_panel' %}
+    <div class="p-2">  
+        {% if service('subscriptions').checkPlanFeatureQuota(user_id,'max-links',total_links) == false %}   
+            {{ component('current>subscriptions.feature.quota',{ feature: 'max-links' }) }}   
+        {% else %}   
+            {{  component('current>links.form',{
+                    relation_id: relation_id,
+                    relation_type: relation_type
+                }) 
+            }}    
+        {% endif %}
+    </div>                                                                     
+{% endcomponent %}

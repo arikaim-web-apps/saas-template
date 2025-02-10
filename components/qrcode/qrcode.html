@@ -1,0 +1,21 @@
+{{ component('current>user-area.title',{ title: title, icon: icon }) }}
+<div 
+    class="{{ theme.user_area.content }} grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 gap-4 justify-items-stretch">                            
+    <div class="order-1 lg:order-1 md:order-2 sm:order-2 xs:order-2">                 
+        {{ component('current>qrcode.menu') }} 
+        <div class="mt-2 w-full" id="qrcode_items">   
+            {{ component('current>qrcode.view',{}) }}               
+        </div>                
+    </div>
+    <div 
+        class="order-2 lg:order-2 md:order-1 sm:order-1 xs:order-1" 
+        id="details_panel">
+        {{ component('current>qrcode.create',{}) }}      
+    </div>                                      
+</div>
+{{  component('tailwind~modal.flowbite',{ 
+        component_id: 'confirm_delete_qrcode',        
+        confirm_button: labels.delete,
+        content: message
+    }) 
+}}

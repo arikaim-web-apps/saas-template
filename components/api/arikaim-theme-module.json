@@ -1,0 +1,14 @@
+{
+    "user-area": {
+        "sidebar": {  
+            "api": {
+                "component": "current>api",
+                "title": "Api",
+                "tooltip": "Api Access",
+                "icon": "material-icons~code"            
+            }                              
+        },
+        "dashboard": [            
+        ]
+    }
+}

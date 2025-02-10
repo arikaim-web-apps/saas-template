@@ -1,0 +1,17 @@
+<div class="{{ styles.class }} {{ class }}">   
+    {% for item in features %}
+    <div class="flex flex-row items-center {{ styles.item.class }}">
+        <div class="ring-4 ring-white relative left-4 rounded-full bg-stone-50 border p-1 border-lime-500 border-solid">
+            {{ component('icons~check',styles.item.icon,'svg') }}           
+        </div>                  
+        <div class="{{ styles.item.title }}">
+            <div>
+                {{ item.title }}
+                <div class="{{ styles.item.subtitle }}">
+                    {{ item.subtitle }}
+                </div>
+            </div>                    
+        </div>
+    </div>    
+    {% endfor %}                        
+</div>

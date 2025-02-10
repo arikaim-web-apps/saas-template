@@ -1,0 +1,35 @@
+{% component 'current>user-area.panel' %}
+    {% set hide_title = true %}
+    {% set id = 'qrcode-menu-panel' %}
+    <div
+        class="w-full flex flex-row self-center">
+        <button 
+            mountTo="details_panel"
+            component="current>qrcode.create"
+            class="inline-block create-qrcode rounded-full tooltip tooltip-right" 
+            data-tip="{{ tooltip.create }}">
+            {{ component('material-icons~add.circle',theme.icons.action,'svg') }}
+        </button>
+        <div        
+            class="px-4 w-2/3">
+            {{  component('current>form.search',{
+                    id: 'search_qrcode',
+                    search_field: 'qrcode_title',
+                    placeholder: labels.search,
+                    namespace: 'qrcode'
+                }) 
+            }}
+        </div>    
+        <div
+            id="paginator" 
+            class="px-4 w-1/3 self-center flex-grow">
+            {{  component('tailwind~paginator.flowbite',{ 
+                    id: 'qrcode_paginator',
+                    component: 'current>qrcode.view.items',
+                    namespace: 'qrtags',
+                    rows_selector: 'qrcode_items'
+                }) 
+            }}
+        </div>    
+    </div>
+{% endcomponent %}

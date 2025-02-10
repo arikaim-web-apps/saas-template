@@ -1,0 +1,22 @@
+{   
+    "title": "Arikaim",
+    "subtitle": "Web Tools",
+    "dashboard": {
+        "icon": "material-icons~dashboard",
+        "component": "current>user-area.dashboard",
+        "title": "Dashboard",
+        "tooltip": "User dashboard"
+    },
+    "account": {
+        "icon": "icons~cog",
+        "component": "current>user-area.account",
+        "title": "Account",
+        "tooltip": "User account settings"
+    },
+    "logout": {
+        "icon": "icons~logout",
+        "component": "current>user-area.logout",
+        "title": "Log out",
+        "tooltip": "User Log out"
+    }
+}

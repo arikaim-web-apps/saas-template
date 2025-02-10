@@ -1,0 +1,30 @@
+{% if uuid is not empty %}
+    {% set template = createModel('QrcodeTemplate','qrcode').findById(uuid) %}
+{% endif %}
+{% set content_type = template.getOption('content_type') %}
+{% set item = content().type(content_type,template.getOption('content_provider')).get(template.getOption('content_id')) %}
+{% set content_editor_name = 'current>qrcode.create.form.content.' ~ content_type %}
+<div class="my-4 p-10 flex flex-row items-start">
+    <div>
+        <img 
+            alt="Qrcode"
+            src="{{ template.getOption('encoded_image') }}" 
+            id="qrcode_image" 
+            class="rounded-lg shadow h-32 w-32">
+    </div>
+    <div class="p-2">
+        <span class="font-bold">
+            {{ labels.slug }}
+        </span>       
+        <span class="px-2 badge badge-s">
+            {{ template.slug }}
+        </span>      
+    </div>
+</div>
+{{  component(content_editor_name,{ 
+        hide_upload: true, 
+        selected: qrcode.content_id,
+        content_item: item, 
+        hide_dynamic: true 
+    }) 
+}}

@@ -1,0 +1,11 @@
+{% component 'current>layout' %}
+    {% set active = 'privacy' %}
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}  
+    {{  component('current>page.privacy',{ 
+            company: 'Intersoft Ltd', 
+            contactus: url('/contact-us'),
+            contactus_class: 'text-sm underline ' ~ theme.link,
+            website: url('',true) 
+        }) 
+    }}                                                      
+{% endcomponent %}

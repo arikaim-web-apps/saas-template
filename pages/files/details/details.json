@@ -1,0 +1,30 @@
+{
+    "title": "File Details",
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "File Details",
+        "description": "File Details",
+        "keywords": "files, file details, file download"
+    },
+    "labels": {
+        "public": "Public", 
+        "access": "Access",
+        "private": "Private",
+        "size": "Size",
+        "date": "Date Created"
+    },
+    "items": {
+        "name": {
+            "title": "File Name",
+            "key": "file_name"      
+        },
+        "type": {
+            "title": "Mime Type",
+            "key": "mime_type"
+        },   
+        "note": {
+            "title": "Note",
+            "key": "note"
+        }       
+    }
+}

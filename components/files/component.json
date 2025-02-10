@@ -1,0 +1,14 @@
+{     
+    "include": {
+        "js": [                  
+            "semantic~upload",          
+            "storage::api",            
+            "tailwind~pdf"          
+        ] 
+    },
+    "access": {
+        "auth": "session",
+        "redirect": "/user"           
+    },
+    "include-styles": true
+}

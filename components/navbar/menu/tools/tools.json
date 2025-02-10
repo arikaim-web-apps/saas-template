@@ -1,0 +1,14 @@
+{
+    "title": "Tools",
+    "items": {
+        "qrcode": {
+            "title": "QR Code Generator"
+        },
+        "links": {
+            "title": "Short Links"
+        },
+        "files": {
+            "title": "File Manager"
+        }
+    }
+}

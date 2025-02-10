@@ -1,0 +1,24 @@
+{% if uuid is not empty %}
+    {% set qrcode = createModel('Qrcode','qrcode').findById(uuid) %}
+{% endif %}
+{% set item = content().type(qrcode.content_type,qrcode.content_provider).get(qrcode.content_id) %}
+{% set content_editor_name = 'current>qrcode.create.form.content.' ~ qrcode.content_type %}
+<form 
+    id="{{ component_id }}"
+    class="ui form">
+    <input type="hidden" id="uuid" name="uuid" value="{{ uuid|default(qrcode.uuid) }}">
+    {{  component(content_editor_name,{ 
+            hide_upload: true, 
+            selected: qrcode.content_id,
+            content_item: item, 
+            hide_dynamic: true 
+        }) 
+    }}
+    <div class="mt-4">
+        {{  component('current>form.footer',{ 
+                button: theme.form.button,
+                button_title: labels.save                        
+            }) 
+        }}          
+    </div>              
+</form>

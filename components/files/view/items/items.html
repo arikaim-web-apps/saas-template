@@ -1,0 +1,49 @@
+
+{% set file_system_data = service('user.storage').getFilesystemData(driver_name) %}
+{% set user_id = service('access').getId() %}
+{% set path = path|default('') %}
+{% set view_type = view_type|default(getViewType('files')) %}
+
+{% if file_system_data.connection_status == 1 %}
+    {% set files_list = getDirectoryFiles(path,false,file_system_data.filesystem) %}
+{% else %}
+    <div class="p-1">          
+        <h4 class="font-bold">            
+            {{ labels.error }}
+        </h4>
+        <p>
+            {{ file_system_data.connection_status }}      
+        </p>     
+    </div>
+{% endif %}
+
+{% set items = paginate(files_list,'myfiles') %}  
+
+{% if view_type == 'table' %}
+    <div class="bg-white rounded-lg flex flex-col items-start" id="files_items">
+{% else %}
+    <div class="grid auto-rows-fr grid-cols-5 items-start lg:grid-cols-5 2xl:grid-cols-6 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4" id="files_items">
+{% endif %}
+
+{% if items.getItems()|length == 0 and file_system_data.connection_status == 1 %}    
+    {{ component('current>files.view.items.empty',{}) }}
+{% endif %}
+
+    {% for item in items.getItems() %}
+        {% if item.path != 'bin' %}
+                {%  set mime_type = (item.type == 'dir') ? 'directory' : service('storage').getMimetype(item.path,file_system_data.filesystem) %}     
+                {%  set file = file_system_data.files.saveFile(item.path,user_id,file_system_data.filesystem,{ 
+                        type: item.type,
+                        size: item.size,          
+                        date_created: item.timestamp,
+                        mime_type: mime_type
+                    },false) 
+                %}           
+                {% if view_type == 'table' %}     
+                    {{ component('current>files.view.row',{ file: file, path: item.path, shared: false }) }}                    
+                {% else %}
+                    {{ component('current>files.view.card',{ file: file, path: item.path, shared: false }) }}                
+                {% endif %}    
+        {% endif %}
+    {% endfor %}
+</div>

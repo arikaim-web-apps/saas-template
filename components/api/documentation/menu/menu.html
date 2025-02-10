@@ -1,0 +1,15 @@
+{% set routes = service('routes').getRoutes({ extension_name: extension_name, type: 2 }) %}
+{% set items = paginate(routes,'routes.api') %}
+<ul class="menu menu-compact">
+    {% for route in items.getItems() %}
+        {% set docs = service('docs').getControllerInfo(route.handler_class,route.handler_method) %}     
+        {% set auth = (route.auth > 0) ? service('access').getAuthNames(route.auth) : null %}           
+        {% if docs.api.title is not empty %}
+        <li class="view-api-details" uuid="{{ route.uuid }}">
+            <a hre="#">
+                {{ docs.api.title }}
+            </a>
+        </li>    
+        {% endif %}
+    {% endfor %}
+</ul>

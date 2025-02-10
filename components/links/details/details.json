@@ -1,0 +1,13 @@
+{
+    "title": "Details",
+    "labels": {
+        "close": "Close",
+        "title": "Title",
+        "url": "Url",
+        "link": "Open Link",
+        "views": "Views",
+        "short": "Short Url",  
+        "type": "Type",     
+        "description": "Description"
+    }
+}

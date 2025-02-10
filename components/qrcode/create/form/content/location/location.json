@@ -1,0 +1,13 @@
+{
+    "title": "Map Location",
+    "fields": {
+        "latitude": {
+            "label": "Latitude",
+            "placeholder": ""
+        },
+        "longitude": {
+            "label": "Longitude",
+            "placeholder": ""
+        }       
+    }
+}

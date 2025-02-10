@@ -1,0 +1,23 @@
+{
+    "post": {
+        "border": "shadow rounded-box border border-stone-200 border-solid",
+        "space": "p-8",
+        "color": "bg-white"
+    },
+    "preview": {
+        "border": "shadow rounded-box border border-stone-200 border-solid",
+        "space": "p-8",
+        "color": "bg-white",
+        "image": "rounded-t-lg",
+        "label": "text-gray-500 text-sm",
+        "icon": {
+            "size": "h-full w-full",
+            "width": "0.1",
+            "color": "text-gray-300"
+        },
+        "link": "hover:text-sky-400 transition transition-duration-1000",
+        "title": "first-letter:text-gray-900 first-letter:font-bold mt-1 text-gray-800 text-2xl",
+        "summary": "font-bold tracking-widest text-gray-400 text-md uppercase p-1"
+    }
+   
+}

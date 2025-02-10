@@ -1,0 +1,22 @@
+{
+    "color": "bg-gray-50",
+    "size": "w-3/4 md:w-full lg:w-3/4",
+    "border": "rounded shadow-lg border border-stone-300 border-solid",
+    "tab": "tab tab-lifted tab-lg",
+    "active": "bg-blue-100",
+    "grid": "grid gap-1 justify-items-stretch place-items-center grid-cols-2 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+    "icon": {
+        "size": "h-7 w-7",
+        "color": "text-sky-500"
+    },
+    "item": {
+        "active": "text-orange-500",
+        "link": "flex flex-col items-center text-sm",
+        "hover": "cursor-pointer hover:text-orange-500 hover:border transition duration-1000 ease-in-out",
+        "class": "py-1 w-full h-full self-center content-center content-type-card border border-solid border-stone-100 rounded-lg bg-stone-50", 
+        "icon": {
+            "size": "h-6 w-6",
+            "color": "text-stone-500"
+        }
+    }
+}

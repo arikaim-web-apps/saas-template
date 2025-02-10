@@ -1,0 +1,14 @@
+{
+    "items": {
+        "details": {
+            "title": "Details",
+            "component": "current>user-area.account.details",
+            "icon": "material-icons~edit"
+        },
+        "password": {
+            "title": "Change Password",
+            "component": "current>user-area.account.password",
+            "icon": "material-icons~key"
+        }         
+    }
+}

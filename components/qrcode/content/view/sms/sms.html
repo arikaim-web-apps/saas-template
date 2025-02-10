@@ -1,0 +1,3 @@
+{% set message = item.getValue('message')|url_encode %}
+{% set phone = item.getValue('phone') %}
+<a href="sms://{{ phone }}&body={{ message }}">SMS Message</a>

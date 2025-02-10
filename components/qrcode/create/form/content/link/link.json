@@ -1,0 +1,10 @@
+{
+    "title": "Link",
+    "icon": "material-icons~link",
+    "fields": {
+        "url": {
+            "label": "Url",
+            "placeholder": "Enter link url."
+        }
+    }
+}

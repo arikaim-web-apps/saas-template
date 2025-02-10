@@ -1,0 +1,7 @@
+{
+    "icon": {
+        "size": "h-6 w-6",
+        "width": 2,
+        "color": "text-sky-400 hover:text-green-500"
+    }
+}

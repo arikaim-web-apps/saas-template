@@ -1,0 +1,11 @@
+{% component 'current>user-area.panel' %} 
+    {% set class = 'w-72 xs:w-full sm:w-full lg:w-72' %}
+    <div class="p-1">       
+        {{  component('current>files.directory.form',{ 
+                path: path,
+                filesystem: filesystem,
+                hide_directory: true 
+            }) 
+        }}                      
+    </div>
+{% endcomponent %}

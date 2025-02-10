@@ -1,0 +1,13 @@
+{
+    "update": "QR Code was saved successfully.",
+    "delete": "QR Code was deleted successfully.",
+    "errors": {
+        "delete": "Can't delete Qr Code."       
+    },
+    "messages": {
+        "delete": {
+            "title": "Confirm Delete",
+            "description": "Delete QR Code <b><% title %></b>."
+        }              
+    }
+}

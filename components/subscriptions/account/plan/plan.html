@@ -1,0 +1,9 @@
+{% component 'current>user-area.panel' %}  
+     {% set id = 'user_change_password' %}
+    <div class="mt-4">
+        {{ component('current>subscriptions',{ upgrade: true }) }}
+    </div>       
+    <div class="mt-4">
+        {{ component('current>subscriptions.account.plan.payments',{}) }}
+    </div>          
+{% endcomponent %}

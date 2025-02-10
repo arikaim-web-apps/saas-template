@@ -1,0 +1,12 @@
+{
+    "head": {
+        "favicon": "images/favicon.png",  
+        "title": "Checkout Cancel Page",
+        "description": "Checkout Cancel Page",
+        "keywords": ""
+    },
+    "title": "Checkout Cancel Page",
+    "labels": {
+        "cancel": "Cancel"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "message": {
+        "start": "You have exceeded your",
+        "end": "quota for your account."
+    },
+    "upgrade": "Upgrade your account",
+    "buttons": {
+        "login": "Login",
+        "signup": "Create Account"
+    }
+}

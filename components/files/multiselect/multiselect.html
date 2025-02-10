@@ -1,0 +1,16 @@
+<div 
+    class="ui basic mini button dropdown {{ class }}" 
+    id="{{ id|default('actions_dropdown') }}">  
+    {{ component('material-icons~task.add',theme.icons.file,'svg') }}               
+    <div class="ui menu">
+        <div class="item" data-value="select">
+            {{ labels.select }}
+        </div>
+        <div class="item" data-value="unselect">
+            {{ labels.unselect }}
+        </div>       
+        <div class="item" data-value="delete">
+            {{ labels.delete }}
+        </div>
+    </div>    
+</div>

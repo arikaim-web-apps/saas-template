@@ -1,0 +1,14 @@
+{     
+    "include": {
+        "js": [                  
+            "qrcode::api",
+            "semantic~upload",    
+            "current>images.upload.form",
+            "current>qrcode.create"
+        ] 
+    },
+    "access": {
+        "auth": "none"       
+    },
+    "include-styles": true
+}

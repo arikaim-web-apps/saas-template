@@ -1,0 +1,15 @@
+<div
+    id="{{ component_id }}"
+    class="dashboard-item justify-self-stretch
+        {{ styles.class }} 
+        {{ styles.border }} 
+        {{ styles.space }}
+        {{ styles.color }}">
+    <div class="flex items-center {{ styles.title.class }}">   
+        {{ component(icon,styles.title.icon,'svg') }}
+        <div class="{{ styles.title.color }}">
+            {{ title }}
+        </div>
+    </div>
+    {{ content }}
+</div>

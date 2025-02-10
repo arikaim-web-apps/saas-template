@@ -1,0 +1,26 @@
+{% if uuid is not empty %}
+    {% set image = createModel('Image','image').findById(uuid) %}
+{% endif %}
+<div
+    id="row_{{ image.uuid }}"
+    class="flex flex-row text-center self-center items-end {{ (mode == 'select') ? 'h-10 w-10' : '' }}">
+    <div>
+        <img 
+            alt="Image preview"
+            uuid="{{ image.uuid }}"
+            fieldId="{{ field_id }}"
+            title="{{ image.base_name }}"
+            file-name="{{ image.base_name }}" 
+            src="{{ url('/api/image/view/' ~ image.uuid) }}" 
+            class="p-1 border-2 border-solid border-gray-300 rounded select-image hover:bg-green-500 cursor-pointer">                    
+    </div>
+    {% if mode == 'edit' %}     
+    <button 
+        id="logo_image_{{ image.uuid }}"
+        uuid="{{ image.uuid }}"
+        class="tooltip self-end cursor-pointer delete-image" 
+        data-tip="{{ tooltips.delete }}">
+        {{ component('material-icons~trash',theme.icons.delete,'svg') }}
+    </button>  
+    {% endif %}
+</div>  

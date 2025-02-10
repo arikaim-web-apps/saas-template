@@ -1,0 +1,21 @@
+{% if uuid is not empty %}
+    {% set post = createModel('Posts','blog').findById(uuid) %} 
+{% endif %}
+{{ component('current>page.title',{ title: post.page.name, subtitle: description }) }}     
+<div 
+    class="flex flex-row items-start {{ styles.color }} {{ styles.border }} {{ styles.size }} {{ styles.space }}">     
+    <div class="p-1 rounded text-gray-300 text-3xl {{ class }}"> 
+        {% if post.image.src is not empty %}          
+            <img class="{{ styles.image }}" src="{{ url(post.image.src) }}" alt="{{ post.title }}">
+        {% else %}           
+            {{ component('icons~image',styles.icon,'svg') }}               
+        {% endif %}                
+        <div class="flex flex-row {{ styles.label }}">
+            <span>{{ labels.published }}</span>    
+            <span class="px-2 text-gray-300">{{ post.date_created|dateFormat }}</span>             
+        </div>
+    </div>   
+    <div class="pl-12 prose prose-2xl text-lg">        
+        {{ post.content|md }}
+    </div>    
+</div>

@@ -1,0 +1,8 @@
+{
+    "title": "Info",
+    "icon": "material-icons~info",
+    "labels": {
+        "login": "Last Login",
+        "signup": "Date Signup"       
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "title": "Confirm",
+    "labels": {      
+        "confirm": "Confirm"
+    },
+    "message": "Confirm Cancel Subscription",
+    "success": "Subscription canceled successfully."
+}

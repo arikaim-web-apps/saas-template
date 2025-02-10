@@ -1,0 +1,13 @@
+{     
+    "include": {
+        "js": [        
+            "semantic~search",         
+            "links::api"           
+        ] 
+    },
+    "access": {
+        "auth": "session",
+        "redirect": "/user"             
+    },
+    "include-styles": true
+}

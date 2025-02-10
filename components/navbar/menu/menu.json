@@ -1,0 +1,23 @@
+{     
+    "items": {
+        "user": [
+            {
+                "title": "Login",
+                "key": "login",         
+                "url": "/login"
+            },
+            {
+                "title": "Sign Up",
+                "key": "signup",
+                "url": "/signup"
+            }
+        ],
+        "navbar": [
+            {
+                "title": "Api",
+                "key": "api",         
+                "url": "/qrcode/api"
+            }
+        ]  
+    }
+}

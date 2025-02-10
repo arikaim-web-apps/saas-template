@@ -1,0 +1,70 @@
+<mjml>
+    <mj-include path="../head.mjml" />
+    <mj-body>
+        <mj-include path="../navbar.mjml" />
+        <mj-section 
+            background-color="#fafaf9">
+            <mj-column>
+                <mj-spacer height="50px" />
+                <mj-text
+                    css-class="title"
+                    align="left">
+                    {{ title }}                       
+                </mj-text>
+                <mj-spacer height="50px" />
+                <mj-raw>
+                {% if message.subject is not empty %}
+                </mj-raw>
+                    <mj-text
+                        font-size="12px"
+                        align="left">
+                     <b>{{ labels.subject }}</b>: {{ message.subject }}<br>                
+                </mj-text>
+                <mj-raw>
+                {% endif %}
+                </mj-raw>
+                <mj-raw>
+                {% if message.message is not empty %}
+                </mj-raw>
+                    <mj-text
+                        font-size="12px"
+                        align="left">
+                     <b>{{ labels.message }}</b>: {{ message.message }}<br>                
+                </mj-text>
+                <mj-raw>
+                {% endif %}
+                </mj-raw>
+                <mj-raw>
+                {% if message.name is not empty %}
+                </mj-raw>
+                    <mj-text
+                        font-size="12px"
+                        align="left">
+                     <b>{{ labels.name }}</b>: {{ message.name }}<br>                
+                </mj-text>
+                <mj-raw>
+                {% endif %}
+                {% if message.email is not empty %}
+                </mj-raw>
+                    <mj-text
+                        font-size="12px"
+                        align="left">
+                     <b>{{ labels.email }}</b>: {{ message.email }}<br>                
+                </mj-text>
+                <mj-raw>
+                {% endif %}
+                {% if message.phone is not empty %}
+                </mj-raw>
+                    <mj-text
+                        font-size="12px"
+                        align="left">
+                     <b>{{ labels.phone }}</b>: {{ message.phone }}<br>                
+                </mj-text>
+                <mj-raw>
+                {% endif %}
+                </mj-raw>
+            </mj-column>
+        </mj-section>
+        <mj-include path="../footer.mjml" />
+    </mj-body>
+</mjml>

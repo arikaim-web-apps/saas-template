@@ -1,0 +1,15 @@
+{% set user = service('access').getUser() %}
+{% set modules = readThemeModules(template_path,template_modules) %}
+{{ component('current>user-area.title',{ title: title, icon: 'material-icons~dashboard' }) }}
+<div 
+    class="mt-16 grid justify-items-stretch items-stretch lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-4 md:grid-flow-col">          
+    {{ component('current>user-area.dashboard.info',{ user: user, styles: styles }) }}  
+    {% for module in modules %}
+        {% set items = module['user-area'].dashboard %}
+        {% if items is not empty %}
+            {% for dashboard_component in items %}  
+                {{ component(dashboard_component,{ user: user, styles: styles }) }} 
+            {% endfor %}
+        {% endif %}
+    {% endfor %}  
+</div>
