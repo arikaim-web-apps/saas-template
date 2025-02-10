@@ -13,7 +13,7 @@
         <div class="px-1">
             {{ component(styles.icons[type].name,styles.icons[type],'svg') }} 
         </div>
-        <div class="flex-grow {{ type_style.color }}">
+        <div class="grow {{ type_style.color }}">
             {{ type_style.title }}
         </div>          
         {% if hide_icon != true %}
@@ -22,7 +22,7 @@
         </div>
         {% endif %}
     </h3>
-    <div class="toast-content flex-grow {{ styles.content }}">
+    <div class="toast-content grow {{ styles.content }}">
         {{ content }} text content
     </div>
     {% if close_button == true %}

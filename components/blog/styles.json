@@ -1,11 +1,11 @@
 {
     "post": {
-        "border": "shadow rounded-box border border-stone-200 border-solid",
+        "border": "shadow-sm rounded-box border border-stone-200 border-solid",
         "space": "p-8",
         "color": "bg-white"
     },
     "preview": {
-        "border": "shadow rounded-box border border-stone-200 border-solid",
+        "border": "shadow-sm rounded-box border border-stone-200 border-solid",
         "space": "p-8",
         "color": "bg-white",
         "image": "rounded-t-lg",

@@ -1,7 +1,7 @@
 {
     "class": "flex flex-col justify-between items-center overflow-y-auto z-40",
     "color": "bg-stone-100",
-    "size": "w-32 h-full flex-grow flex-shrink-0",
+    "size": "w-32 h-full grow shrink-0",
     "content": {
         "class": "p-2 self-stretch place-self-stretch text-center items-center z-40"
     },

@@ -1,3 +1,5 @@
+{% set modules = readThemeModules(template_path,template_modules) %}
+
 {% for item in items.navbar %}  
 <div class="{{ styles.item.class }}">
     <a 
@@ -12,11 +14,6 @@
     </a>
 </div>             
 {% endfor %} 
-
-{% set modules = readThemeModules(template_path,template_modules) %}
-<div class="{{ styles.item.class }}">
-    {{ component('current>navbar.menu.tools',{ styles: styles }) }}
-</div>
 
 {% for module in modules %}  
     {% for item in module.navbar.menu %}  

@@ -6,13 +6,13 @@
         {{ component('current>page.api.route',{ route: route }) }}
     </div>
     <div class="flex flex-row items-start sm:flex-col lg:flex-row">
-        <div class="flex-grow xs:w-full sm:w-full lg:w-1/2">
+        <div class="grow xs:w-full sm:w-full lg:w-1/2">
             <h4 class="font-bold mt-4">
                 Parameters 
             </h4>
             {{ component('current>page.api.param',{ 
                     description: 'Qr Code content type',
-                    class: 'bg-stone-50 my-2 border rounded border-stone-200 ',
+                    class: 'bg-stone-50 my-2 border rounded-sm border-stone-200 ',
                     name: 'content_type',
                     required: true,
                     default: 'text',
@@ -24,7 +24,7 @@
                     {{ labels.type }}
                 </h4>
                 {% for key, item in items %}
-                    <div class="px-4 py-2 w-full bg-stone-50 my-2 border rounded border-stone-200">
+                    <div class="px-4 py-2 w-full bg-stone-50 my-2 border rounded-sm border-stone-200">
                         <div class="flex flex-row items-center">
                             <div>
                                 {{ component(item.icon,theme.qrcode.icon,'svg') }}

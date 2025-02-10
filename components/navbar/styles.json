@@ -8,7 +8,7 @@
         "align": "mx-auto",
         "space": "p-2",
         "color": "bg-stone-100",
-        "border": "rounded-b-box shadow border-x border-b border-solid border-stone-200"
+        "border": "rounded-b-box shadow-sm border-x border-b border-solid border-stone-200"
     },
     "sidebar": {
         "icon": "icons~menu"

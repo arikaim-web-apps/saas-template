@@ -15,8 +15,8 @@
             }
         },
         "button": {
-            "class": "text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-4 py-2 text-center",
-            "color": "bg-gradient-to-r from-green-400 via-green-500 to-green-600",
+            "class": "text-white hover:bg-linear-to-br focus:ring-4 focus:outline-hidden focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-4 py-2 text-center",
+            "color": "bg-linear-to-r from-green-400 via-green-500 to-green-600",
             "border": "shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80"
         }  
     }

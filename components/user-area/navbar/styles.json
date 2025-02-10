@@ -22,7 +22,7 @@
     },
     "avatar": {
         "menu": "text-sm font-semibold",
-        "ring": "bg-white w-6 h-6",
+        "ring-3": "bg-white w-6 h-6",
         "icon": {
             "name": "icons~user",
             "size": "h-6 w-6",

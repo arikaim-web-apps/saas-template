@@ -1,11 +1,11 @@
-<div class="{{ class|default('bg-stone-50 my-2 border rounded border-stone-200') }} w-full px-4 py-2">
+<div class="{{ class|default('bg-stone-50 my-2 border rounded-sm border-stone-200') }} w-full px-4 py-2">
     {% if title is not empty %}
     <h5 class="my-1">
         {{ title }}
     </h5>
     {% endif %}
     <div class="flex flex-row items-center">
-        <div class="flex-grow font-bold">
+        <div class="grow font-bold">
             {{ name }}
         </div>
         {% if type is not empty %}

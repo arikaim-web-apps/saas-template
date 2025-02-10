@@ -1,5 +1,5 @@
 {% set modules = readThemeModules(template_path,template_modules) %}
-<div class="p-2 flex flex-col flex-shrink-0">
+<div class="p-2 flex flex-col shrink-0">
     {% for item in items %}   
         {{ component('current>user-area.account.menu.item',{ item: item, styles: styles }) }}
     {% endfor %}

@@ -12,7 +12,7 @@
     <div class="p-2 {{ styles.item.title.color }} {{ styles.item.title.text }} {{ styles.item.title.border }}">
         {{ plan.title }}
     </div>   
-    <div class="p-2 flex flex-col justify-between flex-grow">
+    <div class="p-2 flex flex-col justify-between grow">
         <div class="mt-1 px-4 py-4">
             <span class="text-gray-600">{{ plan.description }}</span>
         </div>
@@ -38,7 +38,7 @@
                 </div>                     
             </div>        
         </div>              
-        <div class="pl-4 py-4 text-left justify-self-stretch flex-grow">
+        <div class="pl-4 py-4 text-left justify-self-stretch grow">
             <div class="flex flex-col">
                 {% for feature in plan.features %}
                 <div class="flex flex-row">                 

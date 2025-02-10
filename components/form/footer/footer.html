@@ -2,8 +2,7 @@
     <div class="flex flex-row">
         <button 
             loading-class="{{ loading_class|default('loading') }}"
-            class="submit-button cursor-pointer 
-            {{ styles.submit.class }} {{ styles.submit.color }} {{ styles.submit.border }}" 
+            class="submit-button {{ styles.submit }}" 
             {{ tooltip|attr('title') }}>
             {{ button_title|default(buttons.save.title) }}
         </button>      

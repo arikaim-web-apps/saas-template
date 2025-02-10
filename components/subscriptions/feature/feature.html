@@ -1,7 +1,7 @@
 {% set model = createModel('PlanFeatureTypes','subscriptions').findFeatureType(feature) %}
 <div class="p-4 flex flex-col content-between rounded-box bg-stone-50 border border-solid border-stone-200">
     {% if service('access').isLogged() == true %}
-    <div class="flex-grow font-semibold">
+    <div class="grow font-semibold">
         {{ message }}
         <span class="{{ theme.badge.green }}">
             {{ model.title }}
@@ -12,7 +12,7 @@
         {{ component('current>subscriptions.account.buttons.upgrade') }}
     </div>
     {% else %}
-        <div class="flex-grow font-semibold">
+        <div class="grow font-semibold">
             {{ message }}
             <span class="{{ theme.badge.green }}">
                 {{ model.title }}

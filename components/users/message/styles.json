@@ -1,7 +1,7 @@
 {
     "space": "px-4 pb-2",
     "color": "bg-white",
-    "border": "border border-solid border-slate-200 rounded-md shadow",
+    "border": "border border-solid border-slate-200 rounded-md shadow-sm",
     "title": {
         "icon": {
             "name": "icons~check",
@@ -12,6 +12,6 @@
         "class": "pb-2 pt-4 uppercase border-0 border-b-2 border-slate-300 border-solid"
     },
     "button": {
-        "login": "cursor-pointer text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
+        "login": "cursor-pointer text-white bg-linear-to-r from-green-400 via-green-500 to-green-600 hover:bg-linear-to-br focus:ring-4 focus:outline-hidden focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
     }
 }

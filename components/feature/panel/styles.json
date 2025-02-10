@@ -2,7 +2,7 @@
     "subtitle": "text-center text-gray-400 pt-1",
     "title": "text-center assistant-font font-light text-3xl p-2 text-orange-900 relative -top-8",
     "class": "py-4 px-8 border border-stone-200 border-solid rounded-b-xl rounded-t-3xl bg-stone-100 place-self-stretch justify-self-stretch flex flex-col",
-    "border": "rounded shadow-md border border-stone-200 border-solid",
+    "border": "rounded-sm shadow-md border border-stone-200 border-solid",
     "image": "w-full h-full",  
     "item": {
         "icon": {
@@ -14,6 +14,6 @@
         "subtitle": "text-gray-600 text-sm font-light"
     },
     "buttons": {
-        "details": "text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        "details": "text-white bg-linear-to-br from-pink-500 to-orange-400 hover:bg-linear-to-bl focus:ring-4 focus:outline-hidden focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
     }
 }

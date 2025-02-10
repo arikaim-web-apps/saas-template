@@ -12,7 +12,7 @@
             title="{{ image.base_name }}"
             file-name="{{ image.base_name }}" 
             src="{{ url('/api/image/view/' ~ image.uuid) }}" 
-            class="p-1 border-2 border-solid border-gray-300 rounded select-image hover:bg-green-500 cursor-pointer">                    
+            class="p-1 border-2 border-solid border-gray-300 rounded-sm select-image hover:bg-green-500 cursor-pointer">                    
     </div>
     {% if mode == 'edit' %}     
     <button 

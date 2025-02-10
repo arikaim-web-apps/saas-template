@@ -15,7 +15,7 @@
         <btn class="px-1 cursor-pointer sidebar-button py-2 md:hidden lg:hidden" type="button">                    
             {{ component(styles.sidebar.icon,styles.icon,'svg') }}               
         </btn>   
-        <div class="px-2 xs:px-1 flex items-center flex-row xs:flex-grow"> 
+        <div class="px-2 xs:px-1 flex items-center flex-row xs:grow"> 
             <div class="bg-slate-50 rounded-full">              
                 <img width="32px" height="32px" alt="{{ title }}" src="{{ template_url }}images/arikaim-logo.png">               
             </div>                                                 
@@ -32,7 +32,7 @@
                 </div>
             </div> 
         </div>     
-        <div class="flex flex-grow justify-end">
+        <div class="flex grow justify-end">
             <div class="flex flex-row items-center lg:flex xs:hidden md:flex">
                 {{  component('current>navbar.menu',{ 
                         active: active, 

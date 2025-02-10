@@ -1,7 +1,7 @@
 {% if uuid is not empty %}
     {% set link = createModel('Links','links').findById(uuid) %}
 {% endif %}
-<div class="shadow bg-white rounded-lg flex flex-col justify-items-stretch self-stretch w-full">
+<div class="shadow-sm bg-white rounded-lg flex flex-col justify-items-stretch self-stretch w-full">
     {{ component('current>panel-title',{ title: title, icon: 'icons~info', content_id: content_id }) }}   
     <div class="flex flex-row items-start px-4 p-2 w-full">
         <table class="table-auto border-collapse">

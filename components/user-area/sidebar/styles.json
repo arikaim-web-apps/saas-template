@@ -2,7 +2,7 @@
     "size": "w-auto sm:w-auto xs:w-auto",
     "space": "pl-2",
     "position": "top-0 left-0 sm:left-0 xs:left-0",
-    "color": "bg-stone-50 shadow",
+    "color": "bg-stone-50 shadow-sm",
     "border": "border-r border-solid border-stone-100",
     "tooltip": "xs:tooltip sm:tooltip sm:tooltip-right xs:tooltip-right",
     "icon": {

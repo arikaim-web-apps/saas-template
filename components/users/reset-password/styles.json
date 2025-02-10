@@ -13,11 +13,11 @@
     },
     "label": "text-stone-500 flex flex-col my-1 font-semibold dark:text-stone-400",
     "input": {
-        "class": "dark:text-gray-100 dark:border-gray-600 dark:bg-gray-600 w-full p-2 border border-solid rounded border-stone-200 placeholder-stone-400",
-        "focus": "focus:border-sky-300 focus:border focus:border-solid focus:outline-none",
+        "class": "dark:text-gray-100 dark:border-gray-600 dark:bg-gray-600 w-full p-2 border border-solid rounded-sm border-stone-200 placeholder-stone-400",
+        "focus": "focus:border-sky-300 focus:border focus:border-solid focus:outline-hidden",
         "hover": "hover:border-sky-300 transition duration-1000 ease-in-out"
     },
     "buttons": {
-        "submit": "w-full cursor-pointer text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
+        "submit": "w-full cursor-pointer text-white bg-linear-to-r from-green-400 via-green-500 to-green-600 hover:bg-linear-to-br focus:ring-4 focus:outline-hidden focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
     }
 }

@@ -3,7 +3,7 @@
 {% set user_details = createModel('UserDetails','users').findByColumn(user.id,'user_id') %}   
 
 <form class="form" id="user_details_form">   
-    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow">
+    <div class="flex flex-row xs:flex-col md:flex-row items-center grow">
         <!-- 
         <div class="field required flex flex-col w-1/2 md:w-1/2 xs:w-full">            
             <label class="{{ theme.form.label|default(styles.label) }}">
@@ -42,7 +42,7 @@
     <div class="my-8">
         <hr class="border-t-2 border-solid border-stone-50">
     </div> 
-    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow my-1">
+    <div class="flex flex-row xs:flex-col md:flex-row items-center grow my-1">
         <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
             <label class="{{ theme.form.label|default(styles.label) }}">
                 {{ fields.first_name.label }}
@@ -78,7 +78,7 @@
                 value="{{ user_details.last_name }}">
         </div>
     </div>   
-    <div class="flex flex-row xs:flex-col md:flex-row items-center flex-grow">
+    <div class="flex flex-row xs:flex-col md:flex-row items-center grow">
         <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">
             <label class="{{ theme.form.label|default(styles.label) }}">
                 {{ fields.phone.label }}

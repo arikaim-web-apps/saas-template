@@ -1,6 +1,6 @@
 {
     "class": "block w-full",
-    "border": "border border-stone-300 border-solid rounded-xl shadow",
+    "border": "border border-stone-300 border-solid rounded-xl shadow-sm",
     "space": "p-4",
     "title": {
         "icon": {
