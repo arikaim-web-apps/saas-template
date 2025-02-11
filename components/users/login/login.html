@@ -1,14 +1,15 @@
 {% set login_with = getOption('users.login.with',1) %}
 {% set captcha_protect = getOption('users.login.captcha.protect',true) %}
+
 <div class="{{ styles.border }}"> 
-    <div class="z-0 {{ styles.color }} {{ styles.space }} ">         
+    <div class="z-0 {{ styles.color }} {{ styles.space }}">         
         <h1 class="flex items-center {{ styles.title.class }}">
             {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
             <div class="pl-2 font-bold {{ styles.title.color }}">
                 {{ title }}
             </div>
         </h1>
-        <form class="form pt-4 px-4" id="login_form" method="POST">
+        <form class="{{ styles.form }}" id="login_form" method="POST">
             {% if login_with == 1 or login_with == 3 %}
                 <div class="{{ styles.field }}">                             
                     <input 
@@ -21,7 +22,7 @@
                     <label class="{{ styles.label }}">
                         {{ fields.user_name.label }}
                     </label>    
-                    <span class="input-filled-focused"></span>                
+                    <span class="input-filled-focused"></span>                              
                 </div>
             {% else %}
             <div class="{{ styles.field }}">                        
@@ -89,7 +90,9 @@
 </div>
 <div class="flex flex-row items-center p-1">           
     {{ component('icons~lock.open',styles.link.icon,'svg') }}  
-    <a class="pl-2 text-sm {{ styles.link.class }} {{ styles.link.hover }}" id="forgotten_button">   
-        {{ links.forgotten }}
+    <a 
+        class="pl-2 text-sm {{ styles.link.class }}" 
+        id="forgotten_button">   
+        <span class="{{ styles.link.hover }}">{{ links.forgotten }}</span>
     </a>       
 </div>

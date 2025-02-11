@@ -1,13 +1,6 @@
 {    
     "include": {
         "library": [
-            "filepond", 
-            "highlight:github",
-            "calendar:datepicker",
-            "fomantic:transition:async",                     
-            "fomantic:api:async",
-            "fomantic:dropdown:async",
-            "utility:flowbite"
         ]
     }
 }

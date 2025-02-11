@@ -23,7 +23,7 @@ module.exports = {
             {
                 "saas": {
                     ...require("flyonui/src/theming/themes")["light"],
-                    primary: "#0ea5e9" // sky-500
+                    primary: "#0284c7" // sky-600
                 } 
             }
         ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "soft"]

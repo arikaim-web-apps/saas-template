@@ -1,15 +1,14 @@
 {   
     "head": {
         "favicon": "images/favicon.png",  
-        "title": "Arikaim Web Tools",
-        "description": "Arikaim Web Tools",
-        "keywords": "web tools, QR code generator, qrcode, web services"
+        "title": "SaaS template",
+        "description": "SaaS template",
+        "keywords": "saas, html template"
     },
-    "title": "Arikaim",
+    "title": "SaaS template",
     "buttons": {
         "start": "Get Started"
     },
-    "labels": {
-        "services": "Web Tools"
+    "labels": {    
     }
 }

@@ -2,7 +2,7 @@
     "items": {
         "user": [
             {
-                "title": "Login",
+                "title": "Log in",
                 "key": "login",         
                 "url": "/login"
             },
@@ -12,12 +12,11 @@
                 "url": "/signup"
             }
         ],
-        "navbar": [
+        "navbar": [       
             {
-                "title": "Api",
-                "key": "api",         
-                "url": "/qrcode/api"
-            }
+                "title": "Contact",
+                "url": "/contact-us"                
+            }   
         ]  
     }
 }

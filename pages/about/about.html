@@ -1,0 +1,60 @@
+{% component 'current>layout' %}
+    {% set active = 'about' %}
+    {{ component('current>page.title',{ title: title, subtitle: description }) }}     
+    
+    <div class="self-center grid grid-cols-2 lg:grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 gap-8 lg:gap-8 xs:gap-4 sm:gap-4 md:gap-4">
+        <div      
+            class="place-content-end flex">
+            <img  
+                class="xs:w-full sm:w-full md:w-1/2 w-1/2 h-1/2 md:h-1/2 place-self-start md:aspect-auto rounded-lg opacity-animation transition-opacity ease-in duration-1000 opacity-0"               
+                alt="About"
+                src="{{ template_url }}images/about-page.jpg">
+        </div>
+        <div         
+            class="opacity-animation w-full transition-opacity ease-in duration-1000 opacity-0">           
+            <h4 class="mb-2 text-left font-sembold text-xl ">
+                {{ labels.pages }}
+            </h4>   
+            <div class="px-4">
+                <ul class="space-y-2 text-left roboto font-normal">
+                    {% for item in pages %}
+                    <li class="flex items-center space-x-1">
+                        {{ component('icons~check.badge',{ size: 'h-5 w-5', class: 'text-green-500' },'svg') }}
+                        <div class="ml-4 text-md">{{ item }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>       
+            </div>
+            <h4 class="mt-8 mb-2 text-left font-sembold text-xl">
+                {{ labels.created }}
+            </h4>   
+            <div class="px-4">
+                <ul class="space-y-2 text-left roboto-condensed font-thin">
+                    <li class="flex items-center space-x-1 text-2xl ">
+                        {{ component('current>icons.tailwind',{ size: 'h-12 w-12', class: '' },'svg') }}
+                        <span class="px-4 text-md">{{ labels.tailwind }}</span>
+                    </li>
+                    <li class="flex items-center space-x-1 text-2xl ">
+                        <div class="h-12 w-12"></div>                        
+                        <span class="px-4 text-md">{{ labels.material }}</span>
+                    </li>
+                </ul>
+            </div>
+            <h4 class="mt-8 mb-2 text-left font-sembold text-xl">
+                {{ labels.requirements }}
+            </h4>   
+            <div class="px-4">
+                <ul class="space-y-2 text-left roboto-condensed font-thin">
+                    <li class="flex items-center space-x-1 text-2xl">
+                        <div class="h-10 w-10">
+                            <img 
+                                src="{{ template_url }}images/arikaim-logo.png" 
+                                alt="Arikaim CMS logo">
+                        </div>                        
+                        <span class="px-4 text-md">{{ labels.arikaim }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endcomponent %}

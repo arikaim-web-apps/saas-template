@@ -47,6 +47,12 @@
             "name": "contactUs"                   
         },
         {
+            "path": "/about",      
+            "language-path": true,     
+            "page": "about",
+            "name": "About"                   
+        },
+        {
             "path": "/blog",      
             "language-path": true,     
             "page": "blog",
@@ -63,7 +69,10 @@
     "include": {     
         "components": [    
             "current>users"
-        ],         
+        ],      
+        "js": [
+            "form.js"
+        ],
         "css": [
             "preflight.css",
             "style.css",
@@ -72,8 +81,7 @@
         "library": [
             "jquery",                                
             "arikaim",
-            "arikaim-ui",      
-            "fomantic:form-validation"               
+            "arikaim-ui"                     
         ]       
     },
     "modules": {

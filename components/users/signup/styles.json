@@ -1,16 +1,16 @@
 {
-    "space": "p-2",
-    "color": "p-4 bg-stone-100 dark:bg-gray-800 rounded-xl border border-solid border-orange-100",
-    "border": "dark:border-stone-600 rounded-xl border border-stone-300 border-solid",
+    "space": "p-4",
+    "color": "bg-stone-50 dark:bg-gray-800 rounded-xl border border-solid border-stone-200",
+    "border": "dark:border-stone-600 rounded-xl border border-stone-200 border-solid",
     "title": {
         "icon": {
-            "name": "icons~user.add",
+            "name": "icons~user",
             "size": "h-6 w-6",
             "width": "2",
             "color": "text-sky-500"
         },
         "color": "text-orange-950 dark:text-gray-200",
-        "class": "dark:border-gray-600 dark:text-sky-400 pb-2 uppercase border-0 border-b-2 border-stone-200 border-solid"
+        "class": "dark:text-sky-400 pb-8 uppercase"
     },
     "link": {
         "icon": {
@@ -18,10 +18,12 @@
             "color": "text-sky-500",
             "width": "2"           
         },
-        "class": "flex flex-row intems-center cursor-pointer block text-gray-600",
-        "hover": "cursor-pointer hover:text-sky-500 transition duration-1000 ease-in-out"
+        "class": "flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
+        "hover": "decoration-red-500 decoration-2 cursor-pointer hover:underline transition-all duration-1000 ease-in-out"
     },
-    "label": "text-stone-500 flex flex-col my-1 font-semibold dark:text-stone-400",
+    "label": "input-filled-label",
+    "field": "relative field my-4",
+    "form": "form pt-4 px-4",
     "input": {
         "icon": {
             "size": "h-6 w-6",
@@ -29,11 +31,9 @@
             "width": "2",
             "class": "p-1"
         },
-        "class": "dark:text-gray-100 dark:border-gray-600 dark:bg-gray-600 w-full p-2 border border-solid rounded-sm border-stone-200 placeholder-stone-400",
-        "focus": "focus:border-sky-300 focus:border focus:border-solid focus:outline-hidden",
-        "hover": "hover:border-sky-300 transition duration-1000 ease-in-out"
+      "class": "input input-filled peer"        
     },
     "buttons": {
-        "signup": "w-full cursor-pointer text-white bg-linear-to-r from-green-400 via-green-500 to-green-600 hover:bg-linear-to-br focus:ring-4 focus:outline-hidden focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
+        "login": "btnn btn-success"
     }
 }

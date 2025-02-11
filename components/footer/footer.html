@@ -25,16 +25,7 @@
                 <div class="px-1 {{ styles.copyright.color }}">       
                     {{ copyright|renderText({ interval: currentYear() }) }}             
                 </div> 
-            </div>      
-            <div class="mt-2 px-1  {{ styles.item.class }}">
-                <img src="{{ template_url }}images/arikaim-icon.png" 
-                    width="14px" height="14px" alt="Arikaim CMS">
-                <a href="http://arikaim.com" 
-                    class="px-1 {{ styles.item.color }}" 
-                    target="arikaim">                                          
-                    {{ labels.created }}
-                </a>
-            </div>                                                    
+            </div>                                                                  
         </div> 
         {% for column in columns %}
         <div>
@@ -51,12 +42,6 @@
             {% endfor %}       
         </div> 
         {% endfor %} 
-        <div>
-            <h2 class="{{ styles.item.title }}">&nbsp;</h4>
-            <a href="https://twitter.com/arikaimCms"               
-                target="x">
-                {{ component('icons~x',theme.icons.gray,'svg') }}                 
-            </a>    
-        </div>
+        {{ component('current>share.links',{}) }}
     </div>
 </footer>

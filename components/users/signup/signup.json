@@ -1,8 +1,7 @@
 {
-    "title": "Sign Up",
-    "labels": {
-        "divider": "or sign up with",
-        "details": "Details"      
+    "title": "Sign Up",   
+    "links": {
+        "login": "Log in"
     },
     "buttons": {
         "save": "Register"           

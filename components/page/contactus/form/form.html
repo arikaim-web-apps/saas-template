@@ -1,0 +1,91 @@
+
+{% set settings = getOption('contactus.form.settings') %}
+<form class="form {{ class }}" id="contact_us_form">    
+    {% if settings.subject.show == 'true' %}
+    <div class="{{ styles.field }} {{ settings.subject.required|ifthen('true','required') }}">       
+        <input 
+            class="{{ styles.form.input }}"
+            rule="{{ (settings.subject.required == true) ? 'empty' : '' }}" 
+            type="text" 
+            name="subject" 
+            id="subject" 
+            {{ subject.placeholder|attr('placeholder') }} 
+            value="">  
+        <label class="{{ styles.form.label }}">
+            {{ subject.label }}
+        </label>
+        <span class="input-filled-focused"></span>       
+    </div>
+    {% endif %}   
+    <div class="{{ styles.field }} required">       
+        <textarea 
+            class="h-32 {{ styles.form.textarea }}"
+            rule="empty"            
+            name="message" 
+            id="message" 
+            {{ message.placeholder|attr('placeholder') }}></textarea>
+        <label class="textarea-filled-label" for="message">
+            {{ message.label }}
+        </label>
+        <span class="textarea-filled-focused"></span>       
+    </div>                 
+    {% if settings.name.show == 'true' %}   
+    <div class="{{ styles.field }} {{ settings.name.required|ifthen('true','required') }} field"> 
+        <input 
+            class="{{ styles.form.input }}"
+            rule="{{ (settings.name.required == true) ? 'empty' : '' }}" 
+            type="text" 
+            name="name" 
+            id="name" 
+            {{ name.placeholder|attr('placeholder') }} 
+            value="">  
+        <label class="{{ styles.form.label }}">
+            {{ name.label }}
+        </label>
+        <span class="input-filled-focused"></span>       
+    </div> 
+    {% endif %}
+    <div class="two fields">     
+        {% if settings.email.show == 'true' %}      
+        <div class="{{ styles.field }} {{ settings.email.required|ifthen('true','required') }}">          
+            <input 
+                class="{{ styles.form.input }}"
+                rule="{{ (settings.email.required == true) ? 'email' : '' }}" 
+                type="text" 
+                name="email" 
+                id="email" 
+                {{ email.placeholder|attr('placeholder') }} 
+                value="">
+            <label class="{{ styles.form.label }}">
+                {{ email.label }}
+            </label>
+            <span class="input-filled-focused"></span>       
+        </div>
+        {% endif %}
+        {% if settings.phone.show == 'true' %} 
+        <div class="{{ styles.field }} {{ settings.phone.required|ifthen('true','required') }} field">           
+            <input 
+                class="{{ styles.form.input }}"
+                rule="{{ (settings.phone.required == true) ? 'empty' : '' }}" 
+                type="text" 
+                name="phone" 
+                id="phone" 
+                {{ phone.placeholder|attr('placeholder') }} 
+                value="">
+            <label class="{{ styles.form.label }}">
+                {{ phone.label }}
+            </label>
+            <span class="input-filled-focused"></span>       
+        </div>
+        {% endif %}
+    </div>   
+    {% if settings.captcha.show == 'true' %}  
+        <div class="my-2">
+            {{ component('captcha::code') }}
+        </div>        
+    {% endif %}   
+    {{  component('current>form.footer',{           
+            button_title: buttons.save 
+        }) 
+    }}   
+</form>

@@ -1,8 +1,0 @@
-{
-    "head": {
-        "favicon": "{{ template_url }}/images/favicon.svg",  
-        "title": "",
-        "description": "",
-        "keywords": ""
-    }   
-}

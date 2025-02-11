@@ -1,0 +1,28 @@
+<div
+    class="{{ class|default(styles.class) }}">
+    <div class="{{ styles.item }}">
+        <label class="flex flex-row items-center">
+            {{ component('icons~mail',styles.icon,'svg') }}    
+            <span class="{{ styles.label }}">{{ labels.email }}</span>
+        </label>
+        <div class="{{ styles.value }}">{{ address.email|default('email@mail.com') }}</div>
+    </div>
+
+    <div class="{{ styles.item }}">
+        <label class="flex flex-row items-center">
+            {{ component('icons~phone',styles.icon,'svg') }}    
+            <span class="{{ styles.label }}">{{ labels.phone }}</span>
+        </label>
+        <div class="{{ styles.value }}">{{ address.phone|default('0000-1111-123') }}</div>
+    </div>
+
+    <div class="{{ styles.item }}">
+        <label class="flex flex-row items-center">
+            {{ component('icons~address',styles.icon,'svg') }}    
+            <span class="{{ styles.label }}">{{ labels.location }}</span>
+        </label>
+        <div class="{{ styles.value }}">{{ address.street|default('Street address') }}</div>
+    </div>
+
+  
+</div>

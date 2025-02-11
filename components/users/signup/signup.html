@@ -1,82 +1,82 @@
 {% set settings = service('options').get('users.signup.form') %}
-<div class="{{ styles.space }} {{ styles.border }}">
-    <div class="z-0 {{ styles.color }}">
+{% set settings = service('options').get('users.signup.form') %}
+
+<div class="{{ styles.border }}"> 
+    <div class="z-0 {{ styles.color }} {{ styles.space }}">  
         <h1 class="flex items-center {{ styles.title.class }}">
-            {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
+            {{ component('icons~user.add',styles.title.icon,'svg') }}  
             <div class="pl-2 font-bold {{ styles.title.color }}">
                 {{ title }}
             </div>
-        </h1>  
-        {% set settings = service('options').get('users.signup.form') %}
-        <form class="form pt-4" id="signup_form">  
+        </h1>        
+        <form class="{{ styles.form }}" id="signup_form">  
             <input type="hidden" name="redirect_url" value="{{ redirect_url }}">
             <input type="hidden" name="user_type_slug" value="{{ user_type }}">
             <input type="hidden" name="group" value="{{ group }}">
             {% if settings.username.show == 'true' %}
-                <div class="field flex flex-col my-1">
-                    <label class="{{ styles.label }}">
-                        {{ fields.user_name.label }}
-                    </label>
-                    <div class="relative">
-                        <input 
-                        class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                <div class="{{ styles.field }}">                    
+                    <input 
+                        class="form-input {{ styles.input.class }}"
                         rule="minLength[2]"
                         type="text" 
                         name="user_name" 
                         id="user_name" 
                         {{ fields.user_name.placeholder|attr('placeholder') }} 
-                        value="{{ user.user_name }}"> 
-                    </div>
+                        value="{{ user.user_name }}">                 
+                    <label class="{{ styles.label }}">
+                        {{ fields.user_name.label }}
+                    </label>
+                    <span class="input-filled-focused"></span>           
                 </div>
             {% endif %}
             {% if settings.email.show == 'true' %}     
-                <div class="field field flex flex-col my-1  
-                    {{ settings.email.required|ifthen('true','required') }}">
-                    <label class="{{ styles.label }}">
-                        {{ fields.email.label }}
-                    </label>
+                <div class="{{ styles.field }}
+                    {{ settings.email.required|ifthen('true','required') }}">                    
                     <input 
-                        class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                        class="form-input {{ styles.input.class }}"
                         type="text" 
                         rule="email"
                         name="email" 
                         id="email" 
                         {{ fields.email.placeholder|attr('placeholder') }} 
-                        value="{{ user.email }}">  
+                        value="{{ user.email }}"> 
+                    <label class="{{ styles.label }}">
+                        {{ fields.email.label }}
+                    </label> 
+                    <span class="input-filled-focused"></span>    
                 </div>  
             {% endif %} 
             {% if settings.name.show == 'true' %}     
-            <div class="field flex flex-col my-1 {{ settings.name.required|ifthen('true','required') }}">
-                <label class="{{ styles.label }}">
-                    {{ fields.name.label }}
-                </label>
+            <div class="{{ styles.field }} {{ settings.name.required|ifthen('true','required') }}">               
                 <input 
-                    class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                    class="form-input {{ styles.input.class }}"
                     name="name" 
                     id="name" 
                     placeholder="{{ fields.name.placeholder }}" 
                     type="text" 
                     value="{{ user.name }}">
+                <label class="{{ styles.label }}">
+                    {{ fields.name.label }}
+                </label>
+                <span class="input-filled-focused"></span> 
             </div>
             {% endif %}   
             {% if settings.phone.show == 'true' %}     
-            <div class="field flex flex-col my-1 {{ settings.phone.required|ifthen('true','required') }}">
-                <label class="{{ styles.label }}">
-                    {{ fields.phone.label }}
-                </label>
+            <div class="{{ styles.field }} {{ settings.phone.required|ifthen('true','required') }}">                
                 <input 
-                    class="form-input {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                    class="form-input {{ styles.input.class }}"
                     name="phone" 
                     id="phone" 
                     placeholder="{{ fields.phone.placeholder }}" 
                     type="text" 
                     value="{{ user.phone }}">
+                <label class="{{ styles.label }}">
+                    {{ fields.phone.label }}
+                </label>
+                <span class="input-filled-focused"></span> 
             </div>
             {% endif %}            
-            <div class="field flex flex-col my-1 required">
-                <label class="{{ styles.label }}">
-                    {{ fields.password.label }}
-                </label>     
+            <div class="{{ styles.field }} required">               
                 <div class="relative">         
                     <input 
                         class="form-input password-field {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
@@ -90,14 +90,15 @@
                         {{ component('icons~eye',styles.input.icon,'svg') }}
                     </div>
                 </div>   
-            </div>    
-            <div class="field flex flex-col my-1 required">
                 <label class="{{ styles.label }}">
-                    {{ fields.repeat_password.label }}
-                </label>
+                    {{ fields.password.label }}
+                </label>     
+                <span class="input-filled-focused"></span> 
+            </div>    
+            <div class="{{ styles.field }} required">              
                 <div class="relative">   
                     <input 
-                        class="form-input password-field {{ styles.input.class }} {{ styles.input.hover }} {{ styles.input.focus }}"
+                        class="form-input password-field {{ styles.input.class }}"
                         type="password"
                         rule="match[password]" 
                         name="repeat_password" 
@@ -108,6 +109,10 @@
                         {{ component('icons~eye',styles.input.icon,'svg') }}
                     </div>
                 </div>
+                <label class="{{ styles.label }}">
+                    {{ fields.repeat_password.label }}
+                </label>
+                <span class="input-filled-focused"></span> 
             </div>                       
             <div class="field mt-4" id="captcha_panel">   
                 {% if settings.captcha.show == 'true' %}     
@@ -126,4 +131,12 @@
             {{ component('current>users.connect',{ class: '' }) }}
         {% endif %}
     </div>
+</div>
+<div class="flex flex-row items-center p-1">           
+    {{ component('icons~user',styles.link.icon,'svg') }}  
+    <a 
+        href="{{ url('/login') }}"
+        class="pl-2 text-sm {{ styles.link.class }}">   
+        <span class="{{ styles.link.hover }}">{{ links.login }}</span>
+    </a>       
 </div>

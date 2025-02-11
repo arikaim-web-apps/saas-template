@@ -12,13 +12,13 @@
     <div class="p-2 {{ styles.item.title.color }} {{ styles.item.title.text }} {{ styles.item.title.border }}">
         {{ plan.title }}
     </div>   
-    <div class="p-2 flex flex-col justify-between grow">
+    <div class="p-4 flex flex-col justify-between grow">
         <div class="mt-1 px-4 py-4">
             <span class="text-gray-600">{{ plan.description }}</span>
         </div>
         <div class="my-4">              
             <div class="flex flex-row items-center justify-center h-12">                 
-                <div class="px-2 fond-bold self-end">
+                <div class="px-2 fond-bold self-end text-lg">
                     {{ plan.currency.sign }}
                 </div>                                           
                 <div 
@@ -29,8 +29,8 @@
                 </div>    
                 <div class="pl-1 place-self-end">
                     <span 
-                        class="text-xs  uppercase border border-solid rounded-lg px-2 border-gray-400
-                        {{ (plan.isFree() == false) ? 'price-label text-sky-700' : 'text-green-500' }}"
+                        class="text-xs  uppercase border border-solid rounded-lg px-2 border-stone-400
+                        {{ (plan.isFree() == false) ? 'price-label text-sky-700' : 'text-green-700' }}"
                         monthly-label="{{ labels.month }}" 
                         annual-label="{{ labels.year }}">
                         {{ price_label }}
@@ -53,21 +53,18 @@
                 {% endfor %}           
             </div>
         </div>              
-        <div class="place-content-center mt-8">       
+        <div class="mt-8 self-center">       
             {% set monthly_subscrbe_url = url(plan.getSubscribeUrl('monthly',upgrade)) %}
             {% set annual_subscrbe_url = url(plan.getSubscribeUrl('annual',upgrade)) %}            
-            <a class="block subscribe-button 
-                {{ styles.item.button.class }} {{ styles.item.button.color }} {{ styles.item.button.border }}" 
+            <a class="subscribe-button {{ styles.item.button }}" 
                 href="{{ (billing_type == 'annual') ? annual_subscrbe_url : monthly_subscrbe_url }}"  
                 monthly-url="{{ monthly_subscrbe_url }}"
-                annual-url="{{ annual_subscrbe_url }}">               
-                <span class="uppercase text-white">
-                    {% if (upgrade == true) %}
-                        {{ labels.upgrade }}
-                    {% else %}
-                        {{ (plan.isFree() == false) ? labels.subscribe : labels.signup }}
-                    {% endif %}
-                </span>
+                annual-url="{{ annual_subscrbe_url }}">                               
+                {% if (upgrade == true) %}
+                    {{ labels.upgrade }}
+                {% else %}
+                    {{ (plan.isFree() == false) ? labels.subscribe : labels.signup }}
+                {% endif %}                
             </a>       
         </div>
     </div>                     

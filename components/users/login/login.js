@@ -33,12 +33,6 @@ arikaim.component.onLoaded(function() {
             }  
         }         
     },function(error) {
-        if (users.getLoginAttempts() > 0) {          
-            arikaim.page.loadContent({
-                id : 'captcha_panel',
-                component: 'captcha::code',
-                replace: true
-            });
-        }
+        console.log(error);
     });
 });

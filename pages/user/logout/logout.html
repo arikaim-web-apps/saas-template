@@ -1,7 +1,6 @@
-{% component 'current>layout' %}
-    {% set class = ' ' %}
-    <div class="flex w-full justify-center h-full">
-        <div class="shrink-0 self-center w-74">
+{% component 'current>layout' %}    
+    <div class="h-full flex justify-center">
+        <div class="flex-shrink-0 w-96 md:w-96 sm:w-full xs:w-full">
             {{ component('current>users.logout') }}
         </div>        
     </div>

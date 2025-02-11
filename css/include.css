@@ -5,3 +5,10 @@
 .active-button {
     @apply bg-stone-200;
 }
+
+.field.error input {  
+}
+
+.input, .textarea {
+    @apply bg-stone-100 hover:border-stone-400 border-b-2 border-stone-200
+}

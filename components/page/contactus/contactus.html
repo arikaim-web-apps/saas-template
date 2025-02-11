@@ -1,0 +1,11 @@
+<div   
+    class="w-2/3 mx-auto sm:w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-2 sm:grid-cols-1">
+    <div class="{{ styles.class }}">
+        {{ component('current>page.contactus.address',{}) }}      
+    </div>
+    <div 
+        class="{{ styles.class }} border-l border-stone-200" 
+        id="contactus_content">
+        {{ component('current>page.contactus.form',{ styles: styles }) }}
+    </div>
+</div>

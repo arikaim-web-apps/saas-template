@@ -10,10 +10,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.field.error input {
-    border:1px solid #EF4444!important;
-}
-
 .disabled {
     pointer-events: none;
     opacity: 0.8;
