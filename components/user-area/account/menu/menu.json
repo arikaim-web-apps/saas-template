@@ -3,12 +3,12 @@
         "details": {
             "title": "Details",
             "component": "current>user-area.account.details",
-            "icon": "material-icons~edit"
+            "icon": "icons~edit"
         },
         "password": {
             "title": "Change Password",
             "component": "current>user-area.account.password",
-            "icon": "material-icons~key"
+            "icon": "icons~lock"
         }         
     }
 }

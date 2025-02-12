@@ -7,9 +7,9 @@
         "class": "my-1 flex flex-row items-center",          
         "icon": {         
             "size": "h-6 w-6",
-            "width": 1,
+            "width": 2,
             "color": "text-sky-400"
         },       
-        "link": "px-1 font-semibold cursor-pointer hover:text-sky-500 transition duration-700 ease-in-out" 
+        "link": "px-1 poppins-font font-normal cursor-pointer hover:text-red-700 transition duration-700 ease-in-out" 
     }
 }

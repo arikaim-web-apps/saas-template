@@ -1,15 +1,12 @@
 {
-    "label": "flex flex-col my-1 font-semibold",
+    "label": "input-floating-label",
     "input": {
-        "class": "w-full p-2 border border-solid rounded-sm border-stone-200 placeholder-stone-400",
-        "focus": "focus:border-sky-300 focus:border focus:border-solid focus:outline-hidden",
-        "hover": "hover:border-sky-300 transition duration-1000 ease-in-out"
+        "class": "input input-floating peer"
     },
     "icon": {
-        "size": "h-6 w-6",
-        "color": "text-indigo-500",
-        "width": "2",
-        "class": "p-1"
-    },
-    "button": ""        
+        "size": "h-5 w-5",
+        "color": "text-stone-400",
+        "fill": "#a8a29e",
+        "width": "1"       
+    }    
 }

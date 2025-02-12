@@ -1,10 +1,11 @@
 {
-    "title": "font-semibold text-gray-800 text-center text-md p-1",
+    "title": "poppins-font font-normal text-gray-800 text-center text-md p-1",
     "color": "bg-stone-50 rounded-b-lg shadow-md shadow-stone-200",
     "size": "w-64 md:w-64 xs:w-full sm:w-full",
     "icon": {
         "name": "icons~user",
         "size": "h-6 w-6",
+        "width": 2,
         "color": "text-orange-500"
     }
 }

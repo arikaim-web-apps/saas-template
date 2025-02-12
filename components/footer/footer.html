@@ -8,20 +8,20 @@
                 </div>                                                 
                 <div class="pl-2">                
                     <div 
-                        class="first-letter:text-red-600 inline-block align-baseline monoton-font text-xl font-medium hover:text-sky-500 transition duration-700 ease-in-out">
+                        class="poppins-font inline-block align-baseline text-xl font-extrabold hover:text-sky-500 transition duration-700 ease-in-out">
                         <a href="{{ url('') }}" class="align-baseline">
                             {{ title }}
                         </a>
                     </div>                                 
                     <div 
-                        class="tracking-wide text-stone-700 text-xs font-light assistant-font -mt-2">
+                        class="poppins-font tracking-wide text-stone-700 text-xs font-light -mt-2">
                         {{ subtitle }}
                     </div>
                 </div>                                                      
             </div>
             <div 
                 class="px-1 pt-2 flex flex-row items-center">              
-                {{ component('material-icons~copyright',styles.icon,'svg') }}             
+                {{ component('icons~copyright',styles.icon,'svg') }}             
                 <div class="px-1 {{ styles.copyright.color }}">       
                     {{ copyright|renderText({ interval: currentYear() }) }}             
                 </div> 

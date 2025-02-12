@@ -32,8 +32,8 @@
         }
     },
     "item": {
-        "class": "text-sm open-sans font-semibold px-4 md:p-1 lg:px-4",
-        "color": "text-gray-900 hover:text-sky-700 transition duration-700 ease-in-out",
-        "active": "text-sky-700"
+        "class": "poppins-font text-sm open-sans font-normal px-4 md:p-1 lg:px-4",
+        "color": "text-stone-900 hover:text-red-700 transition duration-700 ease-in-out",
+        "active": "text-red-700"
     }
 }

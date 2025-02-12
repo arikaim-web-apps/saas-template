@@ -14,11 +14,11 @@
     </div>   
     <div class="p-4 flex flex-col justify-between grow">
         <div class="mt-1 px-4 py-4">
-            <span class="text-gray-600">{{ plan.description }}</span>
+            <span class="text-stone-700">{{ plan.description }}</span>
         </div>
         <div class="my-4">              
             <div class="flex flex-row items-center justify-center h-12">                 
-                <div class="px-2 fond-bold self-end text-lg">
+                <div class="px-2 fond-bold self-end text-xl">
                     {{ plan.currency.sign }}
                 </div>                                           
                 <div 
@@ -29,7 +29,7 @@
                 </div>    
                 <div class="pl-1 place-self-end">
                     <span 
-                        class="text-xs  uppercase border border-solid rounded-lg px-2 border-stone-400
+                        class="text-xs font-light poppins-font uppercase border border-solid rounded-lg px-2 border-stone-400
                         {{ (plan.isFree() == false) ? 'price-label text-sky-700' : 'text-green-700' }}"
                         monthly-label="{{ labels.month }}" 
                         annual-label="{{ labels.year }}">

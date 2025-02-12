@@ -1,6 +1,6 @@
 {
     "class": "px-4",
-    "label": "uppercase font-thin px-2 text-lg text-stone-600",
+    "label": "uppercase poppins-font font-light px-2 text-lg text-stone-600",
     "item": "my-8",
     "value": "font-semibold text-md my-2",
     "icon": {

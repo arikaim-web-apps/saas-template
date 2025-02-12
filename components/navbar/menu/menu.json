@@ -15,6 +15,7 @@
         "navbar": [       
             {
                 "title": "Contact",
+                "key": "contact-us",
                 "url": "/contact-us"                
             }   
         ]  

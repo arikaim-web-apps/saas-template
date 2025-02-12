@@ -4,7 +4,7 @@
         "size": "xs:w-full sm:w-full",
         "title": {
             "border": "",
-            "text": "text-center text-2xl font-semibold",
+            "text": "poppins-font text-center text-2xl font-normal",
             "color": "bg-stone-100"
         },
         "features": {
@@ -14,6 +14,6 @@
                 "color": "text-green-400"
             }
         },
-        "button": "btn btn-success font-semibold"            
+        "button": "btn btn-success font-normal poppins-font"            
     }
 }

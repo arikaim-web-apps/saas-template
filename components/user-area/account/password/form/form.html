@@ -1,36 +1,43 @@
 <form class="form" id="change_password_form">    
     <input type="hidden" name="token" value="{{ token }}">
-    <div class="field required flex flex-col">
-        <label class="{{ theme.form.label|default(styles.label) }}">
-            {{ fields.password.label }}
-        </label>
-        <input 
-            class="password-field form-input 
-            {{ theme.form.input.class|default(styles.input.class) }} 
-            {{ theme.form.input.hover|default(styles.input.hover) }} 
-            {{ theme.form.input.focus|default(styles.input.focus) }}"
-            type="password" 
-            rule="minLength[4]"
-            name="password" 
-            id="password" 
-            {{ fields.password.placeholder|attr('placeholder') }} 
-            value=""> 
+    <div class="{{ theme.form.field }} required w-1/2 lg:w-1/2 sm:w-full mb-4">      
+        <div class="input-group">    
+            <input 
+                class="password-field form-input {{ theme.form.input.class|default(styles.input.class) }}"
+                type="password" 
+                rule="minLength[4]"
+                name="password" 
+                id="password" 
+                {{ fields.password.placeholder|attr('placeholder') }} 
+                value="">                     
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.password.label }}
+            </label>   
+            <span class="input-group-text">
+                {{ component('icons~eye',styles.icon) }}
+            </span>  
+        </div>
     </div>    
-    <div class="field required flex flex-col my-2">
-        <label class="{{ theme.form.label|default(styles.label) }}">
-            {{ fields.repeat_password.label }}
-        </label>
-        <input 
-            class="password-field form-input 
-            {{ theme.form.input.class|default(styles.input.class) }} 
-            {{ theme.form.input.hover|default(styles.input.hover) }} 
-            {{ theme.form.input.focus|default(styles.input.focus) }}"
-            type="password" 
-            rule="match[password]"
-            name="repeat_password" 
-            id="repeat_password" 
-            {{ fields.repeat_password.placeholder|attr('placeholder') }} 
-            value="">
+    <div class="{{ theme.form.field }} required w-1/2 lg:w-1/2 sm:w-full mb-4">
+        <div class="input-group">
+            <input 
+                class="password-field form-input 
+                {{ theme.form.input.class|default(styles.input.class) }} 
+                {{ theme.form.input.hover|default(styles.input.hover) }} 
+                {{ theme.form.input.focus|default(styles.input.focus) }}"
+                type="password" 
+                rule="match[password]"
+                name="repeat_password" 
+                id="repeat_password" 
+                {{ fields.repeat_password.placeholder|attr('placeholder') }} 
+                value="">
+            <label class="{{ theme.form.label|default(styles.label) }}">
+                {{ fields.repeat_password.label }}
+            </label>
+            <span class="input-group-text">
+                {{ component('icons~eye',styles.icon) }}
+            </span>
+        </div>
     </div>      
     {{  component('current>form.footer',{           
             button_title: buttons.submit                

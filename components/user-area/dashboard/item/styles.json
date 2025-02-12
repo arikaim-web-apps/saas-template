@@ -5,6 +5,7 @@
     "title": {
         "icon": {
             "size": "h-6 w-6",
+            "width": 2,
             "color": "text-orange-400"
         },
         "class": "py-1 border-0 border-b border-gray-200 border-solid",

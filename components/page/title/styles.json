@@ -1,7 +1,7 @@
 {
     "space": "p-2 py-12",
     "align": "mt-10 mx-auto",
-    "title": "p-1 text-5xl assistant-font font-light text-center text-stone-800",
+    "title": "p-1 text-5xl font-light text-center text-stone-800",
     "text": "first-letter:text-stone-800 first-letter:font-medium ",
     "subtitle": "text-center text-stone-700"
 }

@@ -4,17 +4,17 @@
             {{ component(icon,{ color: icon_color, size: 'w-12 h-12' },'svg') }}     
         </div>                          
     </div>
-    <h4 class="{{ theme.feature.title }} {{ title_color }} montserrat-font">
+    <h4 class="{{ theme.feature.title }} {{ title_color }}">
         {{ title }}
     </h4>
-    <div class="montserrat-font {{ theme.feature.subtitle }}">{{ subtitle }}</div>
+    <div class="{{ theme.feature.subtitle }}">{{ subtitle }}</div>
     <ul class="mt-2 p-4">
         {% for item in features %}
         <li class="{{ theme.feature.item }}">
             <div>
                 {{ component('icons~check',theme.feature.icon,'svg') }}           
             </div>                  
-            <div class="p-1 font-medium text-base montserrat-font">
+            <div class="p-1 font-medium text-base">
                 {{ item.title }}
                 <div class="text-gray-400 text-sm font-light">{{ item.subtitle }}</div>
             </div>

@@ -24,11 +24,6 @@
             "label": "Phone",
             "error": "Not valid phone",
             "placeholder": "Enter Phone"
-        },
-        "phone2": {
-            "label": "Phone 2",
-            "error": "Not valid phone 2",
-            "placeholder": "Enter Phone 2"
         }
     },
     "labels": {

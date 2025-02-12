@@ -18,7 +18,7 @@
             "color": "text-sky-500",
             "width": "2"           
         },
-        "class": "flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
+        "class": "poppins-font text-sm font-normal flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
         "hover": "decoration-red-500 decoration-2 cursor-pointer hover:underline transition-all duration-1000 ease-in-out"
     },
     "form": "form pt-4 px-4",
@@ -34,6 +34,6 @@
         "class": "input input-filled peer"        
     },
     "buttons": {
-        "login": "btnn btn-success"
+        "login": "btnn btn-success poppins-font"
     }
 }

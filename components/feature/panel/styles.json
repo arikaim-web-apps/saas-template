@@ -1,6 +1,6 @@
 {
     "subtitle": "text-center text-gray-400 pt-1",
-    "title": "text-center assistant-font font-light text-3xl p-2 text-orange-900 relative -top-8",
+    "title": "text-center font-light text-3xl p-2 text-orange-900 relative -top-8",
     "class": "py-4 px-8 border border-stone-200 border-solid rounded-b-xl rounded-t-3xl bg-stone-100 place-self-stretch justify-self-stretch flex flex-col",
     "border": "rounded-sm shadow-md border border-stone-200 border-solid",
     "image": "w-full h-full",  

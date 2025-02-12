@@ -14,7 +14,7 @@
     "item": {
         "link": "px-2 sm:block xs:hidden font-semibold text-sm cursor-pointer",
         "class": "flex flex-row items-center",
-        "color": "border-transparent border-y border-l hover:rounded-l-xl hover:bg-stone-100 text-gray-900 hover:text-sky-500 transition duration-700 ease-in-out",
+        "color": "border-transparent border-y border-l hover:rounded-l-xl hover:bg-stone-100 text-stone-900 hover:text-red-700 transition duration-700 ease-in-out",
         "active": "text-green-500"
     },
     "logout": {

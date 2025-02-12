@@ -1,8 +1,8 @@
 {   
-    "title": "Arikaim",
-    "subtitle": "Web Tools",
+    "title": "SaaS",
+    "subtitle": "SaaS Template",
     "dashboard": {
-        "icon": "material-icons~dashboard",
+        "icon": "icons~template",
         "component": "current>user-area.dashboard",
         "title": "Dashboard",
         "tooltip": "User dashboard"

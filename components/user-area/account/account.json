@@ -3,6 +3,6 @@
     "icon": "icons~user",
     "menu": {
         "title": "Settings",
-        "icon": "material-icons~settings"
+        "icon": "icons~cog"
     }   
 }

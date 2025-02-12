@@ -5,20 +5,20 @@
     "logo": {
         "size": "h-8 w-8",
         "class": "",
-        "color": "text-gray-300"
+        "color": "text-stone-300"
     },
     "copyright": {
-        "color": "text-gray-700 text-xs"
+        "color": "text-stone-700 text-xs poppins-font font-extralight"
     },
     "icon": {
         "size": "h-4 w-4",
         "class": "",
-        "color": "text-gray-500"
+        "color": "text-stone-500"
     },
     "item": {
-        "title": "mb-2 uppercase text-sm text-stone-900 font-bold dark:text-gray-100",
-        "class": "link link-hover flex flex-row items-center py-1",
-        "color": "text-sm text-gray-800 hover:text-sky-700 transition duration-700 ease-in-out",
-        "active": "text-sky-700"
+        "title": "mb-2 uppercase text-sm text-stone-900 font-bold dark:text-stone-100",
+        "class": "poppins-font font-normal link link-hover flex flex-row items-center py-1",
+        "color": "text-xs text-stone-800 hover:text-red-700 transition duration-700 ease-in-out",
+        "active": "text-red-700"
     }
 }

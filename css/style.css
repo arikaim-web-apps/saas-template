@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
 
-.assistant-font {
-    font-family: 'Assistant', sans-serif; 
+.open-sans-font {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
 }
 
-.open-sans {
-    font-family: 'Open Sans', sans-serif;
+.poppins-font {
+  font-family: "Poppins", serif;
+  font-optical-sizing: auto;
 }
 
 .disabled {
-    pointer-events: none;
-    opacity: 0.8;
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 .loading:before {

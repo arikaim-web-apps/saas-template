@@ -1,6 +1,6 @@
 {
     "title": "Info",
-    "icon": "material-icons~info",
+    "icon": "icons~info",
     "labels": {
         "login": "Last Login",
         "signup": "Date Signup"       
