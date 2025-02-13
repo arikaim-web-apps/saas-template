@@ -16,7 +16,8 @@ module.exports = {
     darkMode: 'class',
     plugins: [               
         require("@tailwindcss/typography"),
-        require("flyonui")
+        require("flyonui"),
+        require("flyonui/plugin") 
     ],
     flyonui: {
         themes: [

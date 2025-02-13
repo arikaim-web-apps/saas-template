@@ -3,7 +3,7 @@
     "field": "relative field my-4",
     "form": {
         "label": "input-filled-label",
-        "input": "input input-filled peer",
-        "textarea": "textarea textarea-filled peer"   
+        "input": "input input-filled peer bg-stone-100 hover:border-stone-400 border-b-2 border-stone-200",
+        "textarea": "textarea textarea-filled peer bg-stone-100 hover:border-stone-400 border-b-2 border-stone-200"   
     }
 }

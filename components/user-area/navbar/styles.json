@@ -11,9 +11,9 @@
     },
     "icon": {
         "name": "icons~user",
-        "size": "h-6 w-6",
-        "class": "cursor-pointer transition duration-1000 ease-in-out",
-        "color": "text-stone-800"
+        "size": "h-5 w-5",
+        "width": 2,                
+        "color": "text-amber-500"              
     },
     "item": {
         "class": "text-sm open-sans font-semibold px-4 md:p-1 lg:px-4",
@@ -21,13 +21,13 @@
         "active": "text-sky-700"
     },
     "avatar": {
-        "menu": "text-sm font-semibold",
-        "ring-3": "bg-white w-6 h-6",
+        "menu": "text-sm poppins-font hover:bg-stone-100 cursor-pointer transition duration-1000 ease-in-out font-normal flex flex-row items-center",
+        "ring": "bg-white w-6 h-6 wing-3",
         "icon": {
             "name": "icons~user",
             "size": "h-6 w-6",
-            "class": "cursor-pointer transition duration-1000 ease-in-out",
-            "color": "text-stone-800"
+            "width": 2,                
+            "color": "text-amber-500"
         }
     }
 }

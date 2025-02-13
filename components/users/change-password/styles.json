@@ -30,7 +30,7 @@
             "width": "2",
             "class": "p-1"
         },
-        "class": "input input-filled bg-stone-100 hover:border-stone-400 border-stone-200 peer"        
+        "class": "input input-filled peer bg-stone-100 hover:border-stone-400 border-b-2 border-stone-200"        
     },
     "buttons": {
         "login": "btnn btn-success poppins-font"

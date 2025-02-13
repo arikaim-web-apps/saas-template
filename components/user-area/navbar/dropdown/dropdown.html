@@ -1,0 +1,38 @@
+{% set user_id = service('access').getId() %}
+{% set user_details = createModel('UserDetails','users').findByColumn(user_id,'user_id') %}   
+<div class="dropdown dropdown-end">
+    <button 
+        id="dropdown_avatar" 
+        type="button" 
+        class="dropdown-toggle flex self-center" 
+        aria-haspopup="menu" 
+        aria-expanded="false" 
+        aria-label="User menu">
+        <div class="{{ styles.avatar.ring }}">   
+            {% if user_details.avatar is not empty %}                            
+                <img alt="Avatar" src="{{ url(service('users').getViewAvatarUrl(),true) }}" />            
+            {% else %}  
+                {{ component('icons~user',styles.avatar.icon,'svg') }}  
+            {% endif %}
+        </div>       
+    </button>    
+    <ul 
+        class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 shadow" 
+        role="menu" 
+        aria-orientation="vertical" 
+        aria-labelledby="dropdown-avatar"> 
+        {% for item in links %}
+        <li class="dropdown-item">
+            <a 
+                mountTo="user_area_content"
+                component="{{ item.component }}"
+                class="navbar-menu-item {{ styles.avatar.menu }}">
+                {{ component(item.icon,styles.icon,'svg') }}
+                <div class="mx-2">
+                    {{ item.title }}
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

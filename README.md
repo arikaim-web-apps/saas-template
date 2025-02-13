@@ -12,7 +12,7 @@
 
 In theme folder: 
 
-1. Install Tailwind CSS
+1. Install Tailwind CSS 3.4
     npm install tailwindcss @tailwindcss/cli
 
 2. Install typography
@@ -22,9 +22,9 @@ In theme folder:
     npm install flyonui
     
 4. Start watch process
-    npx @tailwindcss/cli -i ./css/include.css -o ./css/tailwind.min.css --watch -m
+    npx tailwindcss -i css/include.css -o css/tailwind.min.css -m --watch
  
 
-npx tailwindcss -i css/include.css -o css/tailwind.min.css -m --watch 
+
 
  

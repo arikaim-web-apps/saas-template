@@ -1,0 +1,14 @@
+{
+    "links": [
+        {
+            "title": "Profile",
+            "component": "current>user-area.account",
+            "icon": "icons~user"
+        },
+        {
+            "title": "Log out",
+            "component": "current>user-area.logout",
+            "icon": "icons~logout"
+        }
+    ]
+}

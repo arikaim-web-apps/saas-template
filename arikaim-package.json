@@ -71,7 +71,8 @@
             "current>users"
         ],      
         "js": [
-            "form.js"
+            "form.js",
+            "flyonui.js"
         ],
         "css": [
             "preflight.css",

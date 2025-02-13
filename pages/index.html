@@ -9,18 +9,8 @@
         <meta name="googlebot" content="{{ head.robots|default(robots)|default('index,follow,all') }}"/>
         <meta name="Cache-Control" content="{{ head.cache_control|default("max-age=31536000") }}"/>   
         <link rel="icon" type="image/png" href="{{ template_url }}{{ head.favicon }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="saashub-verification" content="cczj5hbev4qc" />
-        {{ head.html_code }}
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1YLPXCL2V"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-G1YLPXCL2V');
-        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        {{ head.html_code }}      
     </head>    
     <body id="page" class="h-full dark:bg-gray-800">
         {{ body|raw }}    
