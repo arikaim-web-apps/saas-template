@@ -1,23 +1,25 @@
 {
     "post": {
-        "border": "shadow-sm rounded-box border border-stone-200 border-solid",
-        "space": "p-8",
+        "border": "rounded-lg border border-stone-200 border-solid",
+        "space": "p-4",
         "color": "bg-white"
     },
     "preview": {
-        "border": "shadow-sm rounded-box border border-stone-200 border-solid",
-        "space": "p-8",
+        "border": "rounded-lg border border-stone-200 border-solid",
+        "space": "px-4 py-2",
         "color": "bg-white",
-        "image": "rounded-t-lg",
-        "label": "text-gray-500 text-sm",
+        "image": "w-full min-h-56 rounded-t-lg transition-opacity ease-in duration-1000 opacity-0",
+        "label": "text-stone-700 text-xs",
         "icon": {
             "size": "h-full w-full",
-            "width": "0.1",
-            "color": "text-gray-300"
+            "width": "1",
+            "stroke": "1",
+            "color": "text-stone-600"
         },
-        "link": "hover:text-sky-400 transition transition-duration-1000",
-        "title": "first-letter:text-gray-900 first-letter:font-bold mt-1 text-gray-800 text-2xl",
-        "summary": "font-bold tracking-widest text-gray-400 text-md uppercase p-1"
+        "link": "transition transition-duration-1000",
+        "title": "poppins-font mt-4 text-stone-800 text-xl",
+        "summary": "text-stone-700 text-md p-1",
+        "button": "btn btn-info btn-sm poppins-font"          
     }
    
 }

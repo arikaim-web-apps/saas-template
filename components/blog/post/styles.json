@@ -1,13 +1,13 @@
 {   
-    "border": "shadow-sm rounded-box border border-stone-100 border-solid",
-    "space": "p-8 xs:p-1 md:p-12",
-    "color": "bg-white",
-    "image": "w-64 h-64 xs:w-full xs:h-full md:w-64 md:h-64 rounded-lg",
+    "border": "rounded-box border-none border-gray-50 border-solid",
+    "space": "px-8 py-2 xs:p-1",
+    "color": "bg-gray-50",
+    "image": "transition-opacity ease-in duration-1000 opacity-0 w-64 h-64 xs:w-full xs:h-full md:w-64 md:h-64 rounded-lg",
     "size": "min-h-full",
-    "label": "text-sm text-gray-500 p-1",
+    "label": "text-xs text-gray-600 p-1",
     "icon": {
         "size": "h-full w-full",
         "width": "0.1",
-        "color": "text-gray-300"
-    }   
+        "color": "text-gray-400"
+    }
 }

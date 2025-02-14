@@ -22,17 +22,15 @@
         aria-orientation="vertical" 
         aria-labelledby="dropdown-avatar"> 
         {% for item in links %}
-        <li class="dropdown-item">
-            <a 
+            <li 
                 mountTo="user_area_content"
                 component="{{ item.component }}"
-                class="navbar-menu-item {{ styles.avatar.menu }}">
+                class="dropdown-item navbar-menu-item {{ styles.avatar.menu }}">
                 {{ component(item.icon,styles.icon,'svg') }}
                 <div class="mx-2">
                     {{ item.title }}
                 </div>
-            </a>
-        </li>
+            </li>
         {% endfor %}
     </ul>
 </div>

@@ -1,26 +1,39 @@
-<div class="max-w-sm {{ styles.preview.color }} {{ styles.preview.border }}">       
-    <a 
-        class="inline-block {{ styles.preview.link }}" 
-        href="{{ url(post.url) }}">
-        {% if post.image.src is not empty %}          
-            <img class="{{ styles.preview.image }}" src="{{ url(post.image.src) }}" alt="{{ post.title }}">
+<div class="flex flex-col {{ styles.preview.color }} {{ styles.preview.border }}">    
+    <div
+        class="relative w-full h-56 overflow-hidden">
+        {% if post.image.src is not empty %} 
+        {{ component('current>loader.image',{}) }}                     
+        <img 
+            animation="opacity-100"
+            class="{{ styles.preview.image }}" 
+            data-src="{{ url(post.image.thumbnail(256,null).src) }}" 
+            alt="{{ post.title }}">
         {% else %}           
-            {{ component('icons~image',styles.preview.icon,'svg') }}               
+            {{ component('material-icons~image',styles.preview.icon,'svg') }}               
         {% endif %}
-        <div class="{{ styles.preview.space }}">
-            <div class="flex flex-row {{ styles.preview.label }}">
-                <span>{{ labels.published }}</span>
-                <span class="text-bold px-3 text-gray-300">{{ post.date_created|dateFormat }}</span>               
-            </div>
+    </div> 
+    <div
+        class="h-auto flex-grow {{ styles.preview.space }}">
+        <div class="flex flex-row {{ styles.preview.label }}">
+            <span>{{ labels.published }}</span>
+            <span class="text-bold px-3 text-gray-700">{{ post.date_created|dateFormat }}</span>               
+        </div>
+        <a class="block {{ styles.preview.link }}" 
+            href="{{ url('/blog/post/' ~ post.slug) }}">
             <div class="{{ styles.preview.title }}">
                 {{ post.title }}
             </div>    
             <div class="mt-2 {{ styles.preview.summary }}">
-                {{ post.summary }}
-                <div class="mt-1">                        
-                    {{ labels.more }}                
-                </div>
+                <p>
+                    {{ post.summary }}
+                </p>     
+                <div                  
+                    class="flex place-content-center my-2">              
+                    <button class="{{ styles.preview.button }}">                        
+                        {{ labels.more }}                
+                    </button>
+                </div>                         
             </div>
-        </div>        
-    </a>
+        </a>
+    </div>        
 </div>  

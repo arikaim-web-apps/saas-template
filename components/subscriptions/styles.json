@@ -5,7 +5,7 @@
         "title": {
             "border": "",
             "text": "poppins-font text-center text-2xl font-normal",
-            "color": "bg-stone-100"
+            "color": "bg-stone-200"
         },
         "features": {
             "icon": {

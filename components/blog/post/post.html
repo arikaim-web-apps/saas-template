@@ -1,21 +1,26 @@
 {% if uuid is not empty %}
     {% set post = createModel('Posts','blog').findById(uuid) %} 
 {% endif %}
-{{ component('current>page.title',{ title: post.page.name, subtitle: description }) }}     
+{{ component('current>page.title',{ title: post.title, subtitle: description }) }}     
 <div 
     class="flex flex-row items-start {{ styles.color }} {{ styles.border }} {{ styles.size }} {{ styles.space }}">     
-    <div class="p-1 rounded-sm text-gray-300 text-3xl {{ class }}"> 
-        {% if post.image.src is not empty %}          
-            <img class="{{ styles.image }}" src="{{ url(post.image.src) }}" alt="{{ post.title }}">
+    <div class="relative p-1 rounded text-gray-300 text-3xl {{ class }}"> 
+        {% if post.image.src is not empty %}   
+            {{ component('current>loader.image',{}) }}            
+            <img 
+                animation="opacity-100"
+                class="{{ styles.image }}" 
+                data-src="{{ url(post.image.src) }}" 
+                alt="{{ post.title }}">
         {% else %}           
-            {{ component('icons~image',styles.icon,'svg') }}               
+            {{ component('material-icons~image',styles.icon,'svg') }}               
         {% endif %}                
         <div class="flex flex-row {{ styles.label }}">
             <span>{{ labels.published }}</span>    
-            <span class="px-2 text-gray-300">{{ post.date_created|dateFormat }}</span>             
+            <span class="text-bold px-3 text-gray-700">{{ post.date_created|dateFormat }}</span>             
         </div>
     </div>   
-    <div class="pl-12 prose prose-2xl text-lg">        
-        {{ post.content|md }}
+    <div class="pl-12 prose prose-2xl text-lg">  
+        {{ post.content|md|decode }}
     </div>    
 </div>
