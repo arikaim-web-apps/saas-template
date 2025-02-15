@@ -7,21 +7,17 @@
     {{ styles.border }}">
     <div       
         class="flex flex-col items-center {{ styles.space }}">
-        <div class="my-2 px-2 xs:px-1 flex items-center flex-row xs:grow">            
-            <div class="bg-white rounded-full">              
-                <img width="32px" height="32px" alt="{{ title }}" src="{{ template_url }}images/arikaim-logo.png">               
+        <div class="my-2 flex items-center flex-row xs:grow">            
+            <div class="px-1 bg-white rounded-full">              
+                <img class="w-6 h-6" alt="{{ title }}" src="{{ template_url }}images/logo.svg">               
             </div>                                                 
-            <div class="pl-2 flex flex-col items-start">                
+            <div class="xs:hidden sm:hidden md:flex pl-2 flex flex-col items-start">                
                 <div 
                     class="poppins-font font-extrabold inline-block align-baseline text-xl hover:text-red-700 transition duration-700 ease-in-out">
                     <a href="{{ url('') }}" class="align-baseline">
                         {{ title }}
                     </a>
-                </div>                                 
-                <div 
-                    class="-mt-2 tracking-wide text-stone-900 poppins-font text-xs font-light">
-                    {{ subtitle }}
-                </div>
+                </div>                                                 
             </div> 
         </div>    
         {{ component('current>user-area.sidebar.item',{ styles: styles, item: dashboard, active: true }) }} 

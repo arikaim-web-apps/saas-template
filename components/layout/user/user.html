@@ -2,9 +2,8 @@
     {{ component('current>user-area.navbar',{ active: active }) }} 
     <div class="flex flex-row self-stretch items-stretch grow bg-stone-100">  
         {{ component('current>user-area.sidebar',{ active: active }) }}     
-        <div     
-        
-            class="sm:pl-48 xs:pl-16 flex flex-col grow pb-4 h-full pt-12 xs:pr-2 pr-8 lg:pr-8" 
+        <div             
+            class="md:pl-48 sm:pl-14 xs:pl-14 flex flex-col grow pb-4 h-full pt-12 xs:pr-4 sm:pr-4 md:pr-8 pr-8 lg:pr-8" 
             id="user_area_content">
             {{ content }}                              
         </div>    

@@ -1,6 +1,6 @@
 {
-    "size": "w-auto sm:w-auto xs:w-auto",
-    "space": "pl-2",
+    "size": "w-auto md:w-36 sm:w-10 xs:w-10",
+    "space": "pl-1",
     "position": "top-0 left-0 sm:left-0 xs:left-0",
     "color": "bg-stone-50 shadow-sm",
     "border": "border-r border-solid border-stone-100",
@@ -12,7 +12,7 @@
         "color": "text-amber-500 hover:text-green-500"
     },
     "item": {
-        "link": "px-2 sm:block xs:hidden text-sm poppins-font font-normal cursor-pointer",
+        "link": "px-2 md:block sm:hidden xs:hidden text-sm poppins-font font-normal cursor-pointer",
         "class": "flex flex-row items-center",
         "color": "border-transparent border-y border-l hover:rounded-l-xl hover:bg-stone-100 text-stone-900 hover:text-red-700 transition duration-700 ease-in-out",
         "active": "text-green-500"

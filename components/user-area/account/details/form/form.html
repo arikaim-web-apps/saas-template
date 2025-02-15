@@ -3,8 +3,8 @@
 {% set user_details = createModel('UserDetails','users').findByColumn(user.id,'user_id') %}   
 
 <form class="form" id="user_details_form">   
-    <div class="flex flex-row xs:flex-col md:flex-row items-center grow my-2">
-        <div class="{{ theme.form.field }} w-1/2 md:w-1/2 xs:w-full mx-4">  
+    <div class="grid grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 md:grid-cols-2 gap-4 my-2">
+        <div class="{{ theme.form.field }} w-full">  
             <div class="input-group">
                 <span class="input-group-text">
                     {{ component('icons~user',styles.icon) }}
@@ -21,7 +21,7 @@
                 </label>    
             </div>        
         </div>   
-        <div class="{{ theme.form.field }} required flex flex-col w-1/2 md:w-1/2 xs:w-full">          
+        <div class="{{ theme.form.field }} required w-full">          
             <div class="input-group">               
                 <input 
                     class="form-input {{ theme.form.input.class|default(styles.input.class) }}"
@@ -38,8 +38,8 @@
         </div> 
     </div>
     <div class="my-8 "></div> 
-    <div class="flex flex-row xs:flex-col md:flex-row items-center grow my-2">
-        <div class="{{ theme.form.field }} w-1/2 md:w-1/2 xs:w-full mx-4">           
+    <div class="grid grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 md:grid-cols-2 gap-4 my-2">
+        <div class="{{ theme.form.field }} w-full">           
             <input 
                 class="form-input {{ theme.form.input.class|default(styles.input.class) }}"
                 rule="htmlTags" 
@@ -53,7 +53,7 @@
                 {{ fields.first_name.label }}
             </label>
         </div>
-        <div class="{{ theme.form.field }} w-1/2 md:w-1/2 xs:w-full">           
+        <div class="{{ theme.form.field }} w-full">           
             <input 
                 class="form-input {{ theme.form.input.class|default(styles.input.class) }}"
                 rule="htmlTags" 
@@ -68,8 +68,8 @@
             </label>
         </div>
     </div>   
-    <div class="flex flex-row xs:flex-col md:flex-row items-center grow my-4">
-        <div class="{{ theme.form.field }} w-1/2 md:w-1/2 xs:w-full mx-4">          
+    <div class="grid grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 md:grid-cols-2 gap-4 my-2">
+        <div class="{{ theme.form.field }} w-full">          
             <input 
                 class="form-input {{ theme.form.input.class|default(styles.input.class) }}"
                 error-prompt="{{ fields.phone.error }}" 
@@ -84,7 +84,7 @@
                 {{ fields.phone.label }}
             </label>
         </div>
-        <div class="field flex flex-col w-1/2 md:w-1/2 xs:w-full">                      
+        <div class="field w-full">                      
         </div>
     </div>
     {{  component('current>form.footer',{          
