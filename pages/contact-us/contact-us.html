@@ -1,7 +1,7 @@
 {% component 'current>layout' %}
     {% set active = 'contact-us' %}                
     {{ component('current>page.title',{ title: title, subtitle: description }) }} 
-    <div class="mt-10">
+    <div class="opacity-animation transition-opacity ease-in duration-700 opacity-0 mt-10">
         {{ component('current>page.contactus',{}) }}        
     </div>                                     
 {% endcomponent %}

@@ -5,7 +5,8 @@
         "description": "SaaS template",
         "keywords": "saas, html template"
     },
-    "title": "SaaS template",
+    "title": "Your AI-Powered SaaS",
+    "subtitle": "Easy build your SaaS app",
     "buttons": {
         "start": "Get Started"
     },
