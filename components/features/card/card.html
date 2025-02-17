@@ -1,0 +1,40 @@
+<div class="flex flex-col items-center {{ styles.item.class }} {{ styles.item.animation }}">
+    <div         
+        class="flex flex-row items-center w-full">
+        <div class="{{ styles.item.circle }}">
+            <div class="m-auto">
+                {{ component(item.icon,{ color: icon_color, size: 'w-12 h-12' },'svg') }}     
+            </div>                          
+        </div>
+        <h4 class="{{ styles.item.title }}">
+            {{ item.title }}
+        </h4>
+        <div class="{{ styles.item.subtitle }}">
+            {{ item.subtitle }}
+        </div>
+    </div>
+    <p        
+        class="p-8 my-2 flex-grow">
+        {{ item.description }}
+    </p>
+    {% if item.items is iterable %}
+        <ul class="mt-2 p-4">
+            {% for item in item.items %}
+            <li class="{{ styles.item.item }}">
+                <div>
+                    {{ component('icons~check',styles.item.icon,'svg') }}           
+                </div>                  
+                <div class="p-1 font-medium text-base">
+                    {{ item.title }}
+                    <div class="text-gray-400 text-sm font-light">{{ item.subtitle }}</div>
+                </div>
+            </li>    
+            {% endfor %}                
+        </ul>
+    {% endif %}
+    <div class="flex place-content-center pb-8">
+        <button class="{{ styles.item.button }}">
+            {{ labels.details }}
+        </button>
+    </div>    
+</div>

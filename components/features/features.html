@@ -1,14 +1,14 @@
 <div 
-    class="{{ class }} flex flex-col justify-center px-10 sm:px-0 xs:px-0 md:px-4 lg:px-10">
+    class="{{ class }} flex flex-col justify-center">
     {% if hide_title != true %}
     <h2 class="{{ styles.title }} {{ styles.align }}">
-        {{ subtitle }}
+        {{ title }}
     </h2>
     {% endif %}
     <div 
-        class="self-center grid grid-cols-3 lg:grid-cols-3 xs:grid-cols-1 sm:grid-cols-1 gap-8 lg:gap-8 xs:gap-4 sm:gap-4 md:gap-4">
+        class="w-full self-center grid grid-cols-3 lg:grid-cols-3 xs:grid-cols-1 sm:grid-cols-1 gap-10 lg:gap-10 xs:gap-8 sm:gap-8 md:gap-10">
         {% for item in items %}
-            {{  component('current>festures.card',{ 
+            {{  component('current>features.card',{ 
                     styles: styles, 
                     item: item 
                 }) 
