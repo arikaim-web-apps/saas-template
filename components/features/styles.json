@@ -3,9 +3,9 @@
     "title": "p-1 text-2xl poppins-font font-normal text-center text-stone-800",   
     "item": {
         "subtitle": "text-center text-stone-700 pt-1",
-        "circle": "flex self-center rounded-full h-20 w-20 text-center bg-stone-200 border border-stone-200 border-solid",
+        "circle": "flex self-center rounded-full h-20 w-20 text-center bg-stone-50 border border-stone-300 border-solid",
         "title": "font-normal text-lg text-center poppins-font p-2 px-8",
-        "class": "p-4 h-full w-full justify-self-stretch  rounded-sm  shadow-xs border border-stone-200 border-solid",
+        "class": "bg-stone-100 p-4 h-full w-full justify-self-stretch rounded-sm shadow-xs border border-stone-200 border-solid",
         "item": "flex flex-row items-center",
         "animation": "opacity-animation transition-opacity ease-in duration-1000 opacity-0",
         "icon": {
@@ -13,6 +13,6 @@
             "size": "h-6 w-6", 
             "width": 1
         },
-        "button": "btn btn-info btn-outline poppins-font"
+        "button": "btn btn-info bg-white btn-outline poppins-font"
     }
 }
