@@ -13,7 +13,7 @@
                 data-src="{{ url(post.image.src) }}" 
                 alt="{{ post.title }}">
         {% else %}           
-            {{ component('material-icons~image',styles.icon,'svg') }}               
+            {{ component('icons~image',styles.icon,'svg') }}               
         {% endif %}                
         <div class="flex flex-row {{ styles.label }}">
             <span>{{ labels.published }}</span>    

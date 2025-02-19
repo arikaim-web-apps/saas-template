@@ -14,7 +14,7 @@
                 "subscriptions": {
                     "component": "current>subscriptions.account.plan",
                     "title": "Plan",
-                    "icon": "material-icons~subscription"
+                    "icon": "icons~billing"
                 }
             }
         }

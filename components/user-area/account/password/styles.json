@@ -5,6 +5,7 @@
     },
     "icon": {
         "size": "h-5 w-5",
+        "class": "view-password cursor-pointer",
         "color": "text-stone-400",
         "fill": "#a8a29e",
         "width": "1"       

@@ -3,18 +3,18 @@
     "items": [
         {
             "icon": "current>icons.package",
-            "title": "Professional Web Design",
+            "title": "Web Design",
             "description": "In today's digital-first world, a well-designed website is more than just an online presence—it's a critical component of your business strategy. Whether you're a small business owner or running a large enterprise, investing in professional web design services can set you apart from the competition and drive significant business growth.",
             "items": []
         },
         {
-            "icon": "current>icons.search",
+            "icon": "current>icons.launch",         
             "title": "Web Development",
             "description": "Web development services play a crucial role in building, maintaining, and enhancing your online platform. Whether you're a startup or an established brand, investing in professional web development can significantly impact your growth.",
             "items": []
         },
         {
-            "icon": "current>icons.launch",
+            "icon": "current>icons.search",
             "title": "Search Engine Optimization",
             "description": "In the ever-evolving digital landscape, having a stunning website isn't enough—it needs to be found by your target audience. This is where Search Engine Optimization (SEO) comes into play. SEO is the practice of optimizing your website to rank higher on search engines, increasing visibility, and driving organic traffic.",
             "items": []

@@ -8,7 +8,7 @@
                 {
                     "title": "Pricing",
                     "url": "/subscription",
-                    "icon": "material-icons~subscription"
+                    "icon": "icons~billing"
                 }               
             ]
         },

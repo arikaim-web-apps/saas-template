@@ -5,9 +5,11 @@
     {{ styles.item.class }} 
     {{ styles.item.color }}">
     <div 
-        class="{{ styles.tooltip }}" 
-        data-tip="{{ item.tooltip }}">
+        class="{{ styles.tooltip }}">
         {{ component(item.icon,styles.icon,'svg') }}
+        <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+            <span class="tooltip-body">{{ item.tooltip }}</span>
+        </span>
     </div>       
     <div class="{{ styles.item.link }}">
         {{ item.title }}

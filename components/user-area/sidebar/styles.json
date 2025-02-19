@@ -4,11 +4,11 @@
     "position": "top-0 left-0 sm:left-0 xs:left-0",
     "color": "bg-stone-50 shadow-sm",
     "border": "border-r border-solid border-stone-100",
-    "tooltip": "xs:tooltip sm:tooltip sm:tooltip-right xs:tooltip-right",
+    "tooltip": "tooltip",
     "icon": {
         "size": "h-5 w-5",
         "width": 2,
-        "class": "cursor-pointer transition duration-1000 ease-in-out",
+        "class": "tooltip-toggle cursor-pointer transition duration-1000 ease-in-out",
         "color": "text-amber-500 hover:text-green-500"
     },
     "item": {
