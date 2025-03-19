@@ -16,7 +16,7 @@
         class="h-auto flex-grow {{ styles.preview.space }}">
         <div class="flex flex-row {{ styles.preview.label }}">
             <span>{{ labels.published }}</span>
-            <span class="text-bold px-3 text-gray-700">{{ post.date_created|dateFormat }}</span>               
+            <span class="text-bold px-3 dark:text-gray-200 text-gray-700">{{ post.date_created|dateFormat }}</span>               
         </div>
         <a class="block {{ styles.preview.link }}" 
             href="{{ url('/blog/post/' ~ post.slug) }}">
@@ -24,7 +24,7 @@
                 {{ post.title }}
             </div>    
             <div class="mt-2 {{ styles.preview.summary }}">
-                <p>
+                <p class="dark:text-gray-200">
                     {{ post.summary }}
                 </p>     
                 <div                  

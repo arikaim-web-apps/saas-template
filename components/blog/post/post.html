@@ -17,10 +17,10 @@
         {% endif %}                
         <div class="flex flex-row {{ styles.label }}">
             <span>{{ labels.published }}</span>    
-            <span class="text-bold px-3 text-gray-700">{{ post.date_created|dateFormat }}</span>             
+            <span class="text-bold px-3 dark:text-gray-400 text-gray-700">{{ post.date_created|dateFormat }}</span>             
         </div>
     </div>   
-    <div class="pl-12 prose prose-2xl text-lg">  
+    <div class="pl-12 prose prose-2xl text-lg dark:text-gray-200">  
         {{ post.content|md|decode }}
     </div>    
 </div>

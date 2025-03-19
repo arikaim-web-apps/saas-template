@@ -1,8 +1,8 @@
 {
     "class": "px-4",
-    "label": "uppercase poppins-font font-light px-2 text-lg text-stone-600",
+    "label": "dark:text-stone-400 uppercase poppins-font font-light px-2 text-lg text-stone-600",
     "item": "my-8",
-    "value": "font-semibold text-md my-2",
+    "value": "font-semibold text-md my-2 dark:text-stone-200",
     "icon": {
         "size": "h-6 w-6",
         "color": "text-sky-500"

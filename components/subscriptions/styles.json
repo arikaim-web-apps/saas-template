@@ -1,11 +1,11 @@
 {
     "item": {
-        "border": "bg-white border-stone-200 border border-solid rounded-box",
+        "border": "dark:border-stone-700 dark:bg-gray-900 bg-white border-stone-200 border border-solid rounded-box",
         "size": "xs:w-full sm:w-full",
         "title": {
             "border": "",
             "text": "poppins-font text-center text-2xl font-normal",
-            "color": "bg-stone-200"
+            "color": "bg-stone-200 dark:bg-gray-800 dark:text-gray-200 "
         },
         "features": {
             "icon": {

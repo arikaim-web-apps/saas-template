@@ -24,7 +24,7 @@
             name="message" 
             id="message" 
             {{ message.placeholder|attr('placeholder') }}></textarea>
-        <label class="textarea-filled-label" for="message">
+        <label class="{{ styles.textarea_label }}" for="message">
             {{ message.label }}
         </label>
         <span class="textarea-filled-focused"></span>       

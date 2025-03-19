@@ -1,17 +1,17 @@
 {% component 'current>layout' type 'html' %}   
     {% set active = 'home' %}   
     <div   
-        class="opacity-animation transition-opacity ease-in duration-700 opacity-0 mt-44 w-2/3 gap-4 mx-auto sm:w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-2 sm:grid-cols-1">       
+        class="dark:text-gray-200 opacity-animation transition-opacity ease-in duration-700 opacity-0 mt-44 w-2/3 gap-4 mx-auto sm:w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-2 sm:grid-cols-1">       
         <div class="place-content-center">
             <h1 class="poppins-font font-bold text-center  text-5xl">
                 {{ title }}
             </h1>        
-            <h2 class="block text-center poppins-font mt-2 text-xl text-stone-700 font-light">
+            <h2 class="dark:text-gray-400 block text-center poppins-font mt-2 text-xl text-stone-700 font-light">
                 {{ subtitle }}
             </h2>
         </div>
         <div>
-            <div class="p-12 border border-stone-100">
+            <div class="p-2 border border-stone-100 dark:border-stone-500">
                 <img
                     class="rounded" 
                     alt="Home image" 

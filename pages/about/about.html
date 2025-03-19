@@ -12,23 +12,23 @@
         </div>
         <div         
             class="w-full opacity-animation transition-opacity ease-in duration-1000 opacity-0">           
-            <h4 class="mb-2 text-left font-sembold text-xl ">
+            <h4 class="dark:text-gray-200 mb-2 text-left font-sembold text-xl ">
                 {{ labels.pages }}
             </h4>   
             <div class="px-4">
-                <ul class="space-y-2 text-left roboto font-normal">
+                <ul class="dark:text-gray-200 space-y-2 text-left roboto font-normal">
                     {% for item in pages %}
-                    <li class="flex items-center space-x-1">
+                    <li class="flex items-center space-x-2">
                         {{ component('icons~check.badge',{ size: 'h-5 w-5', class: 'text-green-500' },'svg') }}
                         <div class="ml-4 text-md">{{ item }}</div>
                     </li>
                     {% endfor %}
                 </ul>       
             </div>
-            <h4 class="mt-8 mb-2 text-left font-sembold text-xl">
+            <h4 class="dark:text-gray-200 mt-8 mb-2 text-left font-sembold text-xl">
                 {{ labels.created }}
             </h4>   
-            <div class="px-4">
+            <div class="dark:text-gray-200 px-4">
                 <ul class="space-y-2 text-left roboto-condensed font-thin">
                     <li class="flex items-center space-x-1 text-lg">
                         {{ component('current>icons.tailwind',{ size: 'h-8 w-8' },'svg') }}
@@ -40,10 +40,10 @@
                     </li>
                 </ul>
             </div>
-            <h4 class="mt-8 mb-2 text-left font-sembold text-lg">
+            <h4 class="dark:text-gray-200 mt-8 mb-2 text-left font-sembold text-lg">
                 {{ labels.requirements }}
             </h4>   
-            <div class="px-4">
+            <div class="dark:text-gray-200 px-4">
                 <ul class="space-y-2 text-left roboto-condensed font-thin">
                     <li class="flex items-center space-x-1 text-xl">
                         <div class="h-8 w-8">

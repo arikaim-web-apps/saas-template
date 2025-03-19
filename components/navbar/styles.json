@@ -1,13 +1,13 @@
 {
     "size": "w-full",
     "space": "",
-    "color": "bg-stone-50",
+    "color": "bg-stone-50 dark:bg-gray-800",
     "content": {
         "class": "",
         "size": "w-3/4 lg:w-3/4 sm:w-full xs:w-full",
         "align": "mx-auto",
         "space": "p-4",
-        "color": "bg-stone-100",
+        "color": "bg-stone-100 dark:bg-gray-800",
         "border": ""
     },
     "sidebar": {
@@ -33,7 +33,7 @@
     },
     "item": {
         "class": "poppins-font text-sm open-sans font-normal px-4 md:p-1 lg:px-4",
-        "color": "hover:text-red-700 transition duration-700 ease-in-out",
+        "color": "dark:text-gray-200 dark:hover:text-red-500 hover:text-red-700 transition duration-700 ease-in-out",
         "active": "text-red-800"
     }
 }

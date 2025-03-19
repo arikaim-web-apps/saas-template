@@ -1,13 +1,13 @@
-{% set active_color = active_color|default('bg-stone-200 transition-colors duration-700 text-stone-800') %}
+{% set active_color = active_color|default('dark:text-gray-200 dark:bg-gray-600 bg-stone-200 transition-colors duration-700 text-stone-800') %}
 {% set button_hover = button_hover|default('hover:text-stone-900 hover:bg-stone-300 transition duration-1000 ease-in-out') %}
 <buttons
     id="{{ component_id }}"
     selected="{{ selected|default(1) }}"
     active-color="{{ active_color }}"
     class="inline-block
-    {{ color|default('bg-stone-100') }} 
+    {{ color|default('bg-stone-100 dark:bg-gray-800 dark:text-gray-200') }} 
     {{ border|default('rounded-lg') }}
-    {{ class|default('p-2') }}">
+    {{ class|default('py-2 px-4') }}">
     {% for button in buttons %}
     <toggleButton 
         index="{{ loop.index }}"

@@ -1,6 +1,5 @@
 <footer class="{{ styles.class }} {{ styles.space }}">    
-    <div 
-        class="{{ styles.size }} bg-stone-100 grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
+    <div class="{{ styles.size }} {{ styles.content }}">
         <div>
             <div class="flex flex-row items-center">          
                 <div class="bg-stone-100 rounded-full p-0.5">              
@@ -8,13 +7,13 @@
                 </div>                                                 
                 <div class="pl-2">                
                     <div 
-                        class="poppins-font inline-block align-baseline text-xl font-extrabold hover:text-sky-500 transition duration-700 ease-in-out">
+                        class="dark:text-gray-200 poppins-font inline-block align-baseline text-xl font-extrabold hover:text-sky-500 transition duration-700 ease-in-out">
                         <a href="{{ url('') }}" class="align-baseline">
                             {{ title }}
                         </a>
                     </div>                                 
                     <div 
-                        class="poppins-font tracking-wide text-stone-700 text-xs font-light -mt-2">
+                        class="mt-1 dark:text-gray-400 poppins-font tracking-wide text-stone-700 text-xs font-light -mt-2">
                         {{ subtitle }}
                     </div>
                 </div>                                                      
@@ -35,7 +34,7 @@
             {% for item in column.items %}
                 <a class="{{ styles.item.class }}" href="{{ url(item.url) }}">
                     {{ component(item.icon,styles.icon,'svg') }} 
-                    <span class="px-1 {{ styles.item.color }}">               
+                    <span class="px-2 {{ styles.item.color }}">               
                         {{ item.title }}
                     </span> 
                 </a>  

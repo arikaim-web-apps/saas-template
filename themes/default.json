@@ -24,8 +24,8 @@
     "link": "text-sky-800 font-semibold hover:underline hover:text-red-700 transition duration-700 ease-in-out",
     "page": {
         "size": "w-3/4 xs:w-full sm:w-full md:w-full xl:w-3/4 lg:w-3/4 mx-auto",
-        "color" : "bg-stone-50",
-        "content": "bg-stone-50"
+        "color" : "bg-stone-50 dark:bg-gray-950",
+        "content": "bg-stone-50 dark:bg-gray-950"
     },
     "icons": {
         "file": {

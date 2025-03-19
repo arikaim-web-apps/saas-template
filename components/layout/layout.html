@@ -4,7 +4,9 @@
         <div class="relative z-0">
             {{ component('current>sidebar',{ active: active }) }}   
         </div>       
-        <div class="px-4 mt-1 pb-20 min-h-screen {{ theme.page.size }} {{ theme.page.content }}">
+        <div 
+            id="page_content"
+            class="px-4 mt-1 pb-20 min-h-screen {{ theme.page.size }} {{ theme.page.content }}">
             {{ content }}                 
         </div>          
     </div>       

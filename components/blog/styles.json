@@ -5,11 +5,11 @@
         "color": "bg-white"
     },
     "preview": {
-        "border": "rounded-lg border border-stone-200 border-solid",
+        "border": "rounded-lg border dark:border-stone-700 border-stone-200 border-solid",
         "space": "px-4 py-2",
-        "color": "bg-white",
+        "color": "bg-white dark:bg-gray-900 dark:text-gray-200",
         "image": "w-full min-h-56 rounded-t-lg transition-opacity ease-in duration-1000 opacity-0",
-        "label": "text-stone-700 text-xs",
+        "label": "text-stone-700 text-xs dark:text-stone-200",
         "icon": {
             "size": "h-full w-full",
             "width": "1",
@@ -17,8 +17,8 @@
             "color": "text-stone-600"
         },
         "link": "transition transition-duration-1000",
-        "title": "poppins-font mt-4 text-stone-800 text-xl",
-        "summary": "text-stone-700 text-md p-1",
+        "title": "poppins-font mt-4 text-stone-800 dark:text-gray-200 text-xl",
+        "summary": "text-stone-700 dark:text-gray-200 text-md p-1",
         "button": "btn btn-info btn-sm poppins-font"          
     }
    

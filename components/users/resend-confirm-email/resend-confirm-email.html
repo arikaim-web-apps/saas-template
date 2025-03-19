@@ -1,21 +1,19 @@
-<div class="{{ styles.space }} {{ styles.border }}">
-    <div class="{{ styles.color }}">
-        <h1 class="flex items-center {{ styles.title.class }}">
-            {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
-            <div class="pl-2 font-bold">
-                {{ title }}
-            </div>
-        </h1>
-        <div class="my-2 p-2">
-            {{ message }}
+<div class="{{ styles.space }} {{ styles.border }} {{ styles.color }}">  
+    <h1 class="flex items-center {{ styles.title.class }}">
+        {{ component(styles.title.icon.name,styles.title.icon,'svg') }}  
+        <div class="pl-2 font-bold">
+            {{ title }}
         </div>
-        <div           
-            class="my-4 text-center w-full">
-            <button           
-                token="{{ token }}"
-                class="send-confirm-email {{ styles.buttons.submit }}">
-                {{ buttons.submit }}
-            </button>   
-        </div>  
-    </div>           
+    </h1>
+    <div class="my-2 p-2">
+        {{ message }}
+    </div>
+    <div           
+        class="my-4 text-center w-full">
+        <button           
+            token="{{ token }}"
+            class="send-confirm-email {{ styles.buttons.submit }}">
+            {{ buttons.submit }}
+        </button>   
+    </div>                
 </div> 

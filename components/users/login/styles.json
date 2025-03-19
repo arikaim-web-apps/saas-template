@@ -1,7 +1,7 @@
 {
     "space": "p-4",
-    "color": "bg-stone-50 dark:bg-gray-800 rounded-xl border border-solid border-stone-200",
-    "border": "dark:border-stone-600 rounded-xl border border-stone-200 border-solid",
+    "color": "bg-stone-50 dark:bg-gray-800",
+    "border": "dark:border-stone-700 rounded-xl border border-stone-200 border-solid",
     "title": {
         "icon": {
             "name": "icons~user",
@@ -10,7 +10,7 @@
             "color": "text-sky-500"
         },
         "color": "text-orange-950 dark:text-gray-200",
-        "class": "dark:text-sky-400 pb-8 uppercase"
+        "class": "dark:text-gray-200 pb-8 uppercase"
     },
     "link": {
         "icon": {
@@ -18,10 +18,10 @@
             "color": "text-sky-500",
             "width": "2"           
         },
-        "class": "poppins-font text-sm font-normal flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
-        "hover": "decoration-red-500 decoration-2 cursor-pointer hover:underline transition-all duration-1000 ease-in-out"
+        "class": "underline-offset-4 poppins-font text-sm font-normal flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
+        "hover": "decoration-green-500 decoration-2 cursor-pointer hover:underline transition-all duration-1000 ease-in-out"
     },
-    "label": "input-filled-label",
+    "label": "input-filled-label dark:text-gray-200",
     "field": "relative field my-4",
     "form": "form pt-4 px-4",
     "error": "is-invalid",
@@ -32,7 +32,7 @@
             "width": "2",
             "class": "p-1"
         },
-        "class": "input input-filled peer bg-stone-100 hover:border-stone-400 border-b-2 border-stone-200"        
+        "class": "input input-filled peer dark:text-gray-200 dark:bg-gray-700 bg-gray-100 hover:border-gray-400 border-b-2 dark:border-gray-500 border-gray-200"        
     },
     "buttons": {
         "login": "btn btn-success poppins-font"
