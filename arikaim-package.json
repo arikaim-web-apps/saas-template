@@ -4,7 +4,7 @@
     "name": "saas",
     "package-type": "template",
     "icon": "users",
-    "thumbnail": "thumbnail.jpg",
+    "thumbnail": "thumbnail-saas-template.png",
     "private-repository": true,
     "repository": "",
     "require": {
