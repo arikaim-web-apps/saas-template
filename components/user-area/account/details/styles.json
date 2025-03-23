@@ -1,7 +1,7 @@
 {
-    "label": "input-floating-label",
+    "label": "input-filled-label",
     "input": {
-        "class": "input input-floating peer"
+        "class": "input input-filled peer dark:text-gray-200 dark:bg-gray-700 bg-gray-100 hover:border-gray-400 border-b-2 dark:border-gray-500 border-gray-200"
     },
     "icon": {
         "size": "h-5 w-5",

@@ -1,6 +1,6 @@
 {
-    "title": "poppins-font font-normal text-gray-800 text-center text-md p-1",
-    "color": "bg-stone-50 rounded-b-lg shadow-md shadow-stone-200",
+    "title": "py-2 poppins-font font-normal dark:text-gray-100 text-gray-800 text-center text-md p-1",
+    "color": "dark:bg-gray-800 bg-stone-50 rounded-b-lg shadow-md shadow-stone-200 dark:shadow-stone-900",
     "size": "w-64 md:w-64 xs:w-full sm:w-full",
     "icon": {
         "name": "icons~user",

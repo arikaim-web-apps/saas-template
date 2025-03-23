@@ -1,6 +1,6 @@
 {
     "class": "block w-full",
-    "border": "border border-stone-300 border-solid rounded-xl shadow-sm",
+    "border": "border dark:border-stone-800 border-stone-300 border-solid rounded-xl shadow-sm",
     "space": "p-4",
     "title": {
         "icon": {
@@ -8,8 +8,8 @@
             "width": 2,
             "color": "text-orange-400"
         },
-        "class": "py-1 border-0 border-b border-gray-200 border-solid",
+        "class": "py-1 border-0 border-b dark:border-gray-600 border-gray-200 border-solid",
         "color": "px-1 font-bold"
     },
-    "color": "bg-white"       
+    "color": "bg-white dark:bg-gray-800 dark:text-gray-200"       
 }

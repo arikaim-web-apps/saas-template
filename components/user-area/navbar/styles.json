@@ -1,13 +1,13 @@
 {
     "size": "w-full",
     "space": "p-2 px-4 sm:pl-44 xs:pl-16",
-    "color": "bg-stone-50 border-b border-solid border-stone-200",
+    "color": "dark:text-gray-200 dark:bg-gray-800 bg-stone-50 border-b border-solid border-stone-200 dark:border-stone-700",
     "content": {
         "class": "",
         "size": "w-full",
         "align": "mx-auto",
         "space": "p-1",
-        "color": "bg-stone-50"
+        "color": "dark:bg-gray-800 bg-stone-50"
     },
     "icon": {
         "name": "icons~user",
@@ -17,12 +17,12 @@
     },
     "item": {
         "class": "text-sm open-sans font-semibold px-4 md:p-1 lg:px-4",
-        "color": "text-gray-900 hover:text-sky-700 transition duration-700 ease-in-out",
+        "color": "dark:text-gray-200 text-gray-900 hover:text-sky-700 transition duration-700 ease-in-out",
         "active": "text-sky-700"
     },
     "avatar": {
-        "menu": "text-sm poppins-font hover:bg-stone-100 cursor-pointer transition duration-1000 ease-in-out font-normal flex flex-row items-center",
-        "ring": "bg-white w-6 h-6 wing-3",
+        "menu": "dark:text-gray-200 text-sm poppins-font dark:hover:bg-gray-700 hover:bg-stone-100 cursor-pointer transition duration-1000 ease-in-out font-normal flex flex-row items-center",
+        "ring": "dark:bg-transparent bg-white w-6 h-6 wing-3",
         "icon": {
             "name": "icons~user",
             "size": "h-6 w-6",

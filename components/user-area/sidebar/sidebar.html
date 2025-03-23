@@ -8,12 +8,12 @@
     <div       
         class="flex flex-col items-center {{ styles.space }}">
         <div class="my-2 flex items-center flex-row xs:grow">            
-            <div class="px-1 bg-white rounded-full">              
+            <div class="px-1 dark:bg-gray-800 bg-white rounded-full">              
                 <img class="w-6 h-6" alt="{{ title }}" src="{{ template_url }}images/logo.svg">               
             </div>                                                 
             <div class="xs:hidden sm:hidden md:flex pl-2 flex flex-col items-start">                
                 <div 
-                    class="poppins-font font-extrabold inline-block align-baseline text-xl hover:text-red-700 transition duration-700 ease-in-out">
+                    class="dark:text-gray-200 poppins-font font-extrabold inline-block align-baseline text-xl hover:text-red-700 transition duration-700 ease-in-out">
                     <a href="{{ url('') }}" class="align-baseline">
                         {{ title }}
                     </a>
