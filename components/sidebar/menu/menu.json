@@ -12,13 +12,17 @@
                 "url": "/signup"
             }
         ],
+        "navbar": [       
+            {
+                "title": "Contact",
+                "key": "contact-us",
+                "url": "/contact-us"                
+            }   
+        ],
         "dashboard": {
             "title": "Dashboard",
             "key": "dashboard",
             "url": "/user"
-        },
-        "qrcode": {
-            "title": "QR code generator"
         }
     }
 }
