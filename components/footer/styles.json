@@ -2,7 +2,7 @@
     "space": "p-4 py-10",
     "class": "bg-stone-100 dark:bg-stone-900",
     "size": "w-3/4 lg:w-3/4 sm:w-full xs:w-full mx-auto",
-    "content": "bg-stone-100 dark:bg-stone-900 grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5",
+    "content": "justify-items-stretch xs:grid-cols-1 bg-stone-100 dark:bg-stone-900 grid grid-cols-4 gap-8 py-6 lg:py-8 md:grid-cols-4",
     "logo": {
         "size": "h-8 w-8",
         "class": "",

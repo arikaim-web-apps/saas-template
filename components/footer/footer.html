@@ -17,14 +17,7 @@
                         {{ subtitle }}
                     </div>
                 </div>                                                      
-            </div>
-            <div 
-                class="px-1 pt-2 flex flex-row items-center">              
-                {{ component('icons~copyright',styles.icon,'svg') }}             
-                <div class="px-1 {{ styles.copyright.color }}">       
-                    {{ copyright|renderText({ interval: currentYear() }) }}             
-                </div> 
-            </div>                                                                  
+            </div>                                                                 
         </div> 
         {% for column in columns %}
         <div>
@@ -43,4 +36,11 @@
         {% endfor %} 
         {{ component('current>share.links',{}) }}
     </div>
+    <div 
+        class="{{ styles.size }} flex flex-row items-center">              
+        {{ component('icons~copyright',styles.icon,'svg') }}             
+        <div class="px-1 {{ styles.copyright.color }}">       
+            {{ copyright|renderText({ interval: currentYear() }) }}             
+        </div> 
+    </div> 
 </footer>
