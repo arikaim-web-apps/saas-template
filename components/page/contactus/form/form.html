@@ -17,7 +17,7 @@
         <span class="input-filled-focused"></span>       
     </div>
     {% endif %}   
-    <div class="{{ styles.field }} required">       
+    <div class="{{ styles.field }} textarea-floating required">       
         <textarea 
             class="h-32 {{ styles.form.textarea }}"
             rule="empty"            
@@ -26,8 +26,7 @@
             {{ message.placeholder|attr('placeholder') }}></textarea>
         <label class="{{ styles.textarea_label }}" for="message">
             {{ message.label }}
-        </label>
-        <span class="textarea-filled-focused"></span>       
+        </label>      
     </div>                 
     {% if settings.name.show == 'true' %}   
     <div class="{{ styles.field }} {{ settings.name.required|ifthen('true','required') }} field"> 
@@ -41,8 +40,7 @@
             value="">  
         <label class="{{ styles.form.label }}">
             {{ name.label }}
-        </label>
-        <span class="input-filled-focused"></span>       
+        </label>      
     </div> 
     {% endif %}
     <div class="two fields">     
@@ -58,8 +56,7 @@
                 value="">
             <label class="{{ styles.form.label }}">
                 {{ email.label }}
-            </label>
-            <span class="input-filled-focused"></span>       
+            </label>              
         </div>
         {% endif %}
         {% if settings.phone.show == 'true' %} 
@@ -74,8 +71,7 @@
                 value="">
             <label class="{{ styles.form.label }}">
                 {{ phone.label }}
-            </label>
-            <span class="input-filled-focused"></span>       
+            </label>             
         </div>
         {% endif %}
     </div>   

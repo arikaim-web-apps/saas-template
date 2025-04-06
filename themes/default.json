@@ -4,12 +4,12 @@
             "size": "h-6 w-6",
             "color": "text-sky-500"
         },
-        "label": "input-filled-label dark:text-gray-200",
-        "field": "field relative",
+        "label": "input-floating-label dark:text-gray-200",
+        "field": "field relative input-floating",
         "value": "text-gray-700",
         "fields": "grid grid-cols-2 gap-2 md:grid-cols-2 xs:grid-cols-1",
         "input": {          
-            "class": "input input-filled peer dark:text-gray-200 dark:bg-gray-700 bg-gray-100 hover:border-gray-400 border-b-2 dark:border-gray-500 border-gray-200"           
+            "class": "input peer dark:text-gray-200 dark:bg-gray-700"           
         },
         "select": ""
     },

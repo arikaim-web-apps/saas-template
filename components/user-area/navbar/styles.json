@@ -1,7 +1,7 @@
 {
     "size": "w-full",
     "space": "p-2 px-4 sm:pl-44 xs:pl-16",
-    "color": "dark:text-gray-200 dark:bg-gray-800 bg-stone-50 border-b border-solid border-stone-200 dark:border-stone-700",
+    "color": "dark:text-gray-200 dark:bg-gray-800 bg-stone-50",
     "content": {
         "class": "",
         "size": "w-full",

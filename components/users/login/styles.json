@@ -21,8 +21,8 @@
         "class": "underline-offset-4 poppins-font text-sm font-normal flex flex-row intems-center cursor-pointer block text-gray-600 dark:text-gray-400",
         "hover": "decoration-green-500 decoration-2 cursor-pointer hover:underline transition-all duration-1000 ease-in-out"
     },
-    "label": "input-filled-label dark:text-gray-200",
-    "field": "relative field my-4",
+    "label": "input-floating-label dark:text-gray-200",
+    "field": "relative field my-4 input-floating",
     "form": "form pt-4 px-4",
     "error": "is-invalid",
     "input": {
@@ -32,9 +32,9 @@
             "width": "2",
             "class": "p-1"
         },
-        "class": "input input-filled peer dark:text-gray-200 dark:bg-gray-700 bg-gray-100 hover:border-gray-400 border-b-2 dark:border-gray-500 border-gray-200"        
+        "class": "input peer dark:text-gray-200 dark:bg-gray-700"        
     },
     "buttons": {
-        "login": "btn btn-success poppins-font"
+        "login": "btn btn-success poppins-font btn-gradient"
     }
 }
