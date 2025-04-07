@@ -10,9 +10,11 @@
 
 #### Customization 
 
-In theme folder: 
+1. Copy files in folder ../arikaim/view/templates/saas
 
-1. Install Tailwind run 
+In template folder: 
+
+2. Install Tailwind run 
 
 ```sh
 
@@ -20,7 +22,7 @@ npm install
 
 ```
 
-2. Start watch process
+3. Start watch process
 
 ```sh
 
