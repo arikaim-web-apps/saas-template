@@ -12,19 +12,18 @@
 
 In theme folder: 
 
-1. Install Tailwind CSS 4
-    npm install tailwindcss @tailwindcss/cli
+1. Install Tailwind run 
 
-2. Install typography
-    npm install @tailwindcss/typography
+```sh
 
-3. Install Flyonui 2
-    npm install flyonui
-    
-4. Start watch process
-    npx @tailwindcss/cli -i css/include.css -o css/tailwind.min.css -m --watch
- 
+npm install
 
+```
 
+2. Start watch process
 
- 
+```sh
+
+npx @tailwindcss/cli -i css/include.css -o css/tailwind.min.css -m --watch
+
+```
