@@ -12,6 +12,15 @@
 
 1. Copy files in folder ../arikaim/view/templates/saas
 
+<b>or run git command from folder</b> ./arikaim/view/templates/
+
+```sh 
+
+git clone https://github.com/arikaim-web-apps/saas-template.git saas
+
+```
+
+
 In template folder: 
 
 2. Install Tailwind run 

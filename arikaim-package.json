@@ -5,8 +5,7 @@
     "package-type": "template",
     "icon": "users",
     "thumbnail": "thumbnail-saas-template.png",
-    "private-repository": true,
-    "repository": "",
+    "repository": "https://github.com/arikaim-web-apps/saas-template.git",
     "require": {
         "components": [
             "icons",
