@@ -1,5 +1,8 @@
 ## SaaS template
 
+![image](https://github.com/arikaim-web-apps/saas-template/blob/master/images/thumbnail-saas-template.png?raw=true)
+
+
 #### Requirements 
   * [Arikaim CMS](https://github.com/arikaim/arikaim)
 
